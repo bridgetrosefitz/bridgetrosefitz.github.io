@@ -1,7 +1,30 @@
 .nav-arrow {
-  font-size: 100px;
+  font-size: 40px;
   margin: 0 auto;
   width: 1em;
   height: 1em;
-  bottom: 0;
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+}
+
+.image-display-container {
+  display: flex;
+  margin: 0px 150px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-display-container img {
+  filter: grayscale(1) brightness(1);
+  max-width: 100px;
+  object-fit: contain;
+  margin: 40px 60px;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+
+.image-display-container img:hover {
+  filter: initial;
+  transform: scale(1.05);
 }
