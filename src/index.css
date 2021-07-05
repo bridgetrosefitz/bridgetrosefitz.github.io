@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gambetta', serif;
+  font-weight: 300;
+}
+
+@font-face {
+font-family: "Gambetta";
+src: local("GoldmanLight"),
+ url('./fonts/Gambetta-Light.woff') format('woff');
+font-weight: 300;
+}
+
+@font-face {
+font-family: "Gambetta";
+src: local("GoldmanBold"),
+ url('./fonts/Gambetta-Bold.woff') format('woff');
+font-weight: 700;
+}
