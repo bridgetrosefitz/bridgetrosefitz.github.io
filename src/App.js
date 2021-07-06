@@ -16,7 +16,7 @@ function App() {
         <div id="canvas-container"/>
         <Canvas
           camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 30] }}>
-          <OrbitControls/>
+          {/* <OrbitControls/> */}
           <ambientLight intensity={0.1} />
           <directionalLight ref={directionalLight} position={[0, 5, 5]} />
           {directionalLight.current && <directionalLightHelper ref={[directionalLight, 5]}/>}

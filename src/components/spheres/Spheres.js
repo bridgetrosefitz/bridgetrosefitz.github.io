@@ -1,36 +1,60 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useLoader } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
+import * as dat from 'dat.gui'
 
+const gui = new dat.GUI({ width: 500 })
+const debugObject = {
+  metalness: 1,
+  roughness: 0.1
+}
 
 const Spheres = () => {
-  const [
-    colorMap, 
-    ambientOcclusionMap, 
-    displacementMap, 
-    normalMap, 
-    roughnessMap] = useLoader(TextureLoader, ['Tiles105_1K_Color.png', 'Tiles105_1K_AmbientOcclusion.png', 'Tiles105_1K_Displacement.png', 'Tiles105_1K_Normal.png', 'Tiles105_1K_Roughness.png'])
 
-  const numberOfSpheres = 4;
+  const sphere1 = useRef()
 
-  const makeASphere = () => { 
+  const numberOfSpheres = 1;
+
+  const makeASphere = (index) => { 
     return (
     <mesh 
+      key={index}
+      ref={sphere1}
       rotation={[Math.PI * Math.random(), Math.PI * 0.1, Math.PI * 0.25]}
       position={[(Math.random() - 0.5) * 50, 0, 0]}>
     <sphereGeometry args={[4, 100, 100]} />
     <meshStandardMaterial
-      map={colorMap}
-      displacementMap={displacementMap}
-      normalMap={normalMap}
-      roughnessMap={roughnessMap}
-      aoMap={ambientOcclusionMap} />
+      roughness={debugObject.roughness}
+      metalness={debugObject.metalness}
+    />
   </mesh>) 
   }
-
   
-  const multipleSpheres = new Array(numberOfSpheres).fill(0).map(() => makeASphere())
+  const multipleSpheres = new Array(numberOfSpheres).fill(0).map((value, index) => {
+    
+    return makeASphere(index)
+  })
+
+  useEffect(() => {
+    gui.add(debugObject, 'metalness')
+      .min(0.001)
+      .max(1)
+      .step(0.001)
+      .onFinishChange(() => {  
+        sphere1.current.material.metalness = debugObject.metalness
+        sphere1.current.material.needsUpdate = true
+      })
+
+    gui.add(debugObject, 'roughness')
+      .min(0.001)
+      .max(1)
+      .step(0.001)
+      .onFinishChange(() => {
+        sphere1.current.material.roughness = debugObject.roughness
+        sphere1.current.material.needsUpdate = true
+      })
+  })
 
   return (
     <group>
