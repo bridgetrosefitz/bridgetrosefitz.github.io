@@ -1,6 +1,12 @@
 import React, { useEffect, useRef } from 'react'
-import { CubeTextureLoader } from 'three'
-import { useLoader, useThree } from '@react-three/fiber'
+import { 
+  CubeTextureLoader,
+  CubeCamera,
+  WebGLCubeRenderTarget,
+  RGBFormat,
+  LinearMipmapLinearFilter
+ } from 'three'
+import { useThree, extend } from '@react-three/fiber'
 // import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import * as dat from 'dat.gui'
 
@@ -30,9 +36,31 @@ export const Louvre = () => {
 }
 
 export const Spheres = () => {
+
+  const { scene } = useThree()
+
+  const loader = new CubeTextureLoader()
+
+  const environmentMapTexture = loader.load([
+    '/environments/louvre/px.png',
+    '/environments/louvre/nx.png',
+    '/environments/louvre/py.png',
+    '/environments/louvre/ny.png',
+    '/environments/louvre/pz.png',
+    '/environments/louvre/nz.png',
+  ])
+
+  const cubeRenderTarget = new WebGLCubeRenderTarget(256, {
+    format: RGBFormat,
+    generateMipmaps: true,
+    minFilter: LinearMipmapLinearFilter
+  })
+
+  const cubeCamera = new CubeCamera(1, 1000, cubeRenderTarget)
+  cubeCamera.position.set(0, 100, 0)
+  scene.add(cubeCamera)
   
   const sphere1 = useRef()
-
   const numberOfSpheres = 1;
 
   const makeASphere = (index) => { 
@@ -46,6 +74,7 @@ export const Spheres = () => {
     <meshStandardMaterial
       roughness={debugObject.roughness}
       metalness={debugObject.metalness}
+      envMap={environmentMapTexture}
     />
   </mesh>) 
   }
@@ -55,25 +84,25 @@ export const Spheres = () => {
     return makeASphere(index)
   })
 
-  useEffect(() => {
-    gui.add(debugObject, 'metalness')
-      .min(0.001)
-      .max(1)
-      .step(0.001)
-      .onFinishChange(() => {  
-        sphere1.current.material.metalness = debugObject.metalness
-        sphere1.current.material.needsUpdate = true
-      })
+  // useEffect(() => {
+  //   gui.add(debugObject, 'metalness')
+  //     .min(0.001)
+  //     .max(1)
+  //     .step(0.001)
+  //     .onFinishChange(() => {  
+  //       sphere1.current.material.metalness = debugObject.metalness
+  //       sphere1.current.material.needsUpdate = true
+  //     })
 
-    gui.add(debugObject, 'roughness')
-      .min(0.001)
-      .max(1)
-      .step(0.001)
-      .onFinishChange(() => {
-        sphere1.current.material.roughness = debugObject.roughness
-        sphere1.current.material.needsUpdate = true
-      })
-  })
+  //   gui.add(debugObject, 'roughness')
+  //     .min(0.001)
+  //     .max(1)
+  //     .step(0.001)
+  //     .onFinishChange(() => {
+  //       sphere1.current.material.roughness = debugObject.roughness
+  //       sphere1.current.material.needsUpdate = true
+  //     })
+  // })
 
   return (
     <group>
