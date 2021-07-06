@@ -14,8 +14,6 @@ const Spheres = () => {
 
   const numberOfSpheres = 4;
 
-
-
   const makeASphere = () => { 
     return (
     <mesh 

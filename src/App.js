@@ -1,6 +1,7 @@
 import React, {Suspense, useRef} from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
+import Localization from './components/localization/Localization'
 import Header from './components/header/Header'
 import Main from './components/main/Main'
 import Spheres from './components/spheres/Spheres'
@@ -10,6 +11,7 @@ function App() {
   return (
     <div>
       <Suspense fallback={<h1>Loading...</h1>}>
+      <Localization/>
         <Header />
         <div id="canvas-container"/>
         <Canvas
