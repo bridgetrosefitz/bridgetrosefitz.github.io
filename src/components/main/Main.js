@@ -18,6 +18,7 @@ const Main = () => {
 
   return (
     <>  
+      <NavArrow />
       <div className='company-logo-display-container'>
         <img alt='Shadow' src='company-logos/shadow-logo-red.png'></img>
         <img alt='LEK Consulting' src='company-logos/lek-logo.svg'></img>
@@ -41,13 +42,12 @@ const Main = () => {
             <div>Particles - Three.js</div>
           </div>
           <div className="grid-item">
-            <img alt='Food Systems Dialogues' src='project-snapshots/food-systems-dialogues.png'></img>
+            <img alt='Food Systems Dialogues' src='project-snapshots/fsds.png'></img>
           <div>Food Systems Dialogues <span className='small-text'>(Product managed)</span></div>
           </div>
           <div className="grid-item"></div>
           <div className="grid-item"></div>
       </div>
-      <NavArrow />
     </>
   )
 }

@@ -4,6 +4,10 @@
   font-weight: 300;
 }
 
+canvas {
+  height: 520px;
+}
+
 @font-face {
 font-family: "Gambetta";
 src: local("Gambettaight"),
