@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
-import * as THREE from 'three'
-import { useLoader } from '@react-three/fiber'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
+import { CubeTextureLoader } from 'three'
+import { useLoader, useThree } from '@react-three/fiber'
+// import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import * as dat from 'dat.gui'
 
 const gui = new dat.GUI({ width: 500 })
@@ -10,8 +10,27 @@ const debugObject = {
   roughness: 0.1
 }
 
-const Spheres = () => {
+export const Louvre = () => {
+  
+  const { scene } = useThree()
+  const loader = new CubeTextureLoader()
 
+  const texture = loader.load([
+    '/environments/louvre/px.png',
+    '/environments/louvre/nx.png',
+    '/environments/louvre/py.png',
+    '/environments/louvre/ny.png',
+    '/environments/louvre/pz.png',
+    '/environments/louvre/nz.png',
+  ])
+
+  scene.background = texture
+  return null
+
+}
+
+export const Spheres = () => {
+  
   const sphere1 = useRef()
 
   const numberOfSpheres = 1;
@@ -62,5 +81,3 @@ const Spheres = () => {
     </group>
   )
 }
-
-export default Spheres

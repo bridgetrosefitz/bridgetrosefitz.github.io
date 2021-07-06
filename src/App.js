@@ -4,7 +4,8 @@ import { OrbitControls } from '@react-three/drei'
 import Localization from './components/localization/Localization'
 import Header from './components/header/Header'
 import Main from './components/main/Main'
-import Spheres from './components/spheres/Spheres'
+import { Spheres } from './components/spheres/Spheres'
+import { Louvre } from './components/spheres/Spheres'
 
 function App() {
   const directionalLight = useRef()
@@ -21,6 +22,7 @@ function App() {
           <directionalLight ref={directionalLight} position={[0, 5, 5]} />
           {directionalLight.current && <directionalLightHelper ref={[directionalLight, 5]}/>}
           <Spheres/>
+          <Louvre/>
         </Canvas>
         <Main />
       </Suspense>
