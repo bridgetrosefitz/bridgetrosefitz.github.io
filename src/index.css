@@ -9,6 +9,14 @@ canvas {
   height: 520px;
 }
 
+.nav-arrow {
+  display: flex;
+  font-size: 40px;
+  margin: 0 auto;
+  width: 1em;
+  height: 1em;
+}
+
 @font-face {
 font-family: "Gambetta";
 src: local("Gambettaight"),

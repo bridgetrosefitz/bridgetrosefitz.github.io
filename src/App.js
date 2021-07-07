@@ -5,6 +5,8 @@ import Localization from './components/localization/Localization'
 import Header from './components/header/Header'
 import Main from './components/main/Main'
 import { Spheres } from './components/spheres/Spheres'
+import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
+
 
 function App() {
   const [city, setCity] = useState('Paris')
@@ -22,6 +24,7 @@ function App() {
           <directionalLight position={[0, 5, 5]} />
           <Spheres city={city} />
         </Canvas>
+        <HiOutlineArrowNarrowDown className='nav-arrow' />
         <Main />
       </Suspense>
     </div>

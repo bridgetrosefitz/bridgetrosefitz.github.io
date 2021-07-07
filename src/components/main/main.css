@@ -1,13 +1,3 @@
-.nav-arrow {
-  font-size: 40px;
-  margin: 0 auto;
-  width: 1em;
-  height: 1em;
-  /* position: float; */
-  bottom: 60px;
-  left: 50%;
-}
-
 .company-logo-display-container {
   /* position: center */
   display: flex;

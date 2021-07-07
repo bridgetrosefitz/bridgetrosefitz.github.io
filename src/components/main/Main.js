@@ -1,19 +1,8 @@
+import React, { useState } from 'react'
 import './main.css'
-import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import Project from '../project/Project'
 
-// NavArrow component
-const NavArrow = () => {
-
-  return ( 
-    <div className='nav-arrow'>
-      <HiOutlineArrowNarrowDown />
-    </div>
-  )
-}
-
 // Main component
-//  On company logos, make onClick go to website
 
 const projectInfo = {
   title: 'RACI Project Management Web Application',
@@ -21,10 +10,12 @@ const projectInfo = {
 
 const Main = () => {
 
+  const [hidden, setHidden] = useState(false)
+
   return (
     <>  
-      <NavArrow />
-      <Project  project={projectInfo} />
+
+      <Project hidden={hidden} onClose={() => setHidden(prev => !prev)} project={projectInfo} />
       <div className='company-logo-display-container'>
         <img alt='Shadow' src='company-logos/shadow-logo-red.png'></img>
         <img alt='LEK Consulting' src='company-logos/lek-logo.svg'></img>
