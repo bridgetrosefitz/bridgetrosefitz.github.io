@@ -1,20 +1,16 @@
 import React from 'react';
 import './project.css'
 import { IoCloseOutline } from 'react-icons/io5'
+import ProjectSpecs from './ProjectSpecs';
 
 const Project = ({hidden, onClose, project}) => {
   
   return (
     <div className={`${hidden ? 'hidden' : null} project`}>
-      <h1>{project.title}</h1>
-      <IoCloseOutline className='close-icon' onClick={onClose}/>
-      <p>
-        <b>Front end:</b><span>React.js</span>
-        <b>Back end:</b><span>Ruby on Rails</span>
-        <span>View the website <a href='http://bridgetro.se'>here</a></span>
-        <span>View user stories <a href='http://bridgetro.se'>here</a></span>
-        <span>View the code <a href='http://bridgetro.se'>here</a></span>
-      </p>
+      <h1>{project.title}
+        <IoCloseOutline className='close-icon' onClick={onClose} />
+      </h1>
+      <ProjectSpecs/>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
