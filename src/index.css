@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Karla', sans-serif;
   font-weight: 300;
 }
 
@@ -21,3 +22,12 @@ src: local("GambettaBold"),
  url('./fonts/Gambetta-Bold.woff') format('woff');
 font-weight: 700;
 }
+
+@font-face {
+font-family: "Gambetta";
+src: local("GambettaBold"),
+ url('./fonts/Gambetta-Bold.woff') format('woff');
+font-weight: 700;
+}
+
+

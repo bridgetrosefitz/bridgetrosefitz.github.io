@@ -66,8 +66,8 @@ export const Spheres = props => {
 
   useFrame(({ clock }) => {
     // sphere.current.rotation.x = clock.getElapsedTime()
-    sphere.current.position.x = (Math.sin(clock.getElapsedTime()) - 0.5)
-    sphere.current.position.z = (Math.sin(clock.getElapsedTime()) - 0.5)
+    // sphere.current.position.x = (Math.sin(clock.getElapsedTime()) - 0.5) * 0.5
+    // sphere.current.position.z = (Math.sin(clock.getElapsedTime()) - 0.5) * 0.5
   })
 
   const makeASphere = (index) => { 
