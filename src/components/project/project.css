@@ -30,9 +30,15 @@
   background-color: rgba(0,0,0,.3);
 }
 
-.project-specs {
+.single-project-display-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-left: 2%;
-  width: 40%;
+}
+
+.project-specs {
+  display: block;
+  margin-right: 20%;
 }
 
 
@@ -51,6 +57,12 @@
 
 .project-specs a {
   text-decoration: none;
+}
+
+.project-photo img {
+  display: inline-block;
+  width: 90%;
+
 }
 
 .close-icon {

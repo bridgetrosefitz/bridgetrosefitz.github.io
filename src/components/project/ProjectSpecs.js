@@ -8,7 +8,7 @@ const ProjectSpecs = props => {
       <p><b>Front end:</b><span>React.js</span></p>
       <p><b>Back end:</b><span>Ruby on Rails</span></p>
       <p>View the <a href='http://bridgetro.se'>user stories</a>, or <a href='http://bridgetro.se'>code</a>.</p>
-      <p className='project-summary'>{props.project.text}</p>
+      <p className='project-summary'>{props.text}</p>
     </div>
   )
 }
