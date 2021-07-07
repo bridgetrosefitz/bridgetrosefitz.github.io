@@ -32,6 +32,25 @@
 
 .project-specs {
   margin-left: 2%;
+  width: 40%;
+}
+
+
+.project-specs span {
+  margin: 20px;
+}
+
+.project-specs p {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.project-specs b {
+  font-weight: 500;
+}
+
+.project-specs a {
+  text-decoration: none;
 }
 
 .close-icon {
@@ -45,18 +64,4 @@
 .close-icon:hover {
   color: grey;
   cursor: pointer;
-}
-
-
-.project-specs span {
-  margin: 20px;
-}
-
-.project-specs p {
-  font-size: 18px;
-  line-height: 12px;
-}
-
-b {
-  font-weight: 500;
 }
