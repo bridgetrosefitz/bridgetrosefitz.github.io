@@ -78,20 +78,36 @@ const setTexture = (city) => {
 export const Sphere = props => {
 
   const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, -1], args: 12}))
-  
 
   return (
       <mesh
         castShadow
         ref={spherePhysicsRef}
         position={[0, 60, 0]}>
-          <sphereGeometry args={[12, 100, 100]} />
+          <sphereGeometry args={[5, 100, 100]} />
           <meshStandardMaterial
             roughness={debugObject.roughness}
             metalness={debugObject.metalness}
             envMap={setTexture(props.city)}
           />
       </mesh>
+  )
+}
+
+export const ClickableSphere = props => {
+  // This guy has no physics attached to him, because he stays fixed
+  return (
+    <mesh
+      // color={'white'}
+      onClick={() => alert('hi')}
+      position={[19, 12, 10]}>
+      <sphereGeometry args={[1.5, 100, 100]} />
+      <meshStandardMaterial
+        roughness={0.05}
+        metalness={1}
+        envMap={setTexture(props.city)}
+      />
+    </mesh>
   )
 }
 

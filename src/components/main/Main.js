@@ -5,6 +5,7 @@ import Localization from '../localization/Localization'
 import HeaderLarge from '../header/HeaderLarge'
 import Work from '../work/Work'
 import { Sphere } from '../scene/Scene'
+import { ClickableSphere } from '../scene/Scene'
 import { Plane } from '../scene/Scene'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import { OrbitControls } from '@react-three/drei'
@@ -23,7 +24,7 @@ const Main = props => {
           <Canvas
             style={{ position: 'fixed', height: '100%', width: '100%', top: 0, left: 0, zIndex: 0}}
             shadows
-            camera={{ fov: 75, near: 0.1, far: 1000, position: [-3, 3, 60] }}>
+            camera={{ fov: 29, near: 0.1, far: 1000, position: [-3, 3, 60] }}>
           <ambientLight
             intensity={0.7}
           />
@@ -43,6 +44,7 @@ const Main = props => {
           <Physics gravity={[0, -120, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.3}}>
             {/* <Debug scale={1.1}> */}
               <Sphere city={city} />
+              <ClickableSphere city={city} />
               <Plane />
             {/* </Debug> */}
             </Physics>
@@ -51,7 +53,6 @@ const Main = props => {
               maxPolarAngle={Math.PI * 0.5}
               enableZoom={false}
             />
-            {/* <color attach='background' args={['pink']} /> */}
           </Canvas>
           <div className='spacing-element' />
           <div className='main-content'>
