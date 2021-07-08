@@ -17,7 +17,7 @@ const HeaderLarge = props => {
   }
 
   return (
-    <div className="header">
+    <div {...props} className="header">
       <h1>Bridget Fitzgerald</h1>
       <h2>Full stack developer</h2>
       <h3>{citySpans()}</h3>

@@ -9,76 +9,76 @@ const debugObject = {
   roughness: 0.05
 }
 
+const loader = new CubeTextureLoader()
+
+const louvreEnvironmentMapTexture = loader.load([
+  '/environments/louvre/px.png',
+  '/environments/louvre/nx.png',
+  '/environments/louvre/py.png',
+  '/environments/louvre/ny.png',
+  '/environments/louvre/pz.png',
+  '/environments/louvre/nz.png',
+])
+
+const templeEnvironmentMapTexture = loader.load([
+  '/environments/inari-temple/px.png',
+  '/environments/inari-temple/nx.png',
+  '/environments/inari-temple/py.png',
+  '/environments/inari-temple/ny.png',
+  '/environments/inari-temple/pz.png',
+  '/environments/inari-temple/nz.png',
+])
+
+const timesSquareEnvironmentMapTexture = loader.load([
+  '/environments/times-square/px.png',
+  '/environments/times-square/nx.png',
+  '/environments/times-square/py.png',
+  '/environments/times-square/ny.png',
+  '/environments/times-square/pz.png',
+  '/environments/times-square/nz.png',
+])
+
+const norwayEnvironmentMapTexture = loader.load([
+  '/environments/norway/px.png',
+  '/environments/norway/nx.png',
+  '/environments/norway/py.png',
+  '/environments/norway/ny.png',
+  '/environments/norway/pz.png',
+  '/environments/norway/nz.png',
+])
+
+const setTexture = (city) => {
+
+  let textureToUse = louvreEnvironmentMapTexture
+
+  switch (city) {
+    case 'Melbourne':
+      textureToUse = louvreEnvironmentMapTexture
+      break
+    case 'NYC':
+      textureToUse = timesSquareEnvironmentMapTexture
+      break
+    case 'Paris':
+      textureToUse = louvreEnvironmentMapTexture
+      break
+    case 'Tokyo':
+      textureToUse = templeEnvironmentMapTexture
+      break
+    case 'Oslo':
+      textureToUse = norwayEnvironmentMapTexture
+      break
+    default:
+      textureToUse = louvreEnvironmentMapTexture
+      break
+  }
+
+  return textureToUse
+}
+
 export const Sphere = props => {
 
   const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, -1], args: 12}))
   
-  const loader = new CubeTextureLoader()
-
-  const louvreEnvironmentMapTexture = loader.load([
-    '/environments/louvre/px.png',
-    '/environments/louvre/nx.png',
-    '/environments/louvre/py.png',
-    '/environments/louvre/ny.png',
-    '/environments/louvre/pz.png',
-    '/environments/louvre/nz.png',
-  ])
-
-  const templeEnvironmentMapTexture = loader.load([
-    '/environments/inari-temple/px.png',
-    '/environments/inari-temple/nx.png',
-    '/environments/inari-temple/py.png',
-    '/environments/inari-temple/ny.png',
-    '/environments/inari-temple/pz.png',
-    '/environments/inari-temple/nz.png',
-  ])
-
-  const timesSquareEnvironmentMapTexture = loader.load([
-    '/environments/times-square/px.png',
-    '/environments/times-square/nx.png',
-    '/environments/times-square/py.png',
-    '/environments/times-square/ny.png',
-    '/environments/times-square/pz.png',
-    '/environments/times-square/nz.png',
-  ])
-
-  const norwayEnvironmentMapTexture = loader.load([
-    '/environments/norway/px.png',
-    '/environments/norway/nx.png',
-    '/environments/norway/py.png',
-    '/environments/norway/ny.png',
-    '/environments/norway/pz.png',
-    '/environments/norway/nz.png',
-  ])
-
-  let textureToUse = louvreEnvironmentMapTexture
-
-    switch (props.city) {
-      case 'Melbourne':
-        textureToUse = louvreEnvironmentMapTexture
-        break
-      case 'NYC':
-        textureToUse = timesSquareEnvironmentMapTexture
-        break
-      case 'Paris':
-        textureToUse = louvreEnvironmentMapTexture
-        break
-      case 'Tokyo':
-        textureToUse = templeEnvironmentMapTexture
-        break
-      case 'Oslo':
-        textureToUse = norwayEnvironmentMapTexture
-      break
-      default:
-        textureToUse = louvreEnvironmentMapTexture
-        break
-    }
-
-  useFrame((state, delta) => {
-    // console.log(state.clock.getElapsedTime())
-    // spherePhysicsRef.current.position.x += state.clock.getElapsedTime()
-    // api.rotation.set(state.clock.getElapsedTime(), state.clock.getElapsedTime(), 0)
-  })
 
   return (
       <mesh
@@ -89,7 +89,7 @@ export const Sphere = props => {
           <meshStandardMaterial
             roughness={debugObject.roughness}
             metalness={debugObject.metalness}
-            envMap={textureToUse}
+            envMap={setTexture(props.city)}
           />
       </mesh>
   )
@@ -109,3 +109,26 @@ export const Plane = () => {
     </mesh>
     )
 }
+
+export const MakeAButtloadOfSpheres = number => {
+  const radius = Math.random() * 2
+  const [ref, api] = useSphere(() => ({ 
+    mass: 10, 
+    position: [15, 60, -1], 
+    args: radius }))
+
+  return (
+    <instancedMesh
+      castShadow
+      ref={ref}
+      args={[null, null, number]}>
+      <sphereBufferGeometry args={[radius, 100, 100]}>
+      </sphereBufferGeometry>
+      <meshStandardMaterial
+        roughness={debugObject.roughness}
+        metalness={debugObject.metalness}
+        envMap={setTexture('Paris')} />
+    </instancedMesh>
+  )
+}
+

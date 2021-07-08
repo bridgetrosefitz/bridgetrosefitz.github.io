@@ -1,10 +1,11 @@
 .header {
   font: Thin 100 Roboto;
   text-align: center;
+  z-index: 1;
+  position: relative;
 }
 
 .header-small {
-  
   font-size: 20px;
   text-align: center;
   top: 2px;
