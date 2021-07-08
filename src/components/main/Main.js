@@ -1,78 +1,36 @@
-import React, { useState } from 'react'
-import './main.css'
-import Project from '../project/Project'
+import React, {Suspense, useState} from 'react'
+import { Switch, Route, withRouter } from 'react-router-dom'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import Localization from '../localization/Localization'
+import Header from '../header/Header'
+import Work from '../work/Work'
+import { Spheres } from '../spheres/Spheres'
+import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 
-// Main component
-
-const projects = [
-  {
-    title: 'RACI Project Management Web App',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
-    photos: ['/project-snapshots/raci.png'],
-    role: 'Developer',
-    link: 'https://bridgetro.se/raci/',
-    github: 'https://github.com/bridgetrosefitz/raci'
-  },
-  {
-    title: 'Digital Innovation Statistics App',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
-    photos: ['project-snapshots/digital-innovation.png'],
-    role: 'Developer',
-    link: 'http://digital-innovation-stats.herokuapp.com/',
-    github: 'https://github.com/bridgetrosefitz/digital_innovation'
-  },
-  {
-    title: 'Food Systems Dialogues',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
-    photos: ['project-snapshots/fsds.png'],
-    role: 'Product-managed',
-    link: 'https://fsds-tool.herokuapp.com/',
-    github: 'https://github.com/Jesus-Escalona'
-  },
-  {
-    title: 'Particles',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
-    photos: ['project-snapshots/particles.png'],
-    role: 'Developer',
-    link: 'http://bridgetro.se',
-    github: 'https://github.com/bridgetrosefitz/personal-website'
-  }
-]
 
 const Main = () => {
-
-  const [hidden, setHidden] = useState(true)
-  const [currentProject, setCurrentProject] = useState(null)
-
-  const projectDisplay = projects.map(project => {
-
-    return (
-      <div className="grid-item" onClick={() => {
-        setCurrentProject(project)
-        setHidden(prev => !prev)
-      }}>
-        <img alt={project.title} src={project.photos[0]}></img>
-          <div>{project.title}{project.role !== 'Developer' ? (<span className='small-text'> ({project.role})</span>) : null}</div>
-      </div>)
-  })
+  const [city, setCity] = useState('Paris')
+  const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
 
   return (
-    <>  
-      <Project hidden={hidden} onClose={() => setHidden(prev => !prev)} project={currentProject} />
-      <div className='company-logo-display-container'>
-        <img alt='Shadow' src='company-logos/shadow-logo-red.png'></img>
-        <img alt='LEK Consulting' src='company-logos/lek-logo.svg'></img>
-        <img alt='World Economic Forum' src='company-logos/wef-logo.png'></img>
-        <img alt='United Nations' src='company-logos/united-nations-logo.png'></img>
-        <img alt='Institut Montaigne' src='company-logos/institut-montaigne-logo.png'></img>
-        <img alt='国際交流基金' src='company-logos/japan-foundation-logo-english.png'></img>
-        <img alt='Australian Music Examinations Board' src='company-logos/ameb-logo.jpeg'></img>
-      </div>
-      <div className='projects-display-container'>
-        {projectDisplay}
-      </div>
-    </>
-  )
+    <div>
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Localization/>
+          <Header cities={cities} setCity={setCity}/>
+          <div id="canvas-container"/>
+          <Canvas
+            camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 30] }}>
+            {/* <OrbitControls/> */}
+            <ambientLight intensity={0.1} />
+            <directionalLight position={[0, 5, 5]} />
+            <Spheres city={city} />
+          </Canvas>
+          <HiOutlineArrowNarrowDown className='nav-arrow' />
+          <Work />
+        </Suspense>
+    </div>
+  );
 }
 
 export default Main
