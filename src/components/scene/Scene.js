@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { CubeTextureLoader } from 'three'
-import * as dat from 'dat.gui'
 import { useFrame } from '@react-three/fiber'
+import { useSphere, usePlane } from '@react-three/cannon'
 
 // const gui = new dat.GUI({ width: 500 })
 const debugObject = {
@@ -9,12 +9,10 @@ const debugObject = {
   roughness: 0.05
 }
 
-export const Spheres = props => {
+export const Sphere = props => {
 
-  const sphere = useRef()
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 20, -1], args: 12}))
   
-  const numberOfSpheres = 1
-  // This link was somewhat helpful to get the texture loaded https://codeworkshop.dev/blog/2020-06-14-creating-a-skybox-with-reflections-in-react-three-fiber/
   const loader = new CubeTextureLoader()
 
   const louvreEnvironmentMapTexture = loader.load([
@@ -76,55 +74,30 @@ export const Spheres = props => {
         break
     }
 
-  useFrame(({ clock }) => {
-    // sphere.current.rotation.x = clock.getElapsedTime()
-    // sphere.current.position.x = (Math.sin(clock.getElapsedTime()) - 0.5) * 0.5
-    // sphere.current.position.z = (Math.sin(clock.getElapsedTime()) - 0.5) * 0.5
-  })
-
-  const makeASphere = (index) => { 
-    return (
-    <mesh 
-      key={index}
-      ref={sphere}
-      position={[0, 0, 0]}>
-    <sphereGeometry args={[12, 100, 100]} />
-    <meshStandardMaterial
-      roughness={debugObject.roughness}
-      metalness={debugObject.metalness}
-      envMap={textureToUse}
-    />
-  </mesh>) 
-  }
-  
-  const multipleSpheres = new Array(numberOfSpheres).fill(0).map((value, index) => {
-    
-    return makeASphere(index)
-  })
-
-  useEffect(() => {
-    // gui.add(debugObject, 'metalness')
-    //   .min(0.001)
-    //   .max(1)
-    //   .step(0.001)
-    //   .onFinishChange(() => {  
-    //     sphere.current.material.metalness = debugObject.metalness
-    //     sphere.current.material.needsUpdate = true
-    //   })
-
-    // gui.add(debugObject, 'roughness')
-    //   .min(0.001)
-    //   .max(1)
-    //   .step(0.001)
-    //   .onFinishChange(() => {
-    //     sphere.current.material.roughness = debugObject.roughness
-    //     sphere.current.material.needsUpdate = true
-    //   })
-  })
-
   return (
     <group>
-      {multipleSpheres}
+      <mesh
+        castShadow
+        ref={spherePhysicsRef}
+        position={[0, 20, 0]}>
+        <sphereGeometry args={[12, 100, 100]} />
+        <meshStandardMaterial
+          roughness={debugObject.roughness}
+          metalness={debugObject.metalness}
+          envMap={textureToUse}
+        />
+      </mesh>
     </group>
   )
+}
+
+
+export const Plane = () => {
+  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -15, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
+    return(
+      <mesh ref={planePhysicsRef} position={[0, -15, 0]} rotation={[-Math.PI * 0.5, 0, 0]} receiveShadow >
+        <planeGeometry args={[100, 100]} />
+        <meshStandardMaterial color="white" />
+    </mesh>
+    )
 }
