@@ -9,25 +9,33 @@ const projects = [
     title: 'RACI Project Management Web App',
     text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
     photos: ['/project-snapshots/raci.png'],
-    role: 'Developer'
+    role: 'Developer',
+    link: 'https://bridgetro.se/raci/',
+    github: 'https://github.com/bridgetrosefitz/raci'
   },
   {
     title: 'Digital Innovation Statistics App',
     text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
     photos: ['project-snapshots/digital-innovation.png'],
-    role: 'Developer'
+    role: 'Developer',
+    link: 'http://digital-innovation-stats.herokuapp.com/',
+    github: 'https://github.com/bridgetrosefitz/digital_innovation'
   },
   {
     title: 'Food Systems Dialogues',
-    text: '',
+    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
     photos: ['project-snapshots/fsds.png'],
-    role: 'Product-managed'
+    role: 'Product-managed',
+    link: 'https://fsds-tool.herokuapp.com/',
+    github: 'https://github.com/Jesus-Escalona'
   },
   {
     title: 'Particles',
-    text: '',
+    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
     photos: ['project-snapshots/particles.png'],
-    role: 'Developer'
+    role: 'Developer',
+    link: 'http://bridgetro.se',
+    github: 'https://github.com/bridgetrosefitz/personal-website'
   }
 ]
 
@@ -50,7 +58,6 @@ const Main = () => {
 
   return (
     <>  
-
       <Project hidden={hidden} onClose={() => setHidden(prev => !prev)} project={currentProject} />
       <div className='company-logo-display-container'>
         <img alt='Shadow' src='company-logos/shadow-logo-red.png'></img>
