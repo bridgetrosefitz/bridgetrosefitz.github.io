@@ -8,8 +8,8 @@ const Project = ({hidden, onClose, project}) => {
   
   return (
     
-    <>
-      <div className={`${hidden ? 'hidden' : null} project`}>
+    <>{project ? 
+      (<div className={`${hidden ? 'hidden' : null} project`}>
         <h1>{project.title}
           <IoCloseOutline className='close-icon' onClick={onClose} />
         </h1>
@@ -17,7 +17,8 @@ const Project = ({hidden, onClose, project}) => {
         <ProjectSpecs {...project}/>
         <ProjectPhoto {...project} />
         </div>
-      </div>
+      </div>) : null
+    }
     </>
   )
 }

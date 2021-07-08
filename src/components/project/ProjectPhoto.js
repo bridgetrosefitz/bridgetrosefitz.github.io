@@ -1,10 +1,11 @@
 import React from 'react'
+import Project from './Project'
 
 const ProjectPhoto = props => {
 
   return(
     <div className='project-photo'>
-      <img alt='RACI' src={props.photos[0]}/>
+      <img alt='Project snapshot' src={props.photos[0]}/>
     </div>
   )
 }
