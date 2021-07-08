@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
 
-const Header = props => {
+const HeaderLarge = props => {
 
   const citySpans = () => {
     const arrayOfSpans = props.cities.map((city, index) => {
@@ -25,5 +25,5 @@ const Header = props => {
   )
 }
 
-export default Header
+export default HeaderLarge
 

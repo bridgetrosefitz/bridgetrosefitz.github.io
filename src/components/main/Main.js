@@ -3,7 +3,7 @@ import { Switch, Route, withRouter } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Localization from '../localization/Localization'
-import Header from '../header/Header'
+import HeaderLarge from '../header/HeaderLarge'
 import Work from '../work/Work'
 import { Spheres } from '../spheres/Spheres'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
@@ -17,7 +17,7 @@ const Main = () => {
     <div>
         <Suspense fallback={<h1>Loading...</h1>}>
           <Localization/>
-          <Header cities={cities} setCity={setCity}/>
+          <HeaderLarge cities={cities} setCity={setCity}/>
           <div id="canvas-container"/>
           <Canvas
             camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 30] }}>
@@ -26,6 +26,7 @@ const Main = () => {
             <directionalLight position={[0, 5, 5]} />
             <Spheres city={city} />
           </Canvas>
+          <button className='about-button'>About</button>
           <HiOutlineArrowNarrowDown className='nav-arrow' />
           <Work />
         </Suspense>

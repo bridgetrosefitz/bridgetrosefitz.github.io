@@ -1,0 +1,21 @@
+b {
+  font-weight: 500;
+}
+
+.about-p {
+  margin: 0px 280px;
+}
+
+.about-header {  
+  text-align: center;
+}
+
+img {
+  width: 50%;
+}
+
+.photo-of-me {
+  display: flex;
+  justify-content: center;
+  margin: 80px;
+}
