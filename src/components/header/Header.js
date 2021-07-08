@@ -3,10 +3,8 @@ import './header.css'
 
 const Header = props => {
 
-  const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo']
-
   const citySpans = () => {
-    const arrayOfSpans = cities.map((city, index) => {
+    const arrayOfSpans = props.cities.map((city, index) => {
       if (index === 0) {
         return <span key={index} onMouseEnter={() => props.setCity(city)}>{city}</span>
         }

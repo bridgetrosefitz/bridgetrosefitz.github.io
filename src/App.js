@@ -11,11 +11,13 @@ import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 function App() {
   const [city, setCity] = useState('Paris')
 
+  const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
+
   return (
     <div>
       <Suspense fallback={<h1>Loading...</h1>}>
       <Localization/>
-        <Header setCity={setCity}/>
+        <Header cities={cities} setCity={setCity}/>
         <div id="canvas-container"/>
         <Canvas
           camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 30] }}>

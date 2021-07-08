@@ -44,6 +44,15 @@ export const Spheres = props => {
     '/environments/times-square/nz.png',
   ])
 
+  const norwayEnvironmentMapTexture = loader.load([
+    '/environments/norway/px.png',
+    '/environments/norway/nx.png',
+    '/environments/norway/py.png',
+    '/environments/norway/ny.png',
+    '/environments/norway/pz.png',
+    '/environments/norway/nz.png',
+  ])
+
   let textureToUse = louvreEnvironmentMapTexture
 
     switch (props.city) {
@@ -59,6 +68,9 @@ export const Spheres = props => {
       case 'Tokyo':
         textureToUse = templeEnvironmentMapTexture
         break
+      case 'Oslo':
+        textureToUse = norwayEnvironmentMapTexture
+      break
       default:
         textureToUse = louvreEnvironmentMapTexture
         break
