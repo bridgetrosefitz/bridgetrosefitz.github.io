@@ -7,7 +7,7 @@ import Work from '../work/Work'
 import { Sphere } from '../scene/Scene'
 import { Plane } from '../scene/Scene'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
-import { OrbitControls } from '@react-three/drei'
+// import { OrbitControls } from '@react-three/drei'
 
 
 
@@ -17,28 +17,45 @@ const Main = props => {
   
 
   return (
-    <div>
+    <>
         <Suspense fallback={<h1>Loading...</h1>}>
           <Localization/>
           <HeaderLarge cities={cities} setCity={setCity}/>
-          <div id="canvas-container"/>
           <Canvas
-            shadowMap
-            camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 30] }}>
-            <ambientLight intensity={0.1} />
-            <directionalLight position={[0, 5, 5]} />
-          <Physics gravity={[0, -20, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.3}}>
+            style={{ position: 'fixed', height: '100%', width: '100%', top: 0, left: 0, zIndex: -1}}
+            shadows
+            camera={{ fov: 75, near: 0.1, far: 1000, position: [-3, 3, 60] }}>
+          <ambientLight
+            intensity={0.7}
+          />
+          <directionalLight
+            castShadow
+            shadow-mapSize-height={1024}
+            shadow-mapSize-width={1024}
+            shadow-camera-near={0.001}
+            shadow-camera-far={1000}
+            intensity={0.02}
+            position={[1.5, 3, 1]}
+            shadow-camera-left={-50}
+            shadow-camera-right={50}
+            shadow-camera-top={50}
+            shadow-camera-bottom={-50}
+          />
+          <Physics gravity={[0, -120, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.3}}>
+            {/* <Debug scale={1.1}> */}
               <Sphere city={city} />
               <Plane />
+            {/* </Debug> */}
             </Physics>
-            <OrbitControls/>
+            {/* <OrbitControls/> */}
             {/* <color attach='background' args={['pink']} /> */}
           </Canvas>
+          <div style={{height: 450, zIndex:-2}}/>
           <button onClick={() => props.history.push('/about')} className='about-button'>About</button>
           <HiOutlineArrowNarrowDown className='nav-arrow' />
           <Work />
         </Suspense>
-    </div>
+    </>
   );
 }
 

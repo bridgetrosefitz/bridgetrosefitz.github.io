@@ -11,7 +11,7 @@ const debugObject = {
 
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 20, -1], args: 12}))
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, -1], args: 12}))
   
   const loader = new CubeTextureLoader()
 
@@ -74,20 +74,24 @@ export const Sphere = props => {
         break
     }
 
+  useFrame((state, delta) => {
+    // console.log(state.clock.getElapsedTime())
+    // spherePhysicsRef.current.position.x += state.clock.getElapsedTime()
+    // api.rotation.set(state.clock.getElapsedTime(), state.clock.getElapsedTime(), 0)
+  })
+
   return (
-    <group>
       <mesh
         castShadow
         ref={spherePhysicsRef}
-        position={[0, 20, 0]}>
-        <sphereGeometry args={[12, 100, 100]} />
-        <meshStandardMaterial
-          roughness={debugObject.roughness}
-          metalness={debugObject.metalness}
-          envMap={textureToUse}
-        />
+        position={[0, 60, 0]}>
+          <sphereGeometry args={[12, 100, 100]} />
+          <meshStandardMaterial
+            roughness={debugObject.roughness}
+            metalness={debugObject.metalness}
+            envMap={textureToUse}
+          />
       </mesh>
-    </group>
   )
 }
 
@@ -95,9 +99,13 @@ export const Sphere = props => {
 export const Plane = () => {
   const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -15, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
-      <mesh ref={planePhysicsRef} position={[0, -15, 0]} rotation={[-Math.PI * 0.5, 0, 0]} receiveShadow >
-        <planeGeometry args={[100, 100]} />
-        <meshStandardMaterial color="white" />
+      <mesh 
+        receiveShadow
+        ref={planePhysicsRef} 
+        position={[0, -15, 0]} 
+        rotation={[-Math.PI * 0.5, 0, 0]}  >
+        <planeGeometry args={[1000, 1000]} />
+        <shadowMaterial color="#171717" opacity={0.1} />
     </mesh>
     )
 }
