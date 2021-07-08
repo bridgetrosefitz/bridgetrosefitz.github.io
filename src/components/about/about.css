@@ -14,8 +14,17 @@ img {
   width: 50%;
 }
 
+.work-button {
+  cursor: pointer;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: rotate(270deg);
+}
+
 .photo-of-me {
   display: flex;
   justify-content: center;
   margin: 80px;
+  transform: rotate(2deg);
 }

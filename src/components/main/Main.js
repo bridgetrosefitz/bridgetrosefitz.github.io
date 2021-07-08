@@ -1,5 +1,4 @@
-import React, {Suspense, useState} from 'react'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import React, {Suspense, useState, useRef, useEffect} from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Localization from '../localization/Localization'
@@ -9,9 +8,16 @@ import { Spheres } from '../spheres/Spheres'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 
 
-const Main = () => {
+const Main = props => {
   const [city, setCity] = useState('Paris')
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
+  const projects = useRef()
+
+  const executeScroll = () => projects.current.scrollIntoView()
+
+  useEffect(() => {
+    
+  })
 
   return (
     <div>
@@ -26,9 +32,9 @@ const Main = () => {
             <directionalLight position={[0, 5, 5]} />
             <Spheres city={city} />
           </Canvas>
-          <button className='about-button'>About</button>
+          <button onClick={() => props.history.push('/about')} className='about-button'>About</button>
           <HiOutlineArrowNarrowDown className='nav-arrow' />
-          <Work />
+          <Work ref={projects}/>
         </Suspense>
     </div>
   );
