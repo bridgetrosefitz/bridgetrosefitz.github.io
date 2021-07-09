@@ -1,6 +1,6 @@
-import React, {useMemo} from 'react'
+import React, {useEffect, useMemo} from 'react'
 import { CubeTextureLoader } from 'three'
-import { useFrame } from '@react-three/fiber'
+import { useFrame} from '@react-three/fiber'
 import { useSphere, usePlane,} from '@react-three/cannon'
 
 // const gui = new dat.GUI({ width: 500 })
@@ -8,6 +8,9 @@ const debugObject = {
   metalness: 1,
   roughness: 0.05
 }
+
+const clickableSphereXCoordinate = 19
+const clickableSphereZCoordinate = 10
 
 const loader = new CubeTextureLoader()
 
@@ -99,7 +102,7 @@ export const ClickableSphere = props => {
   return (
     <mesh
       {...props}
-      position={[19, 12, 10]}>
+      position={[clickableSphereXCoordinate, 12, clickableSphereZCoordinate]}>
       <sphereGeometry args={[1.5, 100, 100]} />
       <meshStandardMaterial
         roughness={0.05}
@@ -129,22 +132,17 @@ export const MakeAButtloadOfSpheres = ({number}) => {
   const radius = .5
   const [ref, api] = useSphere(() => ({
     mass: 10, 
-    position: [Math.random() - 0.5, Math.random() * 30, Math.random() - 0.5]
+    position: [(Math.random() - 0.5)*0.5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) + clickableSphereZCoordinate -2],
+    args: radius
   }))
 
-
-  //   const positions = useMemo(() => {
-  //   const array = new Float32Array(number * 3)
-  //   for (let i = 0; i < number; i++) {
-  //     array[i * 3 + 0] = 19
-  //     array[i * 3 + 1] = Math.random() * 100 
-  //     array[i * 3 + 2] = 0
-  //   }
-  //   return array
-  // }, [number])
-  useFrame(() => api.at(Math.floor(Math.random() * number)).position.set(0, Math.random() * 30, 0))
-  // useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * number, Math.random() * number, (Math.random() - 0.5) * number))
-
+  useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * 0.5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) + clickableSphereZCoordinate - 2))
+  // useEffect(() => {
+  //   ref.current.count = number
+  //   ref.current.matrixWorldNeedsUpdate = true
+  //   ref.current.material.needsUpdate = true
+  //   window.test = ref.current
+// }, [number] )
   return (
     <instancedMesh
       castShadow

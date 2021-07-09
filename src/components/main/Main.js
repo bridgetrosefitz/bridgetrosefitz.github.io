@@ -25,7 +25,7 @@ const Main = props => {
           <Localization/>
           <HeaderLarge cities={cities} setCity={setCity}/>
           <Canvas
-            style={{ position: 'fixed', height: '100%', width: '100%', top: 0, left: 0, zIndex: 0}}
+          style={{ position: 'fixed', height: '100%', width: '100%', top: 0, left: 0, zIndex: showButtload ? 9 : 0}}
             shadows
             camera={{ fov: 29, near: 0.1, far: 1000, position: [-3, 3, 60] }}>
           <ambientLight
@@ -46,9 +46,9 @@ const Main = props => {
           />
           <Physics gravity={[0, -120, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.3}}>
             {/* <Debug scale={1.1}> */}
-              <Sphere city={city} />
+            {!showButtload && <Sphere city={city} />}
               <ClickableSphere city={city} onClick={() => setShowButtload(!showButtload)} />
-              {showButtload && <MakeAButtloadOfSpheres number={160} />}
+              {showButtload && <MakeAButtloadOfSpheres number={60} />}
               <Plane />
             {/* </Debug> */}
             </Physics>
