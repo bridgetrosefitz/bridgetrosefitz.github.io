@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useMemo} from 'react'
 import { CubeTextureLoader } from 'three'
 import { useFrame } from '@react-three/fiber'
-import { useSphere, usePlane } from '@react-three/cannon'
+import { useSphere, usePlane,} from '@react-three/cannon'
 
 // const gui = new dat.GUI({ width: 500 })
 const debugObject = {
@@ -77,7 +77,7 @@ const setTexture = (city) => {
 
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, -1], args: 12}))
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, -1], args: [5]}))
 
   return (
       <mesh
@@ -98,8 +98,7 @@ export const ClickableSphere = props => {
   // This guy has no physics attached to him, because he stays fixed
   return (
     <mesh
-      // color={'white'}
-      onClick={() => alert('hi')}
+      {...props}
       position={[19, 12, 10]}>
       <sphereGeometry args={[1.5, 100, 100]} />
       <meshStandardMaterial
@@ -113,12 +112,12 @@ export const ClickableSphere = props => {
 
 
 export const Plane = () => {
-  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -15, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
+  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -8, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
       <mesh 
         receiveShadow
         ref={planePhysicsRef} 
-        position={[0, -15, 0]} 
+        position={[0, -8, 0]} 
         rotation={[-Math.PI * 0.5, 0, 0]}  >
         <planeGeometry args={[1000, 1000]} />
         <shadowMaterial color="#171717" opacity={0.1} />
@@ -126,20 +125,32 @@ export const Plane = () => {
     )
 }
 
-export const MakeAButtloadOfSpheres = number => {
-  const radius = Math.random() * 2
-  const [ref, api] = useSphere(() => ({ 
+export const MakeAButtloadOfSpheres = ({number}) => {
+  const radius = .5
+  const [ref, api] = useSphere(() => ({
     mass: 10, 
-    position: [15, 60, -1], 
-    args: radius }))
+    position: [Math.random() - 0.5, Math.random() * 30, Math.random() - 0.5]
+  }))
+
+
+  //   const positions = useMemo(() => {
+  //   const array = new Float32Array(number * 3)
+  //   for (let i = 0; i < number; i++) {
+  //     array[i * 3 + 0] = 19
+  //     array[i * 3 + 1] = Math.random() * 100 
+  //     array[i * 3 + 2] = 0
+  //   }
+  //   return array
+  // }, [number])
+  useFrame(() => api.at(Math.floor(Math.random() * number)).position.set(0, Math.random() * 30, 0))
+  // useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * number, Math.random() * number, (Math.random() - 0.5) * number))
 
   return (
     <instancedMesh
       castShadow
       ref={ref}
       args={[null, null, number]}>
-      <sphereBufferGeometry args={[radius, 100, 100]}>
-      </sphereBufferGeometry>
+      <sphereBufferGeometry args={[radius, 100, 100]}/>
       <meshStandardMaterial
         roughness={debugObject.roughness}
         metalness={debugObject.metalness}

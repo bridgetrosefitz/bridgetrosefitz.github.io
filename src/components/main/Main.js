@@ -1,11 +1,12 @@
 import React, {Suspense, useState} from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Physics } from '@react-three/cannon'
+import { Physics, Debug } from '@react-three/cannon'
 import Localization from '../localization/Localization'
 import HeaderLarge from '../header/HeaderLarge'
 import Work from '../work/Work'
 import { Sphere } from '../scene/Scene'
 import { ClickableSphere } from '../scene/Scene'
+import { MakeAButtloadOfSpheres } from '../scene/Scene'
 import { Plane } from '../scene/Scene'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import { OrbitControls } from '@react-three/drei'
@@ -14,7 +15,9 @@ import './main.css'
 
 const Main = props => {
   const [city, setCity] = useState('Paris')
+  const [showButtload, setShowButtload] = useState(false)
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
+
 
   return (
     <>
@@ -44,7 +47,8 @@ const Main = props => {
           <Physics gravity={[0, -120, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.3}}>
             {/* <Debug scale={1.1}> */}
               <Sphere city={city} />
-              <ClickableSphere city={city} />
+              <ClickableSphere city={city} onClick={() => setShowButtload(!showButtload)} />
+              {showButtload && <MakeAButtloadOfSpheres number={160} />}
               <Plane />
             {/* </Debug> */}
             </Physics>
