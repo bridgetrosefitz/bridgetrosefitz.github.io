@@ -1,7 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import './header.css'
 
 const HeaderLarge = props => {
+  const { t, i18n } = useTranslation()
 
   const citySpans = () => {
     const arrayOfSpans = props.cities.map((city, index) => {
@@ -19,7 +21,7 @@ const HeaderLarge = props => {
   return (
     <div {...props} className="header">
       <h1>Bridget Fitzgerald</h1>
-      <h2>Full stack developer</h2>
+      <h2>{t('header.h2')}</h2>
       <h3>{citySpans()}</h3>
     </div>
   )

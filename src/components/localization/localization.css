@@ -1,4 +1,6 @@
 button {
   background-color: transparent;
   border: none;
+  position: relative;
+  z-index: 2;
 }
