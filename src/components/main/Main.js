@@ -47,7 +47,7 @@ const Main = props => {
         {/* <Debug scale={1.1}> */}
         {!showButtload && <Sphere city={city} />}
           <ClickableSphere city={city} onClick={() => setShowButtload(!showButtload)} />
-          {showButtload && <MakeAButtloadOfSpheres number={100} />}
+          {showButtload && <MakeAButtloadOfSpheres city={city} number={100} />}
           <Plane />
         {/* </Debug> */}
         </Physics>

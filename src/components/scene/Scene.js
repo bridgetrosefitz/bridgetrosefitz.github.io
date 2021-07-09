@@ -128,7 +128,7 @@ export const Plane = () => {
     )
 }
 
-export const MakeAButtloadOfSpheres = ({number}) => {
+export const MakeAButtloadOfSpheres = ({number, city}) => {
   const radius = .5
   const [ref, api] = useSphere(() => ({
     mass: 10, 
@@ -152,7 +152,7 @@ export const MakeAButtloadOfSpheres = ({number}) => {
       <meshStandardMaterial
         roughness={debugObject.roughness}
         metalness={debugObject.metalness}
-        envMap={setTexture('Paris')} />
+        envMap={setTexture(city)} />
     </instancedMesh>
   )
 }
