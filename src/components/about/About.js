@@ -1,16 +1,18 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import Localization from '../localization/Localization'
 import HeaderSmall from '../header/HeaderSmall'
 import './about.css'
 
 const About = props => {
+  const { t } = useTranslation()
 
   return(
     <>
     <Localization />
     <button onClick={() => props.history.push('/')} className='work-button'>Work</button>
     <HeaderSmall/>
-      <h2 className='about-header' >About me</h2>
+      <h2 className='about-header' >{t('about.About me')}</h2>
       <p className='about-p'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
       <br/>
       <p className='about-p'>Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>

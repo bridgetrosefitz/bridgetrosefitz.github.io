@@ -1,6 +1,17 @@
 
 {
   "header": {
-    "h2": "フルスタックウェブ開発者"
+    "Full-stack-developer": "フルスタック開発者",
+    "Melbourne": "メルボルン",
+    "NYC": "ニューヨーク市",
+    "Paris": "パリ",
+    "Tokyo": "東京",
+    "Oslo": "オスロ"
+  },
+  "main": {
+    "About": "私について"
+  },
+  "about": {
+    "About me": "私について"
   }
 }

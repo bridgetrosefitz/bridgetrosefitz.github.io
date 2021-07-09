@@ -1,5 +1,16 @@
 {
   "header": {
-    "h2": "Développeuse full-stack"
+    "Full-stack-developer": "Développeuse full-stack",
+    "Melbourne": "Melbourne",
+    "NYC": "New York",
+    "Paris": "Paris",
+    "Tokyo": "Tokyo",
+    "Oslo": "Oslo"
+  },
+  "main": {
+    "About": "À propos"
+  },
+  "about": {
+    "About me": "Enchantée de faire votre connaissance"
   }
 }

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './main.css'
 import { Canvas } from '@react-three/fiber'
 import { Physics, Debug } from '@react-three/cannon'
 import Localization from '../localization/Localization'
@@ -10,14 +11,13 @@ import { MakeAButtloadOfSpheres } from '../scene/Scene'
 import { Plane } from '../scene/Scene'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import { OrbitControls } from '@react-three/drei'
-import './main.css'
-
+import { useTranslation } from 'react-i18next'
 
 const Main = props => {
+  const { t } = useTranslation()
   const [city, setCity] = useState('Paris')
   const [showButtload, setShowButtload] = useState(false)
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
-
 
   return (
     <>
@@ -57,10 +57,13 @@ const Main = props => {
           enableZoom={false}
         />
       </Canvas>
-      <div className='spacing-element'><button className='about-button' onClick={() => props.history.push('/about')} >About</button>
+      <div className='spacing-element'><button className='about-button' onClick={() => props.history.push('/about')} >{t('main.About')}</button>
       </div>
       <div className='main-content'>
-        <HiOutlineArrowNarrowDown className='nav-arrow' />
+        <div className='nav-arrow'>
+          <div className='nav-arrow-left-tip'></div>
+          <div className='nav-arrow-right-tip'></div>
+        </div>
         <Work />
       </div>
     </>

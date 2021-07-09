@@ -8,10 +8,10 @@ const HeaderLarge = props => {
   const citySpans = () => {
     const arrayOfSpans = props.cities.map((city, index) => {
       if (index === 0) {
-        return <span key={index} onMouseEnter={() => props.setCity(city)}>{city}</span>
+        return <span key={index} onMouseEnter={() => props.setCity(city)}>{t(`header.${city}`)}</span>
         }
       else {
-        return (<span onMouseEnter={() => props.setCity(city)}>{` · ${city}`}</span>)
+        return (<span onMouseEnter={() => props.setCity(city)}>{` · ${t(`header.${city}`)}`}</span>)
       }
   })
 
@@ -21,7 +21,7 @@ const HeaderLarge = props => {
   return (
     <div {...props} className="header">
       <h1>Bridget Fitzgerald</h1>
-      <h2>{t('header.h2')}</h2>
+      <h2>{t('header.Full-stack-developer')}</h2>
       <h3>{citySpans()}</h3>
     </div>
   )

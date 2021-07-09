@@ -1,5 +1,16 @@
 {
   "header": {
-    "h2": "Full stack web developer"
-  }
+    "Full-stack-developer": "Full stack developer",
+    "Melbourne": "Melbourne",
+    "NYC": "NYC",
+    "Paris": "Paris",
+    "Tokyo": "Tokyo",
+    "Oslo": "Oslo"
+  },
+    "main": {
+      "About": "About"
+    },
+    "about": {
+      "About me": "Hi there"
+    }
 }
