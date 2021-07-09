@@ -9,7 +9,6 @@ const App = () => {
 
   const changeLanguage = (selectedLanguage) => {
     i18n.changeLanguage(selectedLanguage)
-    console.log(i18n)
   };
 
   return (
@@ -17,11 +16,13 @@ const App = () => {
       <Route
         path="/about"
         render={routerProps => <About {...routerProps}
-        changeLanguage={changeLanguage} />}/>
+        changeLanguage={changeLanguage}
+        currentLanguage={i18n.language} />}/>
       <Route
         path="/"
         render={routerProps => <Main {...routerProps}
-        changeLanguage={changeLanguage} />} />
+        changeLanguage={changeLanguage}
+        currentLanguage={i18n.language} />} />
     </Switch>
   )
 }

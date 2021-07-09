@@ -9,8 +9,8 @@ const debugObject = {
   roughness: 0.05
 }
 
-const clickableSphereXCoordinate = 19
-const clickableSphereZCoordinate = 10
+const clickableSphereXCoordinate = 0
+const clickableSphereZCoordinate = 0
 
 const loader = new CubeTextureLoader()
 
@@ -102,7 +102,7 @@ export const ClickableSphere = props => {
   return (
     <mesh
       {...props}
-      position={[clickableSphereXCoordinate, 12, clickableSphereZCoordinate]}>
+      position={[clickableSphereXCoordinate+19, 12, clickableSphereZCoordinate+10 ]}>
       <sphereGeometry args={[1.5, 100, 100]} />
       <meshStandardMaterial
         roughness={0.05}
@@ -135,8 +135,8 @@ export const MakeAButtloadOfSpheres = ({number}) => {
     position: [(Math.random() - 0.5)*0.5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) + clickableSphereZCoordinate -2],
     args: radius
   }))
-
-  useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * 0.5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) + clickableSphereZCoordinate - 2))
+  // useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * 0.5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) + clickableSphereZCoordinate - 2))
+  useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * 5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) *5 + clickableSphereZCoordinate - 2))
   // useEffect(() => {
   //   ref.current.count = number
   //   ref.current.matrixWorldNeedsUpdate = true

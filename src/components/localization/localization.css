@@ -3,4 +3,9 @@ button {
   border: none;
   position: relative;
   z-index: 2;
+  cursor: pointer;
+}
+
+button:hover {
+  color: grey;
 }
