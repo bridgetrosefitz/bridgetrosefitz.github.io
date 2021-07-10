@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.css'
 import { AiFillGithub, AiOutlineMail } from 'react-icons/ai'
 import { TiSocialLinkedin } from 'react-icons/ti'
-import {  useTranslation } from 'react-i18next'
+import {  useTranslation, Trans } from 'react-i18next'
 
 const allIcons = [
   
@@ -22,7 +22,7 @@ const allIcons = [
 
 const iconsGroup = allIcons.map(icon => {
   return (
-    <a href={icon.link} rel='noreferrer' target="_blank">
+    <a className='contact-logos' href={icon.link} rel='noreferrer' target="_blank">
       {icon.component}
     </a>
   )
@@ -33,7 +33,11 @@ const Footer = props => {
 
   return(
     <div className='footer'>
-      <div className='footer-text'>{t('footer.text')}</div>
+      <div className='footer-text'>
+        <p>{t("footer.Don't hesitate to say hello")}</p>
+        <p>{t("footer.I would love to hear from you")}</p>
+      </div>
+      <div className='email-div'><a href='mailto:bridgetrosefitz@gmail.com' rel='noreferrer' target='_blank'>bridgetrosefitz@gmail.com</a></div>
       <div className='icons-container'>{iconsGroup}</div>
     </div>
   )

@@ -1,12 +1,16 @@
 .footer {
   position: relative;
+  display: flex;
+  flex-direction: column;
   height: 400px;
+  padding: 0px 20px;
+
 }
 
-a {
+.contact-logos {
   text-decoration: none;
   padding: 10px;
-  margin-left: 25px;
+  margin: 0px 10px;
   font-size: 30px;
   color: #111;
   height: 50px;
@@ -14,10 +18,10 @@ a {
 }
 
 .icons-container {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  margin: 10px;
+  position: relative;
+  /* bottom: 0px;
+  right: 0px; */
+  width: 100%;
 }
 
 .cv {
@@ -25,4 +29,23 @@ a {
   font-weight: 400;
   line-height: 30px;
   vertical-align: top;
+}
+
+.footer-text {
+  margin-top: auto;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.footer-text p {
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0px;
+}
+
+.email-div {
+  text-align: right;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
