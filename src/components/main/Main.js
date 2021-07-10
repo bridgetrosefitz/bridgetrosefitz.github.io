@@ -57,7 +57,10 @@ const Main = props => {
           enableZoom={false}
         />
       </Canvas>
-      <div className='spacing-element'><button className='about-button' onClick={() => props.history.push('/about')} >{t('main.About')}</button>
+      <div className='spacing-element-for-canvas'>
+        <button className='about-button' onClick={() => props.history.push('/about')}>
+          {t('main.About')}
+        </button>
       </div>
       <div className='main-content'>
         <div className='nav-arrow'>
@@ -65,6 +68,7 @@ const Main = props => {
           <div className='nav-arrow-right-tip'></div>
         </div>
         <Work />
+        <div className='footer'></div>
       </div>
     </>
   );

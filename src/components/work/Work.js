@@ -70,7 +70,7 @@ const Work = () => {
         <img alt='国際交流基金' src='company-logos/japan-foundation-logo-english.png'></img>
         <img alt='Australian Music Examinations Board' src='company-logos/ameb-logo.jpeg'></img>
       </div>
-
+      <div className='spacing-element-between-logos-and-projects'/>
       <div ref={projectsRef} className='projects-display-container'>
         {projectDisplay}
       </div>

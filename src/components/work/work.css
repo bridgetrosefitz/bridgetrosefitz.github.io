@@ -30,6 +30,11 @@
   grid-template-rows: repeat(2, 290px);
 }
 
+.spacing-element-between-logos-and-projects {
+  height: 100px;
+  position: relative;
+}
+
 .grid-item {
   background-color: #bebebe;
   color: #444;
