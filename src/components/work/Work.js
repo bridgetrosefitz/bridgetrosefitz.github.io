@@ -62,7 +62,7 @@ const Work = () => {
       <button onClick={executeScroll}> Yo</button>
       <Project hidden={hidden} onClose={() => setHidden(prev => !prev)} project={currentProject} />
       <div className='company-logo-display-container'>
-        <img alt='Shadow' src='company-logos/shadow-logo-red.png'></img>
+        <img alt='Shadow' src='company-logos/shadow-logo.svg'></img>
         <img alt='LEK Consulting' src='company-logos/lek-logo.svg'></img>
         <img alt='World Economic Forum' src='company-logos/wef-logo.png'></img>
         <img alt='United Nations' src='company-logos/united-nations-logo.png'></img>
