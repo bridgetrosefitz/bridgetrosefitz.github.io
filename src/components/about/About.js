@@ -9,7 +9,7 @@ const About = props => {
 
   return(
     <>
-    <Localization />
+    <Localization {...props}/>
     <button onClick={() => props.history.push('/')} className='work-button'>Work</button>
     <HeaderSmall/>
       <h2 className='about-header' >{t('about.About me')}</h2>
