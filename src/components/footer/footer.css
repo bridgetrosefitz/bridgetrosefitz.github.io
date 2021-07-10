@@ -1,0 +1,21 @@
+.footer {
+  position: relative;
+  height: 400px;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 25px;
+  font-size: 30px;
+  color: #111;
+  height: 50px;
+  float: right;
+}
+
+.icons-container {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 10px;
+}

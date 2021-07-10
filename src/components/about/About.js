@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Localization from '../localization/Localization'
 import HeaderSmall from '../header/HeaderSmall'
+import Footer from '../footer/Footer'
 import './about.css'
 
 const About = props => {
@@ -35,6 +36,7 @@ const About = props => {
         <b>{t('about.People can change')}</b><br />
         {t('about.People can change text')}
       </p>
+    <Footer/>
     </>
   )
 }

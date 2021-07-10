@@ -5,6 +5,7 @@ import { Physics, Debug } from '@react-three/cannon'
 import Localization from '../localization/Localization'
 import HeaderLarge from '../header/HeaderLarge'
 import Work from '../work/Work'
+import Footer from '../footer/Footer'
 import { Sphere } from '../scene/Scene'
 import { ClickableSphere } from '../scene/Scene'
 import { MakeAButtloadOfSpheres } from '../scene/Scene'
@@ -68,8 +69,8 @@ const Main = props => {
           <div className='nav-arrow-right-tip'></div>
         </div>
         <Work />
-        <div className='footer'></div>
       </div>
+      <Footer/>
     </>
   );
 }
