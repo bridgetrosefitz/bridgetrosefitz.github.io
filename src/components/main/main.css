@@ -27,6 +27,7 @@ canvas {
   margin: 0 auto;
   width: 25px;
   height: 50px;
+  cursor: pointer;
 }
 
 .nav-arrow-left-tip, .nav-arrow-right-tip {

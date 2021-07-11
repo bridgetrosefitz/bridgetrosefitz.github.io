@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import './work.css'
 import Project from '../project/Project'
 
@@ -37,13 +37,11 @@ const projects = [
   }
 ]
 
-const Work = () => {
+const Work = props => {
 
   const [hidden, setHidden] = useState(true)
   const [currentProject, setCurrentProject] = useState(null)
   const projectsRef = useRef(null)
-
-  const executeScroll = () => projectsRef.current.scrollIntoView()
 
   const projectDisplay = projects.map(project => {
 
@@ -59,7 +57,7 @@ const Work = () => {
 
   return (
     <>  
-      <button onClick={executeScroll}> Yo</button>
+      <button onClick={props.scrollToProjects}> Yo</button>
       <Project hidden={hidden} onClose={() => setHidden(prev => !prev)} project={currentProject} />
       <div className='company-logo-display-container'>
         <img alt='Shadow' src='company-logos/shadow-logo.svg'></img>
@@ -71,7 +69,7 @@ const Work = () => {
         <img alt='Australian Music Examinations Board' src='company-logos/ameb-logo.jpeg'></img>
       </div>
       <div className='spacing-element-between-logos-and-projects'/>
-      <div ref={projectsRef} className='projects-display-container'>
+      <div ref={props.projectsRef} className='projects-display-container'>
         {projectDisplay}
       </div>
     </>

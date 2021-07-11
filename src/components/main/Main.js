@@ -1,4 +1,4 @@
-import React, {useState, useLayoutEffect} from 'react'
+import React, { useState, useLayoutEffect, useRef } from 'react'
 import './main.css'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Physics, Debug } from '@react-three/cannon'
@@ -19,8 +19,12 @@ const Main = props => {
   const { t } = useTranslation()
   const [city, setCity] = useState('Paris')
   const [showButtload, setShowButtload] = useState(false)
-  const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
   const [scrollHeight, setScrollHeight] = useState(document.body.scrollHeight)
+  const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
+  const projectsRef = useRef()
+
+
+  const scrollToProjects = () => projectsRef.current.scrollIntoView()
 
   useLayoutEffect(() => {
     setScrollHeight(document.body.scrollHeight)
@@ -70,11 +74,11 @@ const Main = props => {
         </button>
       </div>
       <div className='main-content'>
-        <div className='nav-arrow'>
+        <div className='nav-arrow' onClick={() => scrollToProjects()}>
           <div className='nav-arrow-left-tip'></div>
           <div className='nav-arrow-right-tip'></div>
         </div>
-        <Work />
+        <Work projectsRef={projectsRef} scrollToProjects={scrollToProjects}/>
       </div>
       <Footer/>
     </>
