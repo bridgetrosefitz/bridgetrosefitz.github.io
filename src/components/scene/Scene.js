@@ -114,7 +114,7 @@ export const ClickableSphere = props => {
 }
 
 
-export const Plane = () => {
+export const PlaneMiddle = () => {
   const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -8, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
       <mesh 
@@ -122,11 +122,25 @@ export const Plane = () => {
         ref={planePhysicsRef} 
         position={[0, -8, 0]} 
         rotation={[-Math.PI * 0.5, 0, 0]}  >
-        <planeGeometry args={[1000, 1000]} />
+        <planeGeometry args={[20, 20]} />
         <shadowMaterial color="#171717" opacity={0.1} />
     </mesh>
     )
 }
+
+// export const PlaneBottom = () => {
+//   const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -8, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
+//   return (
+//     <mesh
+//       receiveShadow
+//       ref={planePhysicsRef}
+//       position={[0, -8, 0]}
+//       rotation={[-Math.PI * 0.5, 0, 0]}  >
+//       <planeGeometry args={[20, 20]} />
+//       <shadowMaterial color="#171717" opacity={0.1} />
+//     </mesh>
+//   )
+// }
 
 export const MakeAButtloadOfSpheres = ({number, city}) => {
   const radius = .5

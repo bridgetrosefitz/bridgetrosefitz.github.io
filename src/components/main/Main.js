@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useLayoutEffect} from 'react'
 import './main.css'
 import { Canvas } from '@react-three/fiber'
 import { Physics, Debug } from '@react-three/cannon'
@@ -9,7 +9,7 @@ import Footer from '../footer/Footer'
 import { Sphere } from '../scene/Scene'
 import { ClickableSphere } from '../scene/Scene'
 import { MakeAButtloadOfSpheres } from '../scene/Scene'
-import { Plane } from '../scene/Scene'
+import { PlaneMiddle } from '../scene/Scene'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import { OrbitControls } from '@react-three/drei'
 import { useTranslation } from 'react-i18next'
@@ -19,13 +19,19 @@ const Main = props => {
   const [city, setCity] = useState('Paris')
   const [showButtload, setShowButtload] = useState(false)
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
+  const [scrollHeight, setScrollHeight] = useState(document.body.scrollHeight)
+
+  useLayoutEffect(() => {
+    setScrollHeight(document.body.scrollHeight)
+  })
 
   return (
     <>
       <Localization {...props}/>
       <HeaderLarge cities={cities} setCity={setCity}/>
       <Canvas
-        style={{ position: 'fixed', height: '100%', width: '100%', top: 0, left: 0, zIndex: showButtload ? 1 : 0}}
+        style={{ position: 'fixed', height: '100vh', width: '100%', top: 0, left: 0, zIndex: showButtload ? 1 : 0}}
+        className={'mycanvas'}
         shadows
         camera={{ fov: 29, near: 0.1, far: 1000, position: [-3, 3, 60] }}>
       <ambientLight
@@ -49,7 +55,7 @@ const Main = props => {
         {!showButtload && <Sphere city={city} />}
           <ClickableSphere city={city} onClick={() => setShowButtload(!showButtload)} />
           {showButtload && <MakeAButtloadOfSpheres city={city} number={100} />}
-          <Plane />
+          <PlaneMiddle />
         {/* </Debug> */}
         </Physics>
         <OrbitControls
