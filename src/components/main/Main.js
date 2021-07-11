@@ -1,6 +1,6 @@
 import React, {useState, useLayoutEffect} from 'react'
 import './main.css'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { Physics, Debug } from '@react-three/cannon'
 import Localization from '../localization/Localization'
 import HeaderLarge from '../header/HeaderLarge'
@@ -13,6 +13,7 @@ import { PlaneMiddle } from '../scene/Scene'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import { OrbitControls } from '@react-three/drei'
 import { useTranslation } from 'react-i18next'
+import { PerspectiveCamera } from 'three'
 
 const Main = props => {
   const { t } = useTranslation()
@@ -30,10 +31,9 @@ const Main = props => {
       <Localization {...props}/>
       <HeaderLarge cities={cities} setCity={setCity}/>
       <Canvas
-        style={{ position: 'fixed', height: '100vh', width: '100%', top: 0, left: 0, zIndex: showButtload ? 1 : 0}}
-        className={'mycanvas'}
+        style={{ position: 'absolute', height: scrollHeight, width: '100%', top: 0, left: 0, zIndex: showButtload ? 1 : 0}}
         shadows
-        camera={{ fov: 29, near: 0.1, far: 1000, position: [-3, 3, 60] }}>
+        camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 50, 30] }}>
       <ambientLight
         intensity={0.7}
       />
@@ -44,7 +44,7 @@ const Main = props => {
         shadow-camera-near={0.001}
         shadow-camera-far={1000}
         intensity={0.02}
-        position={[1.5, 5, 1]}
+        position={[1.5, 100, 1]}
         shadow-camera-left={-50}
         shadow-camera-right={50}
         shadow-camera-top={50}
@@ -59,8 +59,8 @@ const Main = props => {
         {/* </Debug> */}
         </Physics>
         <OrbitControls
-          minPolarAngle={Math.PI * 0.5}
-          maxPolarAngle={Math.PI * 0.5}
+          minPolarAngle={Math.PI * 0.45}
+          maxPolarAngle={Math.PI * 0.45}
           enableZoom={false}
         />
       </Canvas>

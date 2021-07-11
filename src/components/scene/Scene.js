@@ -1,13 +1,12 @@
-import React, {useEffect, useMemo} from 'react'
+import React from 'react'
 import { CubeTextureLoader } from 'three'
-import { useFrame} from '@react-three/fiber'
-import { useSphere, usePlane,} from '@react-three/cannon'
+import { useFrame } from '@react-three/fiber'
+import { useSphere, usePlane} from '@react-three/cannon'
 
 // const gui = new dat.GUI({ width: 500 })
 const debugObject = {
   metalness: 1,
-  roughness: 0.05
-}
+  roughness: 0.05}
 
 const clickableSphereXCoordinate = 0
 const clickableSphereZCoordinate = 0
@@ -78,16 +77,18 @@ const setTexture = (city) => {
   return textureToUse
 }
 
+const planePositionY = 10
+
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, -1], args: [5]}))
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, -1], args: [3]}))
 
   return (
       <mesh
         castShadow
         ref={spherePhysicsRef}
         position={[0, 60, 0]}>
-          <sphereGeometry args={[5, 100, 100]} />
+          <sphereGeometry args={[3, 100, 100]} />
           <meshStandardMaterial
             roughness={debugObject.roughness}
             metalness={debugObject.metalness}
@@ -113,14 +114,13 @@ export const ClickableSphere = props => {
   )
 }
 
-
 export const PlaneMiddle = () => {
-  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -8, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
+  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, planePositionY, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
       <mesh 
         receiveShadow
         ref={planePhysicsRef} 
-        position={[0, -8, 0]} 
+        position={[0, planePositionY, 0]}
         rotation={[-Math.PI * 0.5, 0, 0]}  >
         <planeGeometry args={[20, 20]} />
         <shadowMaterial color="#171717" opacity={0.1} />

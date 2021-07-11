@@ -1,0 +1,1 @@
+onCreated={({ camera }) => camera.lookAt(0, 60, -1)}
