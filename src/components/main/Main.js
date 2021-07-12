@@ -41,7 +41,7 @@ const Main = props => {
       <Canvas
         style={{ position: 'absolute', height: scrollHeight+footerHeight, width: '100%', top: 0, left: 0, zIndex: showButtload ? 1 : 0}}
         shadows
-        camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 50, 30] }}>
+        camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 50, 40] }}>
       <ambientLight
         intensity={0.7}
       />

@@ -104,17 +104,17 @@ export const ClickableSphere = props => {
   )
 }
 
-const planeMiddlePositionY = 10
+const planeMiddlePositionY = 15
 
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, 0-1], args: [3]}))
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 30, 0], args: [3]}))
 
   return (
       <mesh
         castShadow
         ref={spherePhysicsRef}
-        position={[0, 60, 0]}>
+        position={[0, 30, 0]}>
           <sphereGeometry args={[3, 100, 100]} />
           <meshStandardMaterial
             roughness={debugObject.roughness}
