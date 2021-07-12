@@ -3,10 +3,8 @@ import { CubeTextureLoader } from 'three'
 import { useFrame } from '@react-three/fiber'
 import { useSphere, usePlane} from '@react-three/cannon'
 
-// const gui = new dat.GUI({ width: 500 })
-const debugObject = {
-  metalness: 1,
-  roughness: 0.05}
+const sphereMetalness = 1
+const sphereRoughness = 0.05
 
 const clickableSphereXCoordinate = 0
 const clickableSphereZCoordinate = 0
@@ -104,7 +102,7 @@ export const ClickableSphere = props => {
   )
 }
 
-const planeMiddlePositionY = 15
+const planeMiddlePositionY = 14.5
 
 export const Sphere = props => {
 
@@ -117,9 +115,9 @@ export const Sphere = props => {
         position={[0, 30, 0]}>
           <sphereGeometry args={[3, 100, 100]} />
           <meshStandardMaterial
-            roughness={debugObject.roughness}
-            metalness={debugObject.metalness}
-            envMap={setTexture(props.city)}
+          roughness={sphereRoughness}
+          metalness={sphereMetalness}
+          envMap={setTexture(props.city)}
           />
       </mesh>
   )
@@ -158,35 +156,6 @@ export const PlaneMiddle = () => {
     )
 }
 
-// export const PlaneBottom = () => {
-//   const planeBottomPosition = [0, -24, 0]
-//   const [planeBottomPhysicsRef] = usePlane(() => ({ mass: 0, position: planeBottomPosition, rotation: [-Math.PI * 0.5, 0, 0] }))
-//   return (
-//     <mesh
-//       receiveShadow
-//       ref={planeBottomPhysicsRef}
-//       position={planeBottomPosition}
-//       rotation={[-Math.PI * 0.5, 0, 0]}  >
-//       <planeGeometry args={[50, 50]} />
-//       <shadowMaterial color="#171717" opacity={0.1} />
-//     </mesh>
-//   )
-// }
-
-// export const PlaneBottom = () => {
-//   const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -8, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
-//   return (
-//     <mesh
-//       receiveShadow
-//       ref={planePhysicsRef}
-//       position={[0, -8, 0]}
-//       rotation={[-Math.PI * 0.5, 0, 0]}  >
-//       <planeGeometry args={[20, 20]} />
-//       <shadowMaterial color="#171717" opacity={0.1} />
-//     </mesh>
-//   )
-// }
-
 export const MakeAButtloadOfSpheres = ({number, city}) => {
   const radius = .5
   const [ref, api] = useSphere(() => ({
@@ -209,8 +178,8 @@ export const MakeAButtloadOfSpheres = ({number, city}) => {
       args={[null, null, number]}>
       <sphereBufferGeometry args={[radius, 100, 100]}/>
       <meshStandardMaterial
-        roughness={debugObject.roughness}
-        metalness={debugObject.metalness}
+        roughness={sphereRoughness}
+        metalness={sphereMetalness}
         envMap={setTexture(city)} />
     </instancedMesh>
   )
