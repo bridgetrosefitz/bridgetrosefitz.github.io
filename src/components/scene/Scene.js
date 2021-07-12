@@ -123,25 +123,6 @@ export const Sphere = props => {
   )
 }
 
-// export const SpheresAtBottom = props => {
-//   const sphereAtBottom1Position = [0, -15, 0]
-//   const [sphereAtBottomPhysicsRef, api] = useSphere(() => ({ mass: 2, position: sphereAtBottom1Position, args: 1 }))
-
-//   return (
-//       <mesh
-//         castShadow
-//         ref={sphereAtBottomPhysicsRef}
-//         position={sphereAtBottom1Position}>
-//         <sphereGeometry args={[1, 100, 100]} />
-//         <meshStandardMaterial
-//           roughness={debugObject.roughness}
-//           metalness={debugObject.metalness}
-//           envMap={setTexture(props.city)}
-//         />
-//       </mesh>
-//   )
-// }
-
 export const PlaneMiddle = () => {
   const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, planeMiddlePositionY, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
@@ -163,14 +144,9 @@ export const MakeAButtloadOfSpheres = ({number, city}) => {
     position: [(Math.random() - 0.5)*0.5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) + clickableSphereZCoordinate -2],
     args: radius
   }))
-  // useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * 0.5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) + clickableSphereZCoordinate - 2))
+
   useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * 5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) *5 + clickableSphereZCoordinate - 2))
-  // useEffect(() => {
-  //   ref.current.count = number
-  //   ref.current.matrixWorldNeedsUpdate = true
-  //   ref.current.material.needsUpdate = true
-  //   window.test = ref.current
-// }, [number] )
+
   return (
     <instancedMesh
       castShadow
