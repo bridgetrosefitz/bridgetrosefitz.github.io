@@ -7,9 +7,11 @@ import HeaderLarge from '../header/HeaderLarge'
 import Work from '../work/Work'
 import Footer from '../footer/Footer'
 import { Sphere } from '../scene/Scene'
+import { SpheresAtBottom } from '../scene/Scene'
 import { ClickableSphere } from '../scene/Scene'
 import { MakeAButtloadOfSpheres } from '../scene/Scene'
 import { PlaneMiddle } from '../scene/Scene'
+import { PlaneBottom } from '../scene/Scene'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import { OrbitControls } from '@react-three/drei'
 import { useTranslation } from 'react-i18next'
@@ -17,7 +19,7 @@ import { PerspectiveCamera } from 'three'
 
 const Main = props => {
   const { t } = useTranslation()
-  const [city, setCity] = useState('Paris')
+  const [city, setCity] = useState('Melbourne')
   const [showButtload, setShowButtload] = useState(false)
   const [scrollHeight, setScrollHeight] = useState(document.body.scrollHeight)
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
@@ -30,12 +32,14 @@ const Main = props => {
     setScrollHeight(document.body.scrollHeight)
   })
 
+  const footerHeight = 150;
+
   return (
     <>
       <Localization {...props}/>
       <HeaderLarge cities={cities} setCity={setCity}/>
       <Canvas
-        style={{ position: 'absolute', height: scrollHeight, width: '100%', top: 0, left: 0, zIndex: showButtload ? 1 : 0}}
+        style={{ position: 'absolute', height: scrollHeight+footerHeight, width: '100%', top: 0, left: 0, zIndex: showButtload ? 1 : 0}}
         shadows
         camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 50, 30] }}>
       <ambientLight
@@ -57,14 +61,16 @@ const Main = props => {
       <Physics gravity={[0, -120, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.3}}>
         {/* <Debug scale={1.1}> */}
         {!showButtload && <Sphere city={city} />}
-          <ClickableSphere city={city} onClick={() => setShowButtload(!showButtload)} />
-          {showButtload && <MakeAButtloadOfSpheres city={city} number={100} />}
-          <PlaneMiddle />
+        <ClickableSphere city={city} onClick={() => setShowButtload(!showButtload)} />
+        {showButtload && <MakeAButtloadOfSpheres city={city} number={100} />}
+        <PlaneMiddle />
+        {/* <PlaneBottom /> */}
+        {/* <SpheresAtBottom city={city}/> */}
         {/* </Debug> */}
         </Physics>
         <OrbitControls
-          minPolarAngle={Math.PI * 0.45}
-          maxPolarAngle={Math.PI * 0.45}
+          minPolarAngle={Math.PI * 0.25}
+          maxPolarAngle={Math.PI * 0.25}
           enableZoom={false}
         />
       </Canvas>

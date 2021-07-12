@@ -13,6 +13,17 @@ const clickableSphereZCoordinate = 0
 
 const loader = new CubeTextureLoader()
 
+
+const melbourneEnvironmentMapTexture = loader.load([
+  '/environments/melbourne/px.png',
+  '/environments/melbourne/nx.png',
+  '/environments/melbourne/py.png',
+  '/environments/melbourne/ny.png',
+  '/environments/melbourne/pz.png',
+  '/environments/melbourne/nz.png',
+])
+
+
 const louvreEnvironmentMapTexture = loader.load([
   '/environments/louvre/px.png',
   '/environments/louvre/nx.png',
@@ -51,11 +62,11 @@ const norwayEnvironmentMapTexture = loader.load([
 
 const setTexture = (city) => {
 
-  let textureToUse = louvreEnvironmentMapTexture
+  let textureToUse = melbourneEnvironmentMapTexture
 
   switch (city) {
     case 'Melbourne':
-      textureToUse = louvreEnvironmentMapTexture
+      textureToUse = melbourneEnvironmentMapTexture
       break
     case 'NYC':
       textureToUse = timesSquareEnvironmentMapTexture
@@ -70,18 +81,34 @@ const setTexture = (city) => {
       textureToUse = norwayEnvironmentMapTexture
       break
     default:
-      textureToUse = louvreEnvironmentMapTexture
+      textureToUse = melbourneEnvironmentMapTexture
       break
   }
 
   return textureToUse
 }
 
-const planePositionY = 10
+export const ClickableSphere = props => {
+  // This guy has no physics attached to him, because he stays fixed
+  return (
+    <mesh
+      {...props}
+      position={[clickableSphereXCoordinate + 19, 12, clickableSphereZCoordinate + 10]}>
+      <sphereGeometry args={[1.5, 100, 100]} />
+      <meshStandardMaterial
+        roughness={0.05}
+        metalness={1}
+        envMap={setTexture(props.city)}
+      />
+    </mesh>
+  )
+}
+
+const planeMiddlePositionY = 10
 
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, -1], args: [3]}))
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 60, 0-1], args: [3]}))
 
   return (
       <mesh
@@ -98,35 +125,53 @@ export const Sphere = props => {
   )
 }
 
-export const ClickableSphere = props => {
-  // This guy has no physics attached to him, because he stays fixed
-  return (
-    <mesh
-      {...props}
-      position={[clickableSphereXCoordinate+19, 12, clickableSphereZCoordinate+10 ]}>
-      <sphereGeometry args={[1.5, 100, 100]} />
-      <meshStandardMaterial
-        roughness={0.05}
-        metalness={1}
-        envMap={setTexture(props.city)}
-      />
-    </mesh>
-  )
-}
+// export const SpheresAtBottom = props => {
+//   const sphereAtBottom1Position = [0, -15, 0]
+//   const [sphereAtBottomPhysicsRef, api] = useSphere(() => ({ mass: 2, position: sphereAtBottom1Position, args: 1 }))
+
+//   return (
+//       <mesh
+//         castShadow
+//         ref={sphereAtBottomPhysicsRef}
+//         position={sphereAtBottom1Position}>
+//         <sphereGeometry args={[1, 100, 100]} />
+//         <meshStandardMaterial
+//           roughness={debugObject.roughness}
+//           metalness={debugObject.metalness}
+//           envMap={setTexture(props.city)}
+//         />
+//       </mesh>
+//   )
+// }
 
 export const PlaneMiddle = () => {
-  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, planePositionY, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
+  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, planeMiddlePositionY, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
       <mesh 
         receiveShadow
         ref={planePhysicsRef} 
-        position={[0, planePositionY, 0]}
+        position={[0, planeMiddlePositionY, 0]}
         rotation={[-Math.PI * 0.5, 0, 0]}  >
         <planeGeometry args={[20, 20]} />
         <shadowMaterial color="#171717" opacity={0.1} />
     </mesh>
     )
 }
+
+// export const PlaneBottom = () => {
+//   const planeBottomPosition = [0, -24, 0]
+//   const [planeBottomPhysicsRef] = usePlane(() => ({ mass: 0, position: planeBottomPosition, rotation: [-Math.PI * 0.5, 0, 0] }))
+//   return (
+//     <mesh
+//       receiveShadow
+//       ref={planeBottomPhysicsRef}
+//       position={planeBottomPosition}
+//       rotation={[-Math.PI * 0.5, 0, 0]}  >
+//       <planeGeometry args={[50, 50]} />
+//       <shadowMaterial color="#171717" opacity={0.1} />
+//     </mesh>
+//   )
+// }
 
 // export const PlaneBottom = () => {
 //   const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, -8, 0], rotation: [-Math.PI * 0.5, 0, 0] }))

@@ -9,6 +9,7 @@
 p {
   font-size: 18px;
   line-height: 30px;
+  white-space: pre-line;
 }
 
 @font-face {
