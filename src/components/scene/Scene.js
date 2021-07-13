@@ -86,34 +86,18 @@ const setTexture = (city) => {
   return textureToUse
 }
 
-export const ClickableSphere = props => {
-  // This guy has no physics attached to him, because he stays fixed
-  return (
-    <mesh
-      {...props}
-      position={[clickableSphereXCoordinate + 19, 12, clickableSphereZCoordinate + 10]}>
-      <sphereGeometry args={[1.5, 100, 100]} />
-      <meshStandardMaterial
-        roughness={0.05}
-        metalness={1}
-        envMap={setTexture(props.city)}
-      />
-    </mesh>
-  )
-}
-
-const planeMiddlePositionY = 14.5
+const planeMiddlePositionY = -12
 
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 30, 0], args: [3]}))
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 30, 0], args: [10]}))
 
   return (
       <mesh
         castShadow
         ref={spherePhysicsRef}
         position={[0, 30, 0]}>
-          <sphereGeometry args={[3, 100, 100]} />
+          <sphereGeometry args={[10, 100, 100]} />
           <meshStandardMaterial
           roughness={sphereRoughness}
           metalness={sphereMetalness}
@@ -123,7 +107,7 @@ export const Sphere = props => {
   )
 }
 
-export const PlaneMiddle = () => {
+export const Plane = () => {
   const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, planeMiddlePositionY, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
       <mesh 
