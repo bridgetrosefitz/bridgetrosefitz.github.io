@@ -24,15 +24,35 @@
       "People can change text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     "work": {
-      "RACI Project Management Web App": "RACI Project Management Web App",
-      "Digital Innovation Statistics App": "Digital Innovation Statistics App",
-      "Food Systems Dialogues": "Food Systems Dialogues",
-      "(Product-managed)": "(Product-managed)",
-      "Particles": "Particles",
+      "Product-managed": "Product-managed",
       "Front end": "Front end",
       "Back end": "Back end",
       "See it live or view the user stories, or code.": "See it live or view the user stories, or code.",
-      "Project main text  ": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      "RACI": {
+        "Title": "RACI Project Management",
+        "Tech stack front end": "React, Semantic UI React, JWT",
+        "Tech stack back end": "Rails, BCrypt",
+        "Project main text": "I built this app to help solve the problem of managing roles on a team.\n\n'RACI' stands for Responsible, Accountable, Consulted, Informed. From my experience, the RACI (or DACI) framework provides a helpful level of detail to make clear who is responsible for getting a job done well. It reduces the risk of low quality work arising from murky or pooled accountability, it helps make sure the right people have input on tasks (and conversely, gives team members explicit authority to make decisions without input!), and it prompts conversations about workload and capacity.\n\nOn past projects, I used Google Sheets to build my own RACI frameworks. This app has the advantage of being a standardized process which is simple to use, and of supporting functionality such as flags and alerts, issue-tracking and workflow tools."
+      },
+      "Digital Innovation Statistics": "Digital Innovation Statistics App",
+        "Digital Innovation": {
+          "Title": "Digital Innovation Statistics",
+          "Tech stack front end": "Rails, Bootstrap",
+          "Tech stack back end": "Rails API, BCrypt",
+          "Project main text": "This app is a platform to compare digital innovation in different countries. It provides initial thinking and dynamic metrics about factors which lead to innovative digital products being created in a country, such as the amount of activity on GitHub, and the availability of capital.\n\nIn future, the site could crowdsource ideas and data about what makes a ripe environment for digital innovation (indicators about mindset, access to tech education, the price of a computer, who knows!), with the goal of helping people in tech connect and travel to places where they can contribute to innovative projects.\n\n This project was inspired by a research paper completed during my Masters."
+        },
+        "Particles": {
+          "Title": "Particles",
+          "Tech stack front end": "React, React Three Fiber, Three.js",
+          "Tech stack back end": "N/A",
+          "Project main text": "These particles started as an experiment for my personal website. I find the dancing dots endlessly beautiful - please have a play!\n\nI built custom GLSL shaders in Three.js to transform photos into millions of tiny dots, and to allow the user to disturb the dots' movements by dragging their cursor."
+        },
+        "Food Systems Dialogues": {
+          "Title": "Food Systems Dialogues Seating Plan Tool",
+          "Tech stack front end": "React, Google Sheets API (built by the awesome Jesus Escalona)",
+          "Tech stack back end": "N/A",
+          "Project main text": "While managing the Food Systems Dialogues (FSDs) on behalf of the World Economic Forum and other sponsors, I product-managed the creation of a seating plan and reporting tool.\n\nThe FSDs promise to bring together people from all different sectors of food production (e.g. farmers, manufacturers, nutritionists) to - literally - the same table to devise strategies for promoting nutrition and sustainability. \n\nWith this tool, generating diverse seating plans went from taking days, to being at the click of a button. It also gives visibility on where representation is low, allowing organizers to seek more balanced participation."
+        }
     },
     "footer": {
       "Don't hesitate to say hello" : "Don't hesitate to say hello ... or bonjour, こんにちは, 你好, etc ...",

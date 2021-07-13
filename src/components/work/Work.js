@@ -1,35 +1,44 @@
 import React, { useState, useRef } from 'react'
 import './work.css'
 import Project from '../project/Project'
+import { useTranslation } from 'react-i18next'
 
 const projects = [
   {
-    title: 'RACI Project Management',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
+    title: 'work.RACI.Title',
+    text: 'work.RACI.Project main text',
+    techStackFrontEnd: 'work.RACI.Tech stack front end',
+    techStackBackEnd: 'work.RACI.Tech stack back end',
     photos: ['/project-snapshots/raci.png'],
     role: 'Developer',
     link: 'https://bridgetro.se/raci/',
     github: 'https://github.com/bridgetrosefitz/raci'
   },
   {
-    title: 'Digital Innovation Statistics',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
+    title: 'work.Digital Innovation.Title',
+    text: 'work.Digital Innovation.Project main text',
+    techStackFrontEnd: 'work.Digital Innovation.Tech stack front end',
+    techStackBackEnd: 'work.Digital Innovation.Tech stack back end',
     photos: ['project-snapshots/digital-innovation.png'],
     role: 'Developer',
     link: 'http://digital-innovation-stats.herokuapp.com/',
     github: 'https://github.com/bridgetrosefitz/digital_innovation'
   },
   {
-    title: 'Particles',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
+    title: 'work.Particles.Title',
+    text: 'work.Particles.Project main text',
+    techStackFrontEnd: 'work.Particles.Tech stack front end',
+    techStackBackEnd: 'work.Particles.Tech stack back end',
     photos: ['project-snapshots/particles.png'],
     role: 'Developer',
     link: 'http://bridgetro.se',
     github: 'https://github.com/bridgetrosefitz/personal-website'
   },
   {
-    title: 'Food Systems Dialogues',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
+    title: 'work.Food Systems Dialogues.Title',
+    text: 'work.Food Systems Dialogues.Project main text',
+    techStackFrontEnd: 'work.Food Systems Dialogues.Tech stack front end',
+    techStackBackEnd: 'work.Food Systems Dialogues.Tech stack back end',
     photos: ['project-snapshots/fsds.png'],
     role: 'Product-managed',
     link: 'https://fsds-tool.herokuapp.com/',
@@ -42,6 +51,7 @@ const Work = props => {
   const [hidden, setHidden] = useState(true)
   const [currentProject, setCurrentProject] = useState(null)
   const projectsRef = useRef(null)
+  const { t } = useTranslation()
 
   const projectDisplay = projects.map(project => {
 
@@ -50,8 +60,8 @@ const Work = props => {
         setCurrentProject(project)
         setHidden(prev => !prev)
       }}>
-        <img alt={project.title} src={project.photos[0]}></img>
-          <p>{project.title}{project.role !== 'Developer' ? (<span className='small-text'> ({project.role})</span>) : null}</p>
+        <img alt={t(project.title)} src={project.photos[0]}></img>
+          <p>{t(project.title)}{project.role !== 'Developer' ? (<span className='small-text'> ({t('work.Product-managed')})</span>) : null}</p>
       </div>)
   })
 
@@ -70,6 +80,7 @@ const Work = props => {
         <img alt='Australian Music Examinations Board' src='company-logos/ameb-logo.png'></img>
       </div>
       <div className='spacing-element-between-logos-and-projects'/>
+      {/* <h2 className='tech-projects-header'>Tech projects</h2> */}
       <div ref={props.projectsRef} className='projects-display-container'>
         {projectDisplay}
       </div>
