@@ -1,15 +1,12 @@
 import React from 'react'
 import { CubeTextureLoader } from 'three'
-import { useFrame } from '@react-three/fiber'
 import { useSphere, usePlane} from '@react-three/cannon'
 
 const sphereMetalness = 1
 const sphereRoughness = 0.05
 const sphereRadius = 10
-
-const clickableSphereXCoordinate = 0
-const clickableSphereZCoordinate = 0
-
+const spherePosition = [0, 30, 0]
+const planePosition = [0, -12, 0]
 const loader = new CubeTextureLoader()
 
 
@@ -87,19 +84,17 @@ const setTexture = (city) => {
   return textureToUse
 }
 
-const planeMiddlePositionY = -12
-
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 30, 0], args: [sphereRadius]}))
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: spherePosition, args: [sphereRadius]}))
 
   return (
       <mesh
         {...props}
         castShadow
         ref={spherePhysicsRef}
-        position={[0, 30, 0]}>
-      <sphereGeometry args={[sphereRadius, 100, 100]} />
+        position={spherePosition}>
+        <sphereGeometry args={[sphereRadius, 100, 100]} />
           <meshStandardMaterial
           roughness={sphereRoughness}
           metalness={sphereMetalness}
@@ -110,12 +105,12 @@ export const Sphere = props => {
 }
 
 export const Plane = () => {
-  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [0, planeMiddlePositionY, 0], rotation: [-Math.PI * 0.5, 0, 0] }))
+  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: planePosition, rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
       <mesh 
         receiveShadow
         ref={planePhysicsRef} 
-        position={[0, planeMiddlePositionY, 0]}
+        position={planePosition}
         rotation={[-Math.PI * 0.5, 0, 0]}  >
         <planeGeometry args={[100, 100]} />
         <shadowMaterial color="#171717" opacity={0.1} />
@@ -128,7 +123,7 @@ export const MakeAButtloadOfSpheres = ({number, city}) => {
   const [ref, api] = useSphere(() => ({
     mass: 10, 
     material: { friction: 0.02, restitution: 5 },
-    position: [(Math.random() - 0.5) * 0.5 + clickableSphereXCoordinate, (Math.random() - 0.5) * (planeMiddlePositionY + (sphereRadius * 0.5)) , (Math.random() - 0.5) + clickableSphereZCoordinate -2],
+    position: [(Math.random() - 0.5) * 0.5 + spherePosition[0], (Math.random() - 0.5) * (planePosition[1] + (sphereRadius * 0.5)), (Math.random() - 0.5) + spherePosition[2] -2],
     args: radius
   }))
   
