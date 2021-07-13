@@ -6,7 +6,7 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
   switch (currentLanguage) {
     case 'en':
       return (
-        <div className='localization-buttons'>
+        <div>
           <button onClick={() => changeLanguage('fr')}>Français</button>·
           <button onClick={() => changeLanguage('jp')}>日本語</button>
         </div>
@@ -14,7 +14,7 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
       break
     case 'fr':
       return (
-        <div className='localization-buttons'>
+        <div>
           <button onClick={() => changeLanguage('en')}>English</button>·
           <button onClick={() => changeLanguage('jp')}>日本語</button>
         </div>
@@ -22,7 +22,7 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
       break
     case 'jp':
       return (
-        <div className='localization-buttons'>
+        <div>
           <button onClick={() => changeLanguage('fr')}>Français</button>·
           <button onClick={() => changeLanguage('en')}>English</button>
         </div>
@@ -30,7 +30,7 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
       break
     default:
       return (
-        <div className='localization-buttons'>
+        <div>
           <button onClick={() => changeLanguage('fr')}>Français</button>·
           <button onClick={() => changeLanguage('jp')}>日本語</button>·
           <button onClick={() => changeLanguage('en')}>English</button>

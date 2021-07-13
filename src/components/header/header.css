@@ -1,3 +1,4 @@
+/* The main header is inline-block to maximize the space on the canvas where the cursor is ew-resize */
 .header {
   display: inline-block;
   position: relative;
@@ -8,11 +9,10 @@
 }
 
 .header-small {
-  position: fixed;
-  width: 100%;
-  font-size: 20px;
   text-align: center;
   top: 2px;
+
+  font-size: 20px;
   cursor: pointer;
 }
 

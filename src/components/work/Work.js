@@ -4,7 +4,7 @@ import Project from '../project/Project'
 
 const projects = [
   {
-    title: 'RACI Project Management Web App',
+    title: 'RACI Project Management',
     text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
     photos: ['/project-snapshots/raci.png'],
     role: 'Developer',
@@ -12,12 +12,20 @@ const projects = [
     github: 'https://github.com/bridgetrosefitz/raci'
   },
   {
-    title: 'Digital Innovation Statistics App',
+    title: 'Digital Innovation Statistics',
     text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
     photos: ['project-snapshots/digital-innovation.png'],
     role: 'Developer',
     link: 'http://digital-innovation-stats.herokuapp.com/',
     github: 'https://github.com/bridgetrosefitz/digital_innovation'
+  },
+  {
+    title: 'Particles',
+    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
+    photos: ['project-snapshots/particles.png'],
+    role: 'Developer',
+    link: 'http://bridgetro.se',
+    github: 'https://github.com/bridgetrosefitz/personal-website'
   },
   {
     title: 'Food Systems Dialogues',
@@ -27,14 +35,6 @@ const projects = [
     link: 'https://fsds-tool.herokuapp.com/',
     github: 'https://github.com/Jesus-Escalona'
   },
-  {
-    title: 'Particles',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
-    photos: ['project-snapshots/particles.png'],
-    role: 'Developer',
-    link: 'http://bridgetro.se',
-    github: 'https://github.com/bridgetrosefitz/personal-website'
-  }
 ]
 
 const Work = props => {
@@ -51,7 +51,7 @@ const Work = props => {
         setHidden(prev => !prev)
       }}>
         <img alt={project.title} src={project.photos[0]}></img>
-          <div>{project.title}{project.role !== 'Developer' ? (<span className='small-text'> ({project.role})</span>) : null}</div>
+          <p>{project.title}{project.role !== 'Developer' ? (<span className='small-text'> ({project.role})</span>) : null}</p>
       </div>)
   })
 

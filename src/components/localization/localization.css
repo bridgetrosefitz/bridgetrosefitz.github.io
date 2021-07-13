@@ -6,12 +6,6 @@ button {
   cursor: pointer;
 }
 
-.localization-buttons {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
 button:hover {
   color: grey;
 }
