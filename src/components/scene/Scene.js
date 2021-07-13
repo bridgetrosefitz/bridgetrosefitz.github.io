@@ -5,6 +5,7 @@ import { useSphere, usePlane} from '@react-three/cannon'
 
 const sphereMetalness = 1
 const sphereRoughness = 0.05
+const sphereRadius = 10
 
 const clickableSphereXCoordinate = 0
 const clickableSphereZCoordinate = 0
@@ -90,14 +91,15 @@ const planeMiddlePositionY = -12
 
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 30, 0], args: [10]}))
+  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: [0, 30, 0], args: [sphereRadius]}))
 
   return (
       <mesh
+        {...props}
         castShadow
         ref={spherePhysicsRef}
         position={[0, 30, 0]}>
-          <sphereGeometry args={[10, 100, 100]} />
+      <sphereGeometry args={[sphereRadius, 100, 100]} />
           <meshStandardMaterial
           roughness={sphereRoughness}
           metalness={sphereMetalness}
@@ -115,22 +117,21 @@ export const Plane = () => {
         ref={planePhysicsRef} 
         position={[0, planeMiddlePositionY, 0]}
         rotation={[-Math.PI * 0.5, 0, 0]}  >
-        <planeGeometry args={[20, 20]} />
+        <planeGeometry args={[100, 100]} />
         <shadowMaterial color="#171717" opacity={0.1} />
     </mesh>
     )
 }
 
 export const MakeAButtloadOfSpheres = ({number, city}) => {
-  const radius = .5
+  const radius = 0.5
   const [ref, api] = useSphere(() => ({
     mass: 10, 
-    position: [(Math.random() - 0.5)*0.5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) + clickableSphereZCoordinate -2],
+    material: { friction: 0.02, restitution: 5 },
+    position: [(Math.random() - 0.5) * 0.5 + clickableSphereXCoordinate, (Math.random() - 0.5) * (planeMiddlePositionY + (sphereRadius * 0.5)) , (Math.random() - 0.5) + clickableSphereZCoordinate -2],
     args: radius
   }))
-
-  useFrame(() => api.at(Math.floor(Math.random() * number)).position.set((Math.random() - 0.5) * 5 + clickableSphereXCoordinate, Math.random() * 20, (Math.random() - 0.5) *5 + clickableSphereZCoordinate - 2))
-
+  
   return (
     <instancedMesh
       castShadow

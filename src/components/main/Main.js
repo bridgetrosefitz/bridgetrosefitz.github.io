@@ -6,7 +6,7 @@ import Localization from '../localization/Localization'
 import HeaderLarge from '../header/HeaderLarge'
 import Work from '../work/Work'
 import Footer from '../footer/Footer'
-import { Sphere, Plane } from '../scene/Scene'
+import { Sphere, Plane, MakeAButtloadOfSpheres } from '../scene/Scene'
 import { OrbitControls } from '@react-three/drei'
 import { useTranslation } from 'react-i18next'
 
@@ -17,8 +17,16 @@ const Main = props => {
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
   const projectsRef = useRef()
 
-
   const scrollToProjects = () => projectsRef.current.scrollIntoView()
+
+  useEffect(() => {
+    
+    if(showButtload === true) {
+    setTimeout(() => {
+      setShowButtload(false)
+    }, 8000)}
+
+  }, [showButtload])
 
   return (
     <>
@@ -45,8 +53,9 @@ const Main = props => {
         shadow-camera-bottom={-50}
       />
       <Physics gravity={[0, -120, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.5}}>
-        <Sphere city={city} />
+        {!showButtload && <Sphere city={city} onClick={() => setShowButtload(!showButtload)}/>}
         <Plane />
+          {showButtload && <MakeAButtloadOfSpheres city={city} number={100} />}
         </Physics>
         <OrbitControls
           minPolarAngle={Math.PI * 0.5}
