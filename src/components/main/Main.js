@@ -1,39 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import './main.css'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/cannon'
 import Localization from '../localization/Localization'
 import HeaderLarge from '../header/HeaderLarge'
+import Group from '../group/Group'
 import Work from '../work/Work'
 import Footer from '../footer/Footer'
-import { Sphere, Plane, MakeAButtloadOfSpheres } from '../scene/Scene'
 import { OrbitControls } from '@react-three/drei'
 import { useTranslation } from 'react-i18next'
 
 const Main = props => {
   const { t } = useTranslation()
   const [city, setCity] = useState('Melbourne')
-  const [showButtload, setShowButtload] = useState(false)
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
   const projectsRef = useRef()
 
   const scrollToProjects = () => projectsRef.current.scrollIntoView()
 
-  useEffect(() => {
-    
-    if(showButtload === true) {
-    setTimeout(() => {
-      setShowButtload(false)
-    }, 8000)}
-
-  }, [showButtload])
-
   return (
     <>
       <Localization {...props}/>
-      <HeaderLarge cities={cities} setCity={setCity}/>
+      <HeaderLarge cities={cities} city={city} setCity={setCity}/>
       <Canvas
-        style={{ position: 'absolute', height: '100vh', width: '100%', top: 0, left: 0, zIndex: showButtload ? 1 : 0}}
+        style={{ position: 'absolute', height: '100vh', width: '100%', top: 0, left: 0}}
         shadows
         camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 50, 40] }}>
       <ambientLight
@@ -53,10 +43,8 @@ const Main = props => {
         shadow-camera-bottom={-50}
       />
       <Physics gravity={[0, -120, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.5}}>
-        {!showButtload && <Sphere city={city} onClick={() => setShowButtload(!showButtload)}/>}
-        <Plane />
-          {showButtload && <MakeAButtloadOfSpheres city={city} number={100} />}
-        </Physics>
+        <Group city={city}/>
+      </Physics>
         <OrbitControls
           minPolarAngle={Math.PI * 0.5}
           maxPolarAngle={Math.PI * 0.5}

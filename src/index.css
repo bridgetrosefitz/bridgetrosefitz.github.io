@@ -12,6 +12,10 @@ p {
   white-space: pre-line;
 }
 
+canvas {
+  cursor: ew-resize;
+}
+
 @font-face {
 font-family: "Gambetta";
 src: local("Gambettaight"),

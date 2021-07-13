@@ -38,6 +38,7 @@
 .grid-item {
   background-color: #bebebe;
   color: #444;
+  cursor: pointer;
   /* border-radius: 5px; */
   /* padding: 20px; */
   /* font-size: 20px; */

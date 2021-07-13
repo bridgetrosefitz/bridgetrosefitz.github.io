@@ -11,7 +11,7 @@ canvas {
 }
 
 .spacing-element-for-canvas {
-  height: 455px;
+  height: 480px;
   z-index: -1;
   position: 'relative';
 }
@@ -47,6 +47,13 @@ canvas {
   position: absolute;
   transform: rotate(55deg);
   right: 6px;
+}
+
+.sphereHtml {
+  background-color: transparent;
+  cursor: crosshair;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 

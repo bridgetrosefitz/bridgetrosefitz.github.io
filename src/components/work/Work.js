@@ -57,7 +57,6 @@ const Work = props => {
 
   return (
     <>  
-      <button onClick={props.scrollToProjects}> Yo</button>
       <Project hidden={hidden} onClose={() => setHidden(prev => !prev)} project={currentProject} />
       <div className='company-logo-display-container'>
         <img alt='Shadow' src='company-logos/shadow-logo.svg'></img>
@@ -65,8 +64,10 @@ const Work = props => {
         <img alt='World Economic Forum' src='company-logos/wef-logo.png'></img>
         <img alt='United Nations' src='company-logos/united-nations-logo.png'></img>
         <img alt='Institut Montaigne' src='company-logos/institut-montaigne-logo.png'></img>
+        <img alt='Sciences Po' src='company-logos/sciences-po-logo.png'></img>
+        <img alt='Monash University' src='company-logos/monash-university-logo.png'></img>
         <img alt='国際交流基金' src='company-logos/japan-foundation-logo-english.png'></img>
-        <img alt='Australian Music Examinations Board' src='company-logos/ameb-logo.jpeg'></img>
+        <img alt='Australian Music Examinations Board' src='company-logos/ameb-logo.png'></img>
       </div>
       <div className='spacing-element-between-logos-and-projects'/>
       <div ref={props.projectsRef} className='projects-display-container'>

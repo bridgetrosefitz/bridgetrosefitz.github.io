@@ -1,6 +1,7 @@
 import React from 'react'
 import { CubeTextureLoader } from 'three'
 import { useSphere, usePlane} from '@react-three/cannon'
+import { Html } from '@react-three/drei'
 
 const sphereMetalness = 1
 const sphereRoughness = 0.05
@@ -100,6 +101,9 @@ export const Sphere = props => {
           metalness={sphereMetalness}
           envMap={setTexture(props.city)}
           />
+      <Html distanceFactor={800}>
+        <div onClick={props.onClick} style={{ height: sphereRadius * 2, width: sphereRadius * 2}} className='sphereHtml'/>
+        </Html>
       </mesh>
   )
 }

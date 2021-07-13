@@ -1,12 +1,28 @@
 .header {
+  display: inline-block;
+  position: relative;
   text-align: center;
   z-index: 1;
-  position: relative;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .header-small {
+  position: fixed;
+  width: 100%;
   font-size: 20px;
   text-align: center;
   top: 2px;
   cursor: pointer;
+}
+
+.city {
+  /* transition: .2s; */
+  cursor: crosshair;
+}
+
+
+.selected {
+  /* text-shadow: 0.5px 0.5px grey ; */
+  text-shadow: -3px 5px 4px darkgrey
 }
