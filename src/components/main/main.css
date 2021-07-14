@@ -1,14 +1,6 @@
 canvas {
   height: 520px;
 }
-.about-button {
-  cursor: pointer;
-  position: absolute;
-  left: 5px;
-  top: 50%;
-  z-index: 1;
-  transform: rotate(270deg);
-}
 
 .spacing-element-for-canvas {
   height: 480px;

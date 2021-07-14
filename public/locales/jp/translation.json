@@ -18,14 +18,15 @@
     "My values": "My values (and things I'm figuring out).",
     "Make it ok to be wrong": "Make it ok to be wrong",
     "Make it ok to be wrong text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Be the one to change and be vulnerable": "Be the one to change and be vulnerable",
-    "Be the one to change and be vulnerable text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Be the one to change": "Be the one to change",
+    "Be the one to change text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "Care about the people you work with": "Care about the people you work with",
     "Care about the people you work with text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "People can change": "People can change",
     "People can change text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   "work": {
+    "Work button": "Home",
     "RACI Project Management Web App": "RACI Project Management Web App",
     "Digital Innovation Statistics App": "Digital Innovation Statistics App",
     "Food Systems Dialogues": "Food Systems Dialogues",

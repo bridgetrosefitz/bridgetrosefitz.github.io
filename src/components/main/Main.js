@@ -52,7 +52,7 @@ const Main = props => {
         />
       </Canvas>
       <div className='spacing-element-for-canvas'>
-        <button className='about-button' onClick={() => props.history.push('/about')}>
+        <button className='side-button' onClick={() => props.history.push('/about')}>
           {t('main.About')}
         </button>
       </div>
