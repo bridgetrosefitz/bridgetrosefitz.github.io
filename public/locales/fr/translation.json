@@ -11,33 +11,53 @@
     "About": "À propos"
   },
   "about": {
-    "About me": "Enchantée de faire votre connaissance.",
-    "About main text": "J’adore la technologie et le processus de développement de produits. La tech est la meilleure manière que j’ai trouvée pour aider les gens; elle favorise une approche scientifique, restant toujours proche de la vérité; elle a derrière elle une communauté énorme qui a vocation à partager les connaissances de manière toujours plus efficace; et elle nous rassemble sur le chemin de l’apprentissage et de l’amélioration permanents. Ce sont des choses auxquelles je tiens profondément.\n\nJe suis australienne*, mais j’ai vécu et travaillé également à Paris, à New York, et à Oslo. Je parle français - et suis très francophile - ainsi que le japonais et un chinois rudimentaire. Mes proches me connaissent passionnée pour les langues, les cultures, les gens et les idées, et j’adore intégrer tout cela à la technologie.\n\nJe suis intarissable sur les sujets de grammaire et de vocabulaire … mais au fond, ce qui me rend le plus heureuse, c’est de réussir à exprimer les choses simplement pour favoriser la compréhension et le partage d’idées dans un esprit ouvert.\n\nVoilà! J’espère que nous aurons l’occasion de faire connaissance un jour. N’hésitez pas à dire bonjour, si l’envie vous prend.",
+    "About me": "Enchantée de faire ta connaissance.",
+    "About main text": "J’adore la technologie et le processus de développement de produits. La tech est la meilleure manière que j’ai trouvée pour aider les gens; elle favorise une approche scientifique, restant toujours proche de la vérité; elle a derrière elle une communauté énorme qui a vocation à partager les connaissances de manière toujours plus efficace; et elle nous rassemble sur le chemin de l’apprentissage et de l’amélioration permanents. Ce sont des choses auxquelles je tiens profondément.\n\nJe suis australienne*, mais j’ai vécu et travaillé également à Paris, à New York, et à Oslo. Je parle français - et suis très francophile - ainsi que le japonais et un chinois rudimentaire. Mes proches me connaissent passionnée pour les langues, les cultures, les gens et les idées, et j’adore intégrer tout cela à la technologie.\n\nJe suis intarissable sur les sujets de grammaire et de vocabulaire … mais au fond, ce qui me rend le plus heureuse, c’est de réussir à exprimer les choses simplement pour favoriser la compréhension et le partage d’idées dans un esprit ouvert.\n\nVoilà! J’espère que nous aurons l’occasion de faire connaissance un jour. N’hésites pas à dire bonjour, si l’envie te prend.",
     "Asterisk": "*Techniquement, j'ai la citoyenneté américaine aussi",
     "My values": "Des valeurs qui m'importent (et quelques idées encore en travail).",
     "Make it ok to be wrong": "Créer des environnements où il est acceptable d'avoir tort",
-    "Make it ok to be wrong text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "Make it ok to be wrong text": "Being wrong is part of improving. If you keep pushing the bounds of what is possible, and given that the world is always changing, at some point you will always be wrong, you will always fail. You’ll fail and then you’ll push past it and get better. If you are able to own that you were wrong, you can study how you can change. That is why I think making environments where it is ok to be wrong is so critical.\n\nI feel like in so many places where we work, it takes a massive feat of courage to point out where you don’t know something or where your team might be on the wrong track. I want to always set an example of a healthy amount of self doubt, of changing and learning through not knowing. And I hope I always dig deep to find how to help others worry less about being right or wrong and, instead, focus on getting to the truth and building cool stuff.",
     "Be the one to change": "Oser être celui qui est prêt à changer",
-    "Be the one to change text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Be the one to change text": "It is really hard to be vulnerable. It’s hard to step outside your world, and your safety, and all the ways of thinking you’ve inherited, from your community and your culture. But for me, the feeling of connecting with someone who is different from you is one of the most amazing things in the world. And it is worth it to be the person who steps out of what is familiar, without waiting for the other person to.\n\nOne of my memories is sitting in the small home of a kind octogenarian in Oqaatsut, Greenland. It was just the two of us, and neither of us spoke each other’s language, but we shared beautiful moments of wordless understanding as she showed me how to thread beads on a traditional Greenlandic necklace.\n\nYou learn so much, and the rewards are immense, when you are the one to change and go towards the other.",
     "Care about the people you work with": "Se soucier vraiment de ses collègues",
-    "Care about the people you work with text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Care about the people you work with text": "At work, there is caring, and then there is really caring - being willing to take a knock for a colleague, to genuinely seek to know where they’re coming from, and to invest in their success. Doing these things, in my experience, unlocks an incredible ability to work on hard problems together and come up with amazing solutions.\n\nI am a big fan of Kim Scott’s idea of Radical Candor. And I 100% buy her assessment that having great relationships with your colleagues means putting work into caring personally, and directly challenging each other. At the same time. Always. These two things reinforce each other and build trust.\n\nPeople can tell when you care about them just because it’s convenient, or expected. If you go out of your way for each other, and say the hard stuff to each other, the bonds you can build lead to good outcomes for everyone.",
     "People can change": "Les gens sont capables de changer",
-    "People can change text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
+    "People can change text": "In the right environment, cultivating a growth mindset, you can be the person you want to be. I do not have a perfect growth mindset, but I’m working on it. As I come to ‘see’ more and more of the influences which have shaped the mindsets and behaviors I have currently, it helps me choose which ones to let go of and which other ones to go after.\n\nUnfamiliar things and change can make a lot of fear pour out, and it takes a lot of energy to work through them. And maybe you - or the people in your life - are not in the right environment or it’s not the right moment to succeed at changing. But there are ways to make it easier - for yourself and for others - to change. And it’s an amazing gift to give yourself and the people around you to forgive your stumbles, try not to judge, and design a strategy to support the change you want."
+    },
   "work": {
     "Work button": "Page principale",
-    "RACI Project Management Web App": "RACI Project Management Web App",
-    "Digital Innovation Statistics App": "Digital Innovation Statistics App",
-    "Food Systems Dialogues": "Food Systems Dialogues",
-    "(Product-managed)": "(Product-managed)",
-    "Particles": "Particles",
+    "Product-managed": "Product-managed",
     "Front end": "Front end",
     "Back end": "Back end",
     "See it live or view the user stories, or code.": "See it live or view the user stories, or code.",
-    "Project main text  ": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-  },
-    "footer": {
-      "Don't hesitate to say hello": "N'hésites pas à dire hello / こんにちは / 你好! ",
-      "I would love to hear from you": "Ça me ferait plaisir de faire ta connaissance!"
+    "RACI": {
+      "Title": "RACI Project Management",
+      "Tech stack front end": "React, Semantic UI React, JWT",
+      "Tech stack back end": "Rails, BCrypt",
+      "Project main text": "I built this app to help solve the problem of managing roles on a team.\n\n'RACI' stands for Responsible, Accountable, Consulted, Informed. From my experience, the RACI (or DACI) framework provides a helpful level of detail to make clear who is responsible for getting a job done well. It reduces the risk of low quality work arising from murky or pooled accountability, it helps make sure the right people have input on tasks (and conversely, gives team members explicit authority to make decisions without input!), and it prompts conversations about workload and capacity.\n\nOn past projects, I used Google Sheets to build my own RACI frameworks. This app has the advantage of being a standardized process which is simple to use, and of supporting functionality such as flags and alerts, issue-tracking and workflow tools."
+    },
+    "Digital Innovation Statistics": "Digital Innovation Statistics App",
+    "Digital Innovation": {
+      "Title": "Digital Innovation Statistics",
+      "Tech stack front end": "Rails, Bootstrap",
+      "Tech stack back end": "Rails API, BCrypt",
+      "Project main text": "This app is a platform to compare digital innovation in different countries. It provides initial thinking and dynamic metrics about factors which lead to innovative digital products being created in a country, such as the amount of activity on GitHub, and the availability of capital.\n\nIn future, the site could crowdsource ideas and data about what makes a ripe environment for digital innovation (indicators about mindset, access to tech education, the price of a computer, who knows!), with the goal of helping people in tech connect and travel to places where they can contribute to innovative projects.\n\n This project was inspired by a research paper completed during my Masters."
+    },
+    "Particles": {
+      "Title": "Particles",
+      "Tech stack front end": "React, React Three Fiber, Three.js",
+      "Tech stack back end": "N/A",
+      "Project main text": "These particles started as an experiment for my personal website. I find the dancing dots endlessly beautiful - please have a play!\n\nI built custom GLSL shaders in Three.js to transform photos into millions of tiny dots, and to allow the user to disturb the dots' movements by dragging their cursor."
+    },
+    "Food Systems Dialogues": {
+      "Title": "Food Systems Dialogues Seating Plan Tool",
+      "Tech stack front end": "React, Google Sheets API (built by the awesome Jesus Escalona)",
+      "Tech stack back end": "N/A",
+      "Project main text": "While managing the Food Systems Dialogues (FSDs) on behalf of the World Economic Forum and other sponsors, I product-managed the creation of a seating plan and reporting tool.\n\nThe FSDs promise to bring together people from all different sectors of food production (e.g. farmers, manufacturers, nutritionists) to - literally - the same table to devise strategies for promoting nutrition and sustainability. \n\nWith this tool, generating diverse seating plans went from taking days, to being at the click of a button. It also gives visibility on where representation is low, allowing organizers to seek more balanced participation."
     }
+  },
+  "footer": {
+    "Don't hesitate to say hello": "N'hésites pas à dire hello / こんにちは / 你好! ",
+    "I would love to hear from you": "Ça me ferait plaisir de faire ta connaissance!"
+  }
 }
