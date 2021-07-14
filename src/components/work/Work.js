@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import './work.css'
 import Project from '../project/Project'
 import { useTranslation } from 'react-i18next'
@@ -12,7 +12,8 @@ const projects = [
     photos: ['/project-snapshots/raci.png'],
     role: 'Developer',
     link: 'https://bridgetro.se/raci/',
-    github: 'https://github.com/bridgetrosefitz/raci'
+    github: 'https://github.com/bridgetrosefitz/raci',
+    userStories: 'https://www.notion.so/Bridget-Fitzgerald-RACI-3166a2742268438889473e69c943d72e'
   },
   {
     title: 'work.Digital Innovation.Title',
@@ -22,7 +23,8 @@ const projects = [
     photos: ['project-snapshots/digital-innovation.png'],
     role: 'Developer',
     link: 'http://digital-innovation-stats.herokuapp.com/',
-    github: 'https://github.com/bridgetrosefitz/digital_innovation'
+    github: 'https://github.com/bridgetrosefitz/digital_innovation',
+    userStories: 'https://www.notion.so/Bridget-Fitzgerald-Digital-Innovation-0c0a03caf93f4643bfa85f634bd0d8ae'
   },
   {
     title: 'work.Particles.Title',
@@ -32,7 +34,8 @@ const projects = [
     photos: ['project-snapshots/particles.png'],
     role: 'Developer',
     link: 'http://bridgetro.se',
-    github: 'https://github.com/bridgetrosefitz/personal-website'
+    github: 'https://github.com/bridgetrosefitz/personal-website',
+    userStories: 'bridgetro.se'
   },
   {
     title: 'work.Food Systems Dialogues.Title',
@@ -42,7 +45,8 @@ const projects = [
     photos: ['project-snapshots/fsds.png'],
     role: 'Product-managed',
     link: 'https://fsds-tool.herokuapp.com/',
-    github: 'https://github.com/Jesus-Escalona'
+    github: 'https://github.com/Jesus-Escalona',
+    userStories: 'bridgetro.se'
   },
 ]
 
@@ -50,13 +54,12 @@ const Work = props => {
 
   const [hidden, setHidden] = useState(true)
   const [currentProject, setCurrentProject] = useState(null)
-  const projectsRef = useRef(null)
   const { t } = useTranslation()
 
-  const projectDisplay = projects.map(project => {
+  const projectDisplay = projects.map((project, index) => {
 
     return (
-      <div className="grid-item" onClick={() => {
+      <div key={index} className="grid-item" onClick={() => {
         setCurrentProject(project)
         setHidden(prev => !prev)
       }}>

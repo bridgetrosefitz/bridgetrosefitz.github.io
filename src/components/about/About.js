@@ -27,11 +27,11 @@ const values = [
 const About = props => {
   const { t } = useTranslation()
 
-  const valuesDisplay = values.map(value => {
+  const valuesDisplay = values.map((value, index) => {
       return(
         <>
-        <h3 className='values-header'>{t(value.title)}</h3>
-        <p className='values-p'>{t(value.text)}</p>
+        <h3 key={index} className='values-header'>{t(value.title)}</h3>
+        <p key={index} className='values-p'>{t(value.text)}</p>
         </>
       )
   })

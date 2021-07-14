@@ -87,7 +87,7 @@ const setTexture = (city) => {
 
 export const Sphere = props => {
 
-  const [spherePhysicsRef, api] = useSphere(() => ({ mass: 10, position: spherePosition, args: [sphereRadius]}))
+  const [spherePhysicsRef] = useSphere(() => ({ mass: 10, position: spherePosition, args: [sphereRadius]}))
 
   return (
       <mesh
@@ -124,7 +124,7 @@ export const Plane = () => {
 
 export const MakeAButtloadOfSpheres = ({number, city}) => {
   const radius = 0.5
-  const [ref, api] = useSphere(() => ({
+  const [ref] = useSphere(() => ({
     mass: 10, 
     material: { friction: 0.02, restitution: 5 },
     position: [(Math.random() - 0.5) * 0.5 + spherePosition[0], (Math.random() - 0.5) * (planePosition[1] + (sphereRadius * 0.5)), (Math.random() - 0.5) + spherePosition[2] -2],

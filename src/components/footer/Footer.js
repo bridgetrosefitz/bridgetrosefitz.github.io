@@ -1,8 +1,8 @@
 import React from 'react'
 import './footer.css'
-import { AiFillGithub, AiOutlineMail } from 'react-icons/ai'
+import { AiFillGithub } from 'react-icons/ai'
 import { TiSocialLinkedin } from 'react-icons/ti'
-import {  useTranslation, Trans } from 'react-i18next'
+import {  useTranslation } from 'react-i18next'
 
 const allIcons = [
   
@@ -20,9 +20,9 @@ const allIcons = [
   }
 ]
 
-const iconsGroup = allIcons.map(icon => {
+const iconsGroup = allIcons.map((icon, index) => {
   return (
-    <a className='contact-logos' href={icon.link} rel='noreferrer' target="_blank">
+    <a key={index} className='contact-logos' href={icon.link} rel='noreferrer' target="_blank">
       {icon.component}
     </a>
   )

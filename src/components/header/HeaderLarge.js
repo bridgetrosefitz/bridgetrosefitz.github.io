@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import './header.css'
 
 const HeaderLarge = props => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   const citySpans = () => {
     const arrayOfSpans = props.cities.map((city, index) => {
@@ -13,7 +13,7 @@ const HeaderLarge = props => {
         return <span key={index} className={`city ${classNameForCitySpan}`} onMouseEnter={() => props.setCity(city)}>{t(`header.${city}`)}</span>
         }
       else {
-        return (<span className={`city ${classNameForCitySpan}`} onMouseEnter={() => props.setCity(city)}>{` · ${t(`header.${city}`)}`}</span>)
+        return (<span key={index} className={`city ${classNameForCitySpan}`} onMouseEnter={() => props.setCity(city)}>{` · ${t(`header.${city}`)}`}</span>)
       }
   })
 
