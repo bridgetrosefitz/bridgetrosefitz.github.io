@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.56acf579.chunk.css",
+    "main.js": "/static/js/main.9ed20295.chunk.js",
+    "main.js.map": "/static/js/main.9ed20295.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b682218e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b682218e.js.map",
+    "static/js/2.b8d46f8b.chunk.js": "/static/js/2.b8d46f8b.chunk.js",
+    "static/js/2.b8d46f8b.chunk.js.map": "/static/js/2.b8d46f8b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.56acf579.chunk.css.map": "/static/css/main.56acf579.chunk.css.map",
+    "static/js/2.b8d46f8b.chunk.js.LICENSE.txt": "/static/js/2.b8d46f8b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Gambetta-Light.42bd64d0.woff",
+    "static/media/Gambetta-Bold.619ea7c4.woff2": "/static/media/Gambetta-Bold.619ea7c4.woff2",
+    "static/media/Gambetta-Light.34c53d67.woff2": "/static/media/Gambetta-Light.34c53d67.woff2",
+    "static/media/getFetch.cjs": "/static/media/getFetch.582d29c4.cjs"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b682218e.js",
+    "static/js/2.b8d46f8b.chunk.js",
+    "static/css/main.56acf579.chunk.css",
+    "static/js/main.9ed20295.chunk.js"
+  ]
+}

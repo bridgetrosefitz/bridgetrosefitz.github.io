@@ -1,0 +1,64 @@
+{
+  "header": {
+    "Full-stack-developer": "Full stack developer",
+    "Melbourne": "Melbourne",
+    "NYC": "NYC",
+    "Paris": "Paris",
+    "Tokyo": "Tokyo",
+    "Oslo": "Oslo"
+  },
+    "main": {
+      "About": "About"
+    },
+    "about": {
+      "About me": "Hi there.",
+      "About main text": "I love tech and the product development process. It is the best tool I know to build things that help people; it forces us to be scientific and truthful; it has a massive community building ways to share knowledge efficiently; and it locks you into a process of learning and improving forever. These are things I care about deeply.\n\nI’m an Aussie*, but have lived and worked in NYC, Paris and Oslo. I speak French, Japanese and some Chinese. People know me as someone who loves languages, culture, people and ideas - I think it’s awesome to bake those things into tech.\n\nI’m a grammar and vocab nerd, but ultimately I just love expressing things simply, so everyone can understand and share gems of insight, without ego or pretense.\n\n Voilà. I hope we get to meet one day! Say hello, if you’d like.",
+      "Asterisk": "*Technically, I'm also an American citizen",     
+      "My values": "My values (and things I'm figuring out).",
+      "Make it ok to be wrong": "Make it ok to be wrong",
+      "Make it ok to be wrong text": "Being wrong is part of improving. If you keep pushing the bounds of what is possible, and given that the world is always changing, at some point you will always be wrong, you will always fail. You’ll fail and then you’ll push past it and get better. If you are able to own that you were wrong, you can study how you can change. That is why I think making environments where it is ok to be wrong is so critical.\n\nI feel like in so many places where we work, it takes a massive feat of courage to point out where you don’t know something or where your team might be on the wrong track. I want to always set an example of a healthy amount of self doubt, of changing and learning through not knowing. And I hope I always dig deep to find how to help others worry less about being right or wrong and, instead, focus on getting to the truth and building cool stuff.",
+      "Be the one to change": "Be the one to change",
+      "Be the one to change text": "It is really hard to be vulnerable. It’s hard to step outside your world, and your safety, and all the ways of thinking you’ve inherited, from your community and your culture. But for me, the feeling of connecting with someone who is different from you is one of the most amazing things in the world. And it is worth it to be the person who steps out of what is familiar, without waiting for the other person to.\n\nOne of my memories is sitting in the small home of a kind octogenarian in Oqaatsut, Greenland. It was just the two of us, and neither of us spoke each other’s language, but we shared beautiful moments of wordless understanding as she showed me how to thread beads on a traditional Greenlandic necklace.\n\nYou learn so much, and the rewards are immense, when you are the one to change and go towards the other.",
+      "Care about the people you work with": "Care about the people you work with",
+      "Care about the people you work with text": "At work, there is caring, and then there is really caring - being willing to take a knock for a colleague, to genuinely seek to know where they’re coming from, and to invest in their success. Doing these things, in my experience, unlocks an incredible ability to work on hard problems together and come up with amazing solutions.\n\nI am a big fan of Kim Scott’s idea of Radical Candor. And I 100% buy her assessment that having great relationships with your colleagues means putting work into caring personally, and directly challenging each other. At the same time. Always. These two things reinforce each other and build trust.\n\nPeople can tell when you care about them just because it’s convenient, or expected. If you go out of your way for each other, and say the hard stuff to each other, the bonds you can build lead to good outcomes for everyone.",
+      "People can change": "People can change",
+      "People can change text": "In the right environment, cultivating a growth mindset, you can be the person you want to be. I do not have a perfect growth mindset, but I’m working on it. As I come to ‘see’ more and more of the influences which have shaped the mindsets and behaviors I have currently, it helps me choose which ones to let go of and which other ones to go after.\n\nUnfamiliar things and change can make a lot of fear pour out, and it takes a lot of energy to work through them. And maybe you - or the people in your life - are not in the right environment or it’s not the right moment to succeed at changing. But there are ways to make it easier - for yourself and for others - to change. And it’s an amazing gift to give yourself and the people around you to forgive your stumbles, try not to judge, and design a strategy to support the change you want."
+    },
+    "work": {
+      "Work button": "Home",
+      "Product-managed": "Product-managed",
+      "Front end": "Front end",
+      "Back end": "Back end",
+      "See it live or view the user stories, or code.": "See it live or view the user stories, or code.",
+      "RACI": {
+        "Title": "RACI Project Management",
+        "Tech stack front end": "React, Semantic UI React, JWT",
+        "Tech stack back end": "Rails, BCrypt",
+        "Project main text": "I built this app to help solve the problem of managing roles on a team.\n\n'RACI' stands for Responsible, Accountable, Consulted, Informed. From my experience, the RACI (or DACI) framework provides a helpful level of detail to make clear who is responsible for getting a job done well. It reduces the risk of low quality work arising from murky or pooled accountability, it helps make sure the right people have input on tasks (and conversely, gives team members explicit authority to make decisions without input!), and it prompts conversations about workload and capacity.\n\nOn past projects, I used Google Sheets to build my own RACI frameworks. This app has the advantage of being a standardized process which is simple to use, and of supporting functionality such as flags and alerts, issue-tracking and workflow tools."
+      },
+      "Digital Innovation Statistics": "Digital Innovation Statistics App",
+        "Digital Innovation": {
+          "Title": "Digital Innovation Statistics",
+          "Tech stack front end": "Rails, Bootstrap",
+          "Tech stack back end": "Rails API, BCrypt",
+          "Project main text": "This app is a platform to compare digital innovation in different countries. It provides initial thinking and dynamic metrics about factors which lead to innovative digital products being created in a country, such as the amount of activity on GitHub, and the availability of capital.\n\nIn future, the site could crowdsource ideas and data about what makes a ripe environment for digital innovation (indicators about mindset, access to tech education, the price of a computer, who knows!), with the goal of helping people in tech connect and travel to places where they can contribute to innovative projects.\n\n This project was inspired by a research paper completed during my Masters."
+        },
+        "Particles": {
+          "Title": "Particles",
+          "Tech stack front end": "React, React Three Fiber, Three.js",
+          "Tech stack back end": "N/A",
+          "Project main text": "These particles started as an experiment for my personal website. I find the dancing dots endlessly beautiful - please have a play!\n\nI built custom GLSL shaders in Three.js to transform photos into millions of tiny dots, and to allow the user to disturb the dots' movements by dragging their cursor."
+        },
+        "Food Systems Dialogues": {
+          "Title": "Food Systems Dialogues Seating Plan Tool",
+          "Tech stack front end": "React, Google Sheets API (built by the awesome Jesus Escalona)",
+          "Tech stack back end": "N/A",
+          "Project main text": "While managing the Food Systems Dialogues (FSDs) on behalf of the World Economic Forum and other sponsors, I product-managed the creation of a seating plan and reporting tool.\n\nThe FSDs promise to bring together people from all different sectors of food production (e.g. farmers, manufacturers, nutritionists) to - literally - the same table to devise strategies for promoting nutrition and sustainability. \n\nWith this tool, generating diverse seating plans went from taking days, to being at the click of a button. It also gives visibility on where representation is low, allowing organizers to seek more balanced participation."
+        }
+    },
+    "footer": {
+      "Don't hesitate to say hello" : "Don't hesitate to say hello ... or bonjour, こんにちは, 你好, etc ...",
+      "I would love to hear from you": "I would love to hear from you!"
+    }
+
+}
