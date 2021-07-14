@@ -1,13 +1,13 @@
 import React from 'react'
 import './footer.css'
-import { AiFillGithub } from 'react-icons/ai'
+import { AiFillGithub, AiOutlineMail } from 'react-icons/ai'
 import { TiSocialLinkedin } from 'react-icons/ti'
 import {  useTranslation } from 'react-i18next'
 
 const allIcons = [
   
   {
-    component: <span className='cv'>CV</span>,
+    component: <AiOutlineMail />,
     link: 'mailto:bridgetrosefitz@gmail.com',
   },
   {
