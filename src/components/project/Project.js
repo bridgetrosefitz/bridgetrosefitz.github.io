@@ -13,7 +13,11 @@ const Project = ({hidden, onClose, project}) => {
     <>{project ? 
       (<div className={`${hidden ? 'hidden' : null} project`}>
         <h1>{t(project.title)}
-          <IoCloseOutline className='close-icon' onClick={onClose} />
+          <div className='close-icon' onClick={onClose}>
+            <div className='close-left'></div>
+            <div className='close-right'></div>
+          </div>
+          {/* <IoCloseOutline className='close-icon' onClick={onClose} /> */}
         </h1>
         <div className='single-project-display-container'>
         <ProjectSpecs {...project}/>
