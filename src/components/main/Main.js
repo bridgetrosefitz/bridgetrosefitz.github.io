@@ -14,9 +14,9 @@ const Main = props => {
   const { t } = useTranslation()
   const [city, setCity] = useState('Melbourne')
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
-  const projectsRef = useRef()
+  const workRef = useRef()
 
-  const scrollToProjects = () => projectsRef.current.scrollIntoView()
+  const scrollToProjects = () => workRef.current.scrollIntoView()
 
   return (
     <>
@@ -61,7 +61,7 @@ const Main = props => {
           <div className='nav-arrow-left-tip'></div>
           <div className='nav-arrow-right-tip'></div>
         </div>
-        <Work projectsRef={projectsRef} scrollToProjects={scrollToProjects}/>
+        <Work workRef={workRef} scrollToProjects={scrollToProjects}/>
       </div>
       <Footer/>
     </>

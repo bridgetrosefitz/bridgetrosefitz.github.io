@@ -71,7 +71,7 @@ const Work = props => {
   return (
     <>  
       <Project hidden={hidden} onClose={() => setHidden(prev => !prev)} project={currentProject} />
-      <div className='company-logo-display-container'>
+      <div ref={props.workRef} className='company-logo-display-container'>
         <img alt='Shadow' src='company-logos/shadow-logo.svg'></img>
         <img alt='LEK Consulting' src='company-logos/lek-logo.svg'></img>
         <img alt='World Economic Forum' src='company-logos/wef-logo.png'></img>
@@ -84,7 +84,7 @@ const Work = props => {
       </div>
       <div className='spacing-element-between-logos-and-projects'/>
       <h2 className='tech-projects-header'>Projects</h2>
-      <div ref={props.projectsRef} className='projects-display-container'>
+      <div className='projects-display-container'>
         {projectDisplay}
       </div>
     </>
