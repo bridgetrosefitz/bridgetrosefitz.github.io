@@ -1,6 +1,7 @@
 {
-  "name": "personal-website-experiments",
+  "name": "bridgetrosefitz.github.io",
   "version": "0.1.0",
+  "homepage": "https://bridgetro.se/",
   "private": true,
   "dependencies": {
     "@react-three/cannon": "^2.5.0",
