@@ -46,7 +46,7 @@ const projects = [
     role: 'Product-managed',
     link: 'https://fsds-tool.herokuapp.com/',
     github: 'https://github.com/Jesus-Escalona',
-    userStories: 'bridgetro.se'
+    userStories: 'https://docs.google.com/spreadsheets/d/1SICeapZqaMtsvrVGJHqvYo3tOVagKm988AiR43vGt58/edit?usp=sharing'
   },
 ]
 
