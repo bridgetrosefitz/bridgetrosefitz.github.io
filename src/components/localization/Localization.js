@@ -11,7 +11,6 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
           <button onClick={() => changeLanguage('jp')}>日本語</button>
         </div>
       )
-      break
     case 'fr':
       return (
         <div>
@@ -19,7 +18,6 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
           <button onClick={() => changeLanguage('jp')}>日本語</button>
         </div>
       )
-      break
     case 'jp':
       return (
         <div>
@@ -27,7 +25,6 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
           <button onClick={() => changeLanguage('en')}>English</button>
         </div>
       )
-      break
     default:
       return (
         <div>
@@ -36,7 +33,6 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
           <button onClick={() => changeLanguage('en')}>English</button>
         </div>
       )
-      break
   }
   
 }
