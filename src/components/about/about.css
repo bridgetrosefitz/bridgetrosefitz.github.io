@@ -2,7 +2,12 @@ b {
   font-weight: 500;
 }
 
-
+.small-text {
+  display: block;
+  color: grey;
+  margin-top: 2em;
+  font-size: 0.5em;
+}
 
 .about-p, .values-p {
   margin: 0px 280px;

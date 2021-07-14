@@ -44,7 +44,7 @@ const About = props => {
     <button onClick={() => props.history.push('/')} className='work-button'>Work</button>
     <HeaderSmall {...props}/>
       <h2 className='about-header' >{t('about.About me')}</h2>
-      <p className='about-p'>{t('about.About main text')}</p>
+      <p className='about-p'>{t('about.About main text')}<span><a href='mailto:bridgetrosefitz@gmail.com' rel="noreferrer" target='_blank'>bridgetrosefitz@gmail.com</a></span><span className='small-text'>{t('about.Asterisk')}</span></p>
       <br/>
       <div className='photo-of-me'>
         <img alt='Me at Trolltunga, Norway' src='/photos/Trolltunga.jpeg'/>
