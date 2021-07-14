@@ -40,6 +40,11 @@
   display: block;
   margin-right: 20%;
 }
+/* 
+.project-specs p {
+  margin: 0px;
+  line-height: 30px;
+} */
 
 .project-specs p a {
   text-decoration: underline;

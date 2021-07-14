@@ -1,9 +1,6 @@
 .company-logo-display-container {
   display: flex;
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 100px;
+  margin: 5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -32,17 +29,19 @@
   display: grid;
   grid-column-gap: 8rem;
   grid-row-gap: 4rem;
-  padding: 0 8rem;
+  padding-right: 8rem;
+  padding-left: 8rem;
+  padding-top: 5rem;
   color: #fff;
   background-color: transparent;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 425px);
+  grid-template-rows: repeat(2, 400px);
 }
 
-.spacing-element-between-logos-and-projects {
+/* .spacing-element-between-logos-and-projects {
   height: 100px;
   position: relative;
-}
+} */
 
 .grid-item img {
   width: 100%;
@@ -52,7 +51,6 @@
 .grid-item p {
   /* background-color: #bebebe; */
   color: #444;
-  font-weight: normal;
   font-size: 1.3rem;
 }
 

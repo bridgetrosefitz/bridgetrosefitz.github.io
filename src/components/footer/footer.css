@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 150px;
+  height: 200px;
   padding: 0px 20px;
   background-color: transparent;
 }
@@ -49,9 +49,15 @@
 
 .email-div {
   text-align: right;
+  text-decoration: none;
   font-size: 15px;
   margin-bottom: 10px;
   margin-right: 10px;
   background-color: transparent;
 
+}
+
+a:visited { 
+ text-decoration: none; 
+ color: black; 
 }

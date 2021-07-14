@@ -2,9 +2,46 @@ b {
   font-weight: 500;
 }
 
-.about-p {
+
+
+.about-p, .values-p {
   margin: 0px 280px;
 }
+
+/* .values-p:after {
+    content: '';
+    border-bottom: 1px solid grey;
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+    display: block;
+    margin-top: 3em;
+} */
+
+.values-p:last-of-type::after {
+  content: none;
+}
+
+/* .values-p:after {
+    content: '';
+    width: 60%;
+    height: 1px;
+    background-color: rgba(0,0,0,.3);
+    display: block;
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+    margin-top: 2em;
+} */
+
+.project h1:after {
+  position: absolute;  
+  content: '';
+  left: 2%;
+  top: 10%;
+  width: 96%;
+  height: 1px;
+  background-color: rgba(0,0,0,.3);
+}
+
 
 .about-header {  
   text-align: center;
@@ -12,6 +49,12 @@ b {
 
 img {
   width: 50%;
+}
+
+.values-header {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 400;
 }
 
 .work-button {

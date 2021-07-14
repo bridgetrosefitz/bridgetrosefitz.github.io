@@ -80,7 +80,7 @@ const Work = props => {
         <img alt='Australian Music Examinations Board' src='company-logos/ameb-logo.png'></img>
       </div>
       <div className='spacing-element-between-logos-and-projects'/>
-      {/* <h2 className='tech-projects-header'>Tech projects</h2> */}
+      <h2 className='tech-projects-header'>Projects</h2>
       <div ref={props.projectsRef} className='projects-display-container'>
         {projectDisplay}
       </div>
