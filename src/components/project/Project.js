@@ -3,6 +3,7 @@ import './project.css'
 import ProjectSpecs from './ProjectSpecs';
 import ProjectPhoto from './ProjectPhoto';
 import { useTranslation } from 'react-i18next';
+import Cross from '../cross/Cross'
 
 const Project = ({hidden, onClose, project}) => {
  const { t } = useTranslation()
@@ -12,10 +13,7 @@ const Project = ({hidden, onClose, project}) => {
     <>{project ? 
       (<div className={`${hidden ? 'hidden' : null} project`}>
         <h1>{t(project.title)}
-          <div className='close-icon' onClick={onClose}>
-            <div className='close-left'></div>
-            <div className='close-right'></div>
-          </div>
+        <Cross onClose={onClose}/>
         </h1>
         <div className='single-project-display-container'>
         <ProjectSpecs {...project}/>
