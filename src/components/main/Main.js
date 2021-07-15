@@ -7,6 +7,7 @@ import HeaderLarge from '../header/HeaderLarge'
 import Group from '../group/Group'
 import Work from '../work/Work'
 import Footer from '../footer/Footer'
+import Arrow from '../arrow/Arrow'
 import { OrbitControls } from '@react-three/drei'
 import { useTranslation } from 'react-i18next'
 
@@ -15,8 +16,6 @@ const Main = props => {
   const [city, setCity] = useState('Melbourne')
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
   const workRef = useRef()
-
-  const scrollToProjects = () => workRef.current.scrollIntoView()
 
   return (
     <>
@@ -57,11 +56,8 @@ const Main = props => {
         </button>
       </div>
       <div className='main-content'>
-        <div className='nav-arrow' onClick={() => scrollToProjects()}>
-          <div className='nav-arrow-left-tip'></div>
-          <div className='nav-arrow-right-tip'></div>
-        </div>
-        <Work workRef={workRef} scrollToProjects={scrollToProjects}/>
+        <Arrow workRef={workRef} />
+        <Work workRef={workRef} />
       </div>
       <Footer/>
     </>
