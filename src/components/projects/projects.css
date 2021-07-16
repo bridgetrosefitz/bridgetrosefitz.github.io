@@ -1,0 +1,31 @@
+  
+.projects-container {
+  display: grid;
+  grid-template-columns: 30% 68%;
+  grid-auto-rows: 30vh;
+  grid-row-gap: 10vh;
+  grid-column-gap: 2%;
+  margin: 14vw;
+}
+
+.project-specs-container {
+  padding: 10px;
+  color: black;
+  background-color: tomato;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: auto 200 / 134;
+}
+
+.tech-logo-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tech-logo {
+  width: 7%;
+  margin: 1px 9px;
+  filter: grayscale(1) brightness(1);
+}

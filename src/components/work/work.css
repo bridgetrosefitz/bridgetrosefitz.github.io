@@ -44,8 +44,8 @@
 } */
 
 .grid-item img {
-  width: 100%;
-  display: block;
+  width: 10%;
+  /* display: block; */
 }
 
 .grid-item p {

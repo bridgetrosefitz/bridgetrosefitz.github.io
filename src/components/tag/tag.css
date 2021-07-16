@@ -1,0 +1,8 @@
+.tag {
+  font-size: 0.9rem;
+  background-color: lightgrey;
+  border-radius: 30px;
+  text-align: center;
+  padding: 1.5% 3%;
+  margin: 0.3%;
+}

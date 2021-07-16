@@ -2,53 +2,7 @@ import React, { useState } from 'react'
 import './work.css'
 import Project from '../project/Project'
 import { useTranslation } from 'react-i18next'
-
-const projects = [
-  {
-    title: 'work.RACI.Title',
-    text: 'work.RACI.Project main text',
-    techStackFrontEnd: 'work.RACI.Tech stack front end',
-    techStackBackEnd: 'work.RACI.Tech stack back end',
-    photos: ['/project-snapshots/raci.png'],
-    role: 'Developer',
-    link: 'https://bridgetro.se/raci/',
-    github: 'https://github.com/bridgetrosefitz/raci',
-    userStories: 'https://www.notion.so/Bridget-Fitzgerald-RACI-3166a2742268438889473e69c943d72e'
-  },
-  {
-    title: 'work.Digital Innovation.Title',
-    text: 'work.Digital Innovation.Project main text',
-    techStackFrontEnd: 'work.Digital Innovation.Tech stack front end',
-    techStackBackEnd: 'work.Digital Innovation.Tech stack back end',
-    photos: ['project-snapshots/digital-innovation.png'],
-    role: 'Developer',
-    link: 'http://digital-innovation-stats.herokuapp.com/',
-    github: 'https://github.com/bridgetrosefitz/digital_innovation',
-    userStories: 'https://www.notion.so/Bridget-Fitzgerald-Digital-Innovation-0c0a03caf93f4643bfa85f634bd0d8ae'
-  },
-  {
-    title: 'work.Particles.Title',
-    text: 'work.Particles.Project main text',
-    techStackFrontEnd: 'work.Particles.Tech stack front end',
-    techStackBackEnd: 'work.Particles.Tech stack back end',
-    photos: ['project-snapshots/particles.png'],
-    role: 'Developer',
-    link: 'http://bridgetro.se',
-    github: 'https://github.com/bridgetrosefitz/personal-website',
-    userStories: 'bridgetro.se'
-  },
-  {
-    title: 'work.Food Systems Dialogues.Title',
-    text: 'work.Food Systems Dialogues.Project main text',
-    techStackFrontEnd: 'work.Food Systems Dialogues.Tech stack front end',
-    techStackBackEnd: 'work.Food Systems Dialogues.Tech stack back end',
-    photos: ['project-snapshots/fsds.png'],
-    role: 'Product-managed',
-    link: 'https://fsds-tool.herokuapp.com/',
-    github: 'https://github.com/Jesus-Escalona',
-    userStories: 'https://docs.google.com/spreadsheets/d/1SICeapZqaMtsvrVGJHqvYo3tOVagKm988AiR43vGt58/edit?usp=sharing'
-  },
-]
+import Projects from '../projects/Projects'
 
 const Work = props => {
 
@@ -56,17 +10,17 @@ const Work = props => {
   const [currentProject, setCurrentProject] = useState(null)
   const { t } = useTranslation()
 
-  const projectDisplay = projects.map((project, index) => {
+  // const projectDisplay = projects.map((project, index) => {
 
-    return (
-      <div key={index} className="grid-item" onClick={() => {
-        setCurrentProject(project)
-        setHidden(prev => !prev)
-      }}>
-        <img alt={t(project.title)} src={project.photos[0]}></img>
-          <p>{t(project.title)}{project.role !== 'Developer' ? (<span className='small-text'> ({t('work.Product-managed')})</span>) : null}</p>
-      </div>)
-  })
+  //   return (
+  //     <div key={index} className="grid-item" onClick={() => {
+  //       setCurrentProject(project)
+  //       setHidden(prev => !prev)
+  //     }}>
+  //       <img alt={t(project.title)} src={project.photos[0]}></img>
+  //         <p>{t(project.title)}{project.role !== 'Developer' ? (<span className='small-text'> ({t('work.Product-managed')})</span>) : null}</p>
+  //     </div>)
+  // })
 
   return (
     <>  
@@ -84,9 +38,10 @@ const Work = props => {
       </div>
       <div className='spacing-element-between-logos-and-projects'/>
       <h2 className='tech-projects-header'>Projects</h2>
-      <div className='projects-display-container'>
+      {/* <div className='projects-display-container'>
         {projectDisplay}
-      </div>
+      </div> */}
+      <Projects />
     </>
   )
 }
