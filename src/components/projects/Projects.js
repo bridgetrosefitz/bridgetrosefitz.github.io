@@ -14,14 +14,6 @@ const techLogos = {
   'Bootstrap': '/tech-logos/bootstrap.svg'
 }
 
-const reactLogo = '/tech-logos/react.svg'
-const semanticUiLogo = '/tech-logos/semantic-ui.png'
-const jwtLogo = '/tech-logos/jwt.svg'
-const railsLogo = '/tech-logos/rails.svg'
-const bootstrapLogo = '/tech-logos/bootstrap.svg'
-const threeJsLogo = 'tech-logos/threejs.png'
-const googleSheetsLogo = 'tech-logos/google-sheets.png'
-
 const projects = [
   {
     title: 'work.RACI.Title',
@@ -103,8 +95,8 @@ const projectCells = projects.map((project, index) => {
           </div>
           <div className='project-short-text'>{t(project.shortText)}</div>
           <div className='buttons-container'>
-            <Tag name={'View site'} />
-            <Tag name='View the code' />
+            <Tag name={'View site'} link={project.link}/>
+            <Tag name='View the code' link={`${project.github}/#readme`}/>
           </div>
         </div>
       </>
