@@ -12,7 +12,7 @@ const Tag = ({ img, name, link }) => {
         target='_blank'
         >
         {name}
-        {img}
+        {img} 
       </a>
     )
 

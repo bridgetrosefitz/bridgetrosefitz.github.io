@@ -11,7 +11,7 @@ const techLogos = {
   'Google Sheets API': '/tech-logos/google-sheets.png', 
   'JWT': '/tech-logos/jwt.svg', 
   'Semantic UI React': '/tech-logos/semantic-ui-react.png', 
-  'Bootstrap': '/tech-logos/bootstrap.svg'
+  'Bootstrap': '/tech-logos/bootstrap.png'
 }
 
 const projects = [
@@ -32,7 +32,7 @@ const projects = [
     title: 'work.Digital Innovation.Title',
     text: 'work.Digital Innovation.Project main text',
     shortText: 'work.Digital Innovation.Project short text',
-    techStack: [],
+    techStack: ['Rails', 'Bootstrap'],
     techStackFrontEnd: 'work.Digital Innovation.Tech stack front end',
     techStackBackEnd: 'work.Digital Innovation.Tech stack back end',
     photos: ['project-snapshots/digital-innovation.png'],
@@ -45,7 +45,7 @@ const projects = [
     title: 'work.Particles.Title',
     text: 'work.Particles.Project main text',
     shortText: 'work.Particles.Project short text',
-    techStack: [],
+    techStack: ['React.js', 'Three.js'],
     techStackFrontEnd: 'work.Particles.Tech stack front end',
     techStackBackEnd: 'work.Particles.Tech stack back end',
     photos: ['project-snapshots/particles.png'],
@@ -57,7 +57,7 @@ const projects = [
   {
     title: 'work.Food Systems Dialogues.Title',
     text: 'work.Food Systems Dialogues.Project main text',
-    techStack: [],
+    techStack: ['React.js', 'Google Sheets API'],
     shortText: 'work.Food Systems Dialogues.Project short text',
     techStackFrontEnd: 'work.Food Systems Dialogues.Tech stack front end',
     techStackBackEnd: 'work.Food Systems Dialogues.Tech stack back end',

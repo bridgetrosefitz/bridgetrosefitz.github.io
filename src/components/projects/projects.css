@@ -41,8 +41,14 @@ img {
 
 .tech-logo {
   width: 32px;
+  object-fit: contain;
   margin-right: 40px;
   filter: grayscale(1) brightness(1);
+  transition: filter 0.1s ease-in-out;
+}
+
+.tech-logo:hover {
+  filter: initial;
 }
 
 .buttons-container {
