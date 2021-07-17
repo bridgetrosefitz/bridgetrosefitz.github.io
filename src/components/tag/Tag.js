@@ -5,10 +5,10 @@ const Tag = ({ img, name }) => {
 
 
     return (
-      <span className='tag'>
+      <button className='tag'>
         {name}
         {img}
-      </span>
+      </button>
     )
 
 }
