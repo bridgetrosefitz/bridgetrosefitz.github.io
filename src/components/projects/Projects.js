@@ -4,11 +4,30 @@ import { VscGithubAlt } from 'react-icons/vsc'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
+const techLogos = {
+  'React.js': '/tech-logos/react.svg',
+  'Rails': '/tech-logos/rails.svg', 
+  'Three.js': '/tech-logos/threejs.png', 
+  'Google Sheets API': '/tech-logos/google-sheets.png', 
+  'JWT': '/tech-logos/jwt.svg', 
+  'Semantic UI React': '/tech-logos/semantic-ui-react.png', 
+  'Bootstrap': '/tech-logos/bootstrap.svg'
+}
+
+const reactLogo = '/tech-logos/react.svg'
+const semanticUiLogo = '/tech-logos/semantic-ui.png'
+const jwtLogo = '/tech-logos/jwt.svg'
+const railsLogo = '/tech-logos/rails.svg'
+const bootstrapLogo = '/tech-logos/bootstrap.svg'
+const threeJsLogo = 'tech-logos/threejs.png'
+const googleSheetsLogo = 'tech-logos/google-sheets.png'
+
 const projects = [
   {
     title: 'work.RACI.Title',
     text: 'work.RACI.Project main text',
     shortText: 'work.RACI.Project short text',
+    techStack: ['React.js', 'Rails', 'JWT', 'Semantic UI React'],
     techStackFrontEnd: 'work.RACI.Tech stack front end',
     techStackBackEnd: 'work.RACI.Tech stack back end',
     photos: ['/project-snapshots/raci.png'],
@@ -21,6 +40,7 @@ const projects = [
     title: 'work.Digital Innovation.Title',
     text: 'work.Digital Innovation.Project main text',
     shortText: 'work.Digital Innovation.Project short text',
+    techStack: [],
     techStackFrontEnd: 'work.Digital Innovation.Tech stack front end',
     techStackBackEnd: 'work.Digital Innovation.Tech stack back end',
     photos: ['project-snapshots/digital-innovation.png'],
@@ -33,6 +53,7 @@ const projects = [
     title: 'work.Particles.Title',
     text: 'work.Particles.Project main text',
     shortText: 'work.Particles.Project short text',
+    techStack: [],
     techStackFrontEnd: 'work.Particles.Tech stack front end',
     techStackBackEnd: 'work.Particles.Tech stack back end',
     photos: ['project-snapshots/particles.png'],
@@ -44,6 +65,7 @@ const projects = [
   {
     title: 'work.Food Systems Dialogues.Title',
     text: 'work.Food Systems Dialogues.Project main text',
+    techStack: [],
     shortText: 'work.Food Systems Dialogues.Project short text',
     techStackFrontEnd: 'work.Food Systems Dialogues.Tech stack front end',
     techStackBackEnd: 'work.Food Systems Dialogues.Tech stack back end',
@@ -55,48 +77,45 @@ const projects = [
   },
 ]
 
-const reactLogo = '/tech-logos/react.svg'
-const semanticUiLogo = '/tech-logos/semantic-ui.png'
-const jwt = '/tech-logos/jwt.svg'
-const railsLogo = '/tech-logos/rails.svg'
-
 const Projects = props => {
-const { t } = useTranslation()
+  const { t } = useTranslation()
 
-  const projectGridItems = projects.map((project, index) => {
+const projectCells = projects.map((project, index) => {
 
-    return (
+    let projectTechLogos = project.techStack.map((techUsed, index) => {
+      return (
+        <img
+          index={index}
+          className='tech-logo'
+          alt={techUsed}
+          src={techLogos[techUsed]}
+        />
+      )
+    })
+    
+    return(
       <>
-      {/* PROJECT SNAPSHOT (left-hand-side cell) */}
         <img alt={'ProjectPhoto'} src={project.photos[0]}></img>
-      {/* PROJECT SPECS (right-hand-side cell) */}
-        <div key={index} className='project-specs-container'>
-          {/* PROJECT TITLE */}
+        <div className='project-specs-container'>
           <h3 className='project-title'>{t(project.title)}</h3>
-          {/* PROJECT LOGOS */}
           <div className='tech-logo-container'>
-            <img className='tech-logo' alt='React.js' src={reactLogo} ></img>
-            <img className='tech-logo' alt='Ruby on Rails' src={railsLogo} ></img>
-            <img className='tech-logo' alt='JWT' src={jwt} ></img>
-            <img className='tech-logo' alt='Semantic UI React' src={semanticUiLogo} ></img>
+            {projectTechLogos}
           </div>
-          {/* PROJECT DESCRIPTION */}
           <div className='project-short-text'>{t(project.shortText)}</div>
           <div className='buttons-container'>
             <Tag name={'View site'} />
-            <Tag name='View the code'/>
+            <Tag name='View the code' />
           </div>
         </div>
       </>
     )
+
   })
 
   return (
-    <>
     <div className='projects-container'>
-      {projectGridItems}
+      {projectCells}
     </div>
-    </>
   )
 
 }
