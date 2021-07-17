@@ -72,7 +72,7 @@ const { t } = useTranslation()
       {/* PROJECT SPECS (right-hand-side cell) */}
         <div key={index} className='project-specs-container'>
           {/* PROJECT TITLE */}
-          <div className='project-title'>{t(project.title)}</div>
+          <h3 className='project-title'>{t(project.title)}</h3>
           {/* PROJECT LOGOS */}
           <div className='tech-logo-container'>
             <img className='tech-logo' alt='React.js' src={reactLogo} ></img>

@@ -5,7 +5,7 @@
   grid-auto-rows: auto;
   grid-row-gap: 20vh;
   grid-column-gap: 5%;
-  margin: 14vw;
+  margin: 8vw 14vw 14vw 14vw;
 }
 
 .project-specs-container {
@@ -19,7 +19,8 @@ img {
 }
 
 .project-title {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  margin: 0;
 }
 
 .project-short-text {
