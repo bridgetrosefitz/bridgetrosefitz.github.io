@@ -10,8 +10,8 @@ const Tag = ({ img, name, link }) => {
         rel='noreferrer'
         target='_blank'
         >
-        {name}
         {img} 
+        {name}
       </a>
     )
 

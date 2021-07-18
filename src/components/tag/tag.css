@@ -1,4 +1,5 @@
 .tag {
+  display: inline-block;
   font-size: 0.9rem;
   background-color: lightgrey;
   border-radius: 30px;
@@ -6,4 +7,9 @@
   padding: 8px 16px;
   margin-right: 8px;
   cursor: pointer;
+}
+
+.tag svg {
+  margin-bottom: -0.12rem;
+  margin-right: 0.3rem;
 }

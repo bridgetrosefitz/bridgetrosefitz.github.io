@@ -1,6 +1,6 @@
 import './projects.css'
 import Tag from '../tag/Tag'
-import { VscGithubAlt } from 'react-icons/vsc'
+import { AiOutlineGithub } from 'react-icons/ai'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -102,7 +102,7 @@ const projectCells = projects.map((project, index) => {
           <div className='project-short-text'>{t(project.shortText)}</div>
           <div className='buttons-container'>
             <Tag name={'View site'} link={project.link}/>
-            <Tag name='View the code' link={`${project.github}/#readme`} img={<VscGithubAlt/>}/>
+            <Tag name='View the code' link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
           </div>
         </div>
       </>
