@@ -1,5 +1,4 @@
 import './tag.css'
-import { VscGithubAlt } from 'react-icons/vsc'
 
 const Tag = ({ img, name, link }) => {
 

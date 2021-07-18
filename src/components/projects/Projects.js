@@ -11,7 +11,13 @@ const techLogos = {
   'Google Sheets API': '/tech-logos/google-sheets.png', 
   'JWT': '/tech-logos/jwt.svg', 
   'Semantic UI React': '/tech-logos/semantic-ui-react.png', 
-  'Bootstrap': '/tech-logos/bootstrap.png'
+  'Bootstrap': '/tech-logos/bootstrap.png',
+  'JSON API': '/tech-logos/json-api.png',
+  'PostgreSQL': '/tech-logos/postgresql.png',
+  'webpack': 'tech-logos/webpack.png',
+  'Apex charts': 'tech-logos/apex-charts.png',
+  'drei': 'tech-logos/drei.png',
+  'GSAP': 'tech-logos/greensock.png'
 }
 
 const projects = [
@@ -19,7 +25,7 @@ const projects = [
     title: 'work.RACI.Title',
     text: 'work.RACI.Project main text',
     shortText: 'work.RACI.Project short text',
-    techStack: ['React.js', 'Rails', 'JWT', 'Semantic UI React'],
+    techStack: ['React.js', 'Rails', 'JSON API', 'PostgreSQL', 'JWT', 'Semantic UI React'],
     techStackFrontEnd: 'work.RACI.Tech stack front end',
     techStackBackEnd: 'work.RACI.Tech stack back end',
     photos: ['/project-snapshots/raci.png'],
@@ -32,7 +38,7 @@ const projects = [
     title: 'work.Digital Innovation.Title',
     text: 'work.Digital Innovation.Project main text',
     shortText: 'work.Digital Innovation.Project short text',
-    techStack: ['Rails', 'Bootstrap'],
+    techStack: ['Rails', 'Bootstrap', 'PostgreSQL', 'webpack', 'Apex charts'],
     techStackFrontEnd: 'work.Digital Innovation.Tech stack front end',
     techStackBackEnd: 'work.Digital Innovation.Tech stack back end',
     photos: ['project-snapshots/digital-innovation.png'],
@@ -45,7 +51,7 @@ const projects = [
     title: 'work.Particles.Title',
     text: 'work.Particles.Project main text',
     shortText: 'work.Particles.Project short text',
-    techStack: ['React.js', 'Three.js'],
+    techStack: ['React.js', 'Three.js', 'drei', 'GSAP', 'webpack'],
     techStackFrontEnd: 'work.Particles.Tech stack front end',
     techStackBackEnd: 'work.Particles.Tech stack back end',
     photos: ['project-snapshots/particles.png'],
@@ -96,7 +102,7 @@ const projectCells = projects.map((project, index) => {
           <div className='project-short-text'>{t(project.shortText)}</div>
           <div className='buttons-container'>
             <Tag name={'View site'} link={project.link}/>
-            <Tag name='View the code' link={`${project.github}/#readme`}/>
+            <Tag name='View the code' link={`${project.github}/#readme`} img={<VscGithubAlt/>}/>
           </div>
         </div>
       </>
