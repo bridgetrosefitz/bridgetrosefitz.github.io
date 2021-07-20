@@ -1,5 +1,4 @@
 import './projects.css'
-import { useState } from 'react'
 import Tag from '../tag/Tag'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { useTranslation } from 'react-i18next'
@@ -77,33 +76,9 @@ const projects = [
 ]
 
 const Projects = props => {
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
   const { t } = useTranslation()
 
-
 const projectCells = projects.map((project, index) => {
-
-  const changePhotoIndex = direction => {
-    const numberOfProjectSnapshots = project.photos.length
-
-    if (direction === 'left') {
-      if(currentPhotoIndex === 0) {
-        setCurrentPhotoIndex((numberOfProjectSnapshots - 1))
-      } else {
-        setCurrentPhotoIndex((currentPhotoIndex - 1))
-      }
-    } else if (direction === 'right') {
-      if (currentPhotoIndex === 0) {
-        setCurrentPhotoIndex(1)
-      } else if (currentPhotoIndex === numberOfProjectSnapshots -1 ) {
-        setCurrentPhotoIndex(0)
-      } 
-      else {
-        setCurrentPhotoIndex((currentPhotoIndex + 1))
-      }
-    }
-    
-  }
 
     let projectTechLogos = project.techStack.map((techUsed, index) => {
       return (
@@ -121,7 +96,7 @@ const projectCells = projects.map((project, index) => {
     return(
       <>
         {/* <img alt={'ProjectPhoto'} src={project.photos[0]}></img> */}
-        <PhotoSlideshow onClick={direction => changePhotoIndex(direction)} photo={project.photos[currentPhotoIndex]}/>
+        <PhotoSlideshow photos={project.photos}/>
         <div className='project-specs-container'>
           <h3 className='project-title'>{t(project.title)}</h3>
           <div className='tech-logo-container'>
