@@ -1,8 +1,8 @@
 import './projects.css'
 import Tag from '../tag/Tag'
 import { AiOutlineGithub } from 'react-icons/ai'
-import React from 'react'
 import { useTranslation } from 'react-i18next'
+import PhotoSlideshow from '../photo-slideshow/PhotoSlideshow'
 
 const techLogos = {
   'React.js': '/tech-logos/react.svg',
@@ -82,18 +82,21 @@ const projectCells = projects.map((project, index) => {
 
     let projectTechLogos = project.techStack.map((techUsed, index) => {
       return (
+
         <img
           index={index}
           className='tech-logo'
           alt={techUsed}
           src={techLogos[techUsed]}
         />
+
       )
     })
     
     return(
       <>
-        <img alt={'ProjectPhoto'} src={project.photos[0]}></img>
+        {/* <img alt={'ProjectPhoto'} src={project.photos[0]}></img> */}
+        <PhotoSlideshow project={project}/>
         <div className='project-specs-container'>
           <h3 className='project-title'>{t(project.title)}</h3>
           <div className='tech-logo-container'>
