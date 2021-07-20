@@ -1,18 +1,14 @@
 import './photo-slideshow.css'
 import Arrow from '../arrow/Arrow'
 
-const PhotoSlideshow = (props) => {
-
-  const changeImage = dir => {
-
-  }
+const PhotoSlideshow = ({ onClick, photo }) => {
 
   return (
 
     <div class="photo-slideshow-container">
-    <Arrow direction='left' />
-    <Arrow direction='right' />
-    <img alt='project-snapshot' src={props.project.photos[0]}/>
+      <Arrow onClick={() => onClick('left')} />
+      <Arrow onClick={() => onClick('right')} />
+      <img alt='project-snapshot' src={photo}/>
     </div>
 
   )

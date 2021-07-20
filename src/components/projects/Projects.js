@@ -1,4 +1,5 @@
 import './projects.css'
+import { useState } from 'react'
 import Tag from '../tag/Tag'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { useTranslation } from 'react-i18next'
@@ -28,7 +29,7 @@ const projects = [
     techStack: ['React.js', 'Rails', 'JSON API', 'PostgreSQL', 'JWT', 'Semantic UI React'],
     techStackFrontEnd: 'work.RACI.Tech stack front end',
     techStackBackEnd: 'work.RACI.Tech stack back end',
-    photos: ['/project-snapshots/raci.png'],
+    photos: ['/project-snapshots/raci.png', '/project-snapshots/raci-photo-2.png', '/project-snapshots/raci-photo-3.png'],
     role: 'Developer',
     link: 'https://bridgetro.se/raci/',
     github: 'https://github.com/bridgetrosefitz/raci',
@@ -76,9 +77,33 @@ const projects = [
 ]
 
 const Projects = props => {
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
   const { t } = useTranslation()
 
+
 const projectCells = projects.map((project, index) => {
+
+  const changePhotoIndex = direction => {
+    const numberOfProjectSnapshots = project.photos.length
+
+    if (direction === 'left') {
+      if(currentPhotoIndex === 0) {
+        setCurrentPhotoIndex((numberOfProjectSnapshots - 1))
+      } else {
+        setCurrentPhotoIndex((currentPhotoIndex - 1))
+      }
+    } else if (direction === 'right') {
+      if (currentPhotoIndex === 0) {
+        setCurrentPhotoIndex(1)
+      } else if (currentPhotoIndex === numberOfProjectSnapshots -1 ) {
+        setCurrentPhotoIndex(0)
+      } 
+      else {
+        setCurrentPhotoIndex((currentPhotoIndex + 1))
+      }
+    }
+    
+  }
 
     let projectTechLogos = project.techStack.map((techUsed, index) => {
       return (
@@ -96,7 +121,7 @@ const projectCells = projects.map((project, index) => {
     return(
       <>
         {/* <img alt={'ProjectPhoto'} src={project.photos[0]}></img> */}
-        <PhotoSlideshow project={project}/>
+        <PhotoSlideshow onClick={direction => changePhotoIndex(direction)} photo={project.photos[currentPhotoIndex]}/>
         <div className='project-specs-container'>
           <h3 className='project-title'>{t(project.title)}</h3>
           <div className='tech-logo-container'>
