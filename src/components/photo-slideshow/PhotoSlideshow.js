@@ -24,8 +24,8 @@ const PhotoSlideshow = ({ photos }) => {
 
   return (
     <div class="photo-slideshow-container">
-      <Arrow onClick={() => changePhoto('left')} />
-      <Arrow onClick={() => changePhoto('right')} />
+      <Arrow direction='left' onClick={() => changePhoto('left')} />
+      {/* <Arrow onClick={() => changePhoto('right')} /> */}
       <img alt='project-snapshot' src={photos[currentPhotoIndex]}/>
     </div>
   )

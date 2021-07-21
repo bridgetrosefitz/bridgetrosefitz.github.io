@@ -1,28 +1,64 @@
 
-.nav-arrow {
+.arrow-positioning-context {
   position: relative;
+  margin-top: 2em;
+  padding-bottom: 10px;
+}
+
+.nav-arrow {
+  position: absolute;
   z-index: 2;
   margin: 0 auto;
   width: 25px;
-  height: 50px;
+  height: 20px;
   cursor: pointer;
 }
 
-.nav-arrow-left-tip, .nav-arrow-right-tip {
+.down.nav-arrow-left-tip, 
+.down.nav-arrow-right-tip, 
+.left.nav-arrow-left-tip, 
+.left.nav-arrow-right-tip {
   position: absolute;
   z-index: 2;
   width: 1px;
   height: 15px;
-  bottom: 0;
   background-color: black;
 }
-.nav-arrow-left-tip {
+
+/* For downwards-pointing arrow */
+
+.down.nav-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.down.nav-arrow-left-tip {
   position: absolute;
   transform: rotate(-55deg);
   left: 6px;
+  bottom: 0;
 }
-.nav-arrow-right-tip {
+.down.nav-arrow-right-tip {
   position: absolute;
   transform: rotate(55deg);
   right: 6px;
+  bottom: 0;
+}
+
+
+/* For left-pointing arrow */
+
+
+.left.nav-arrow-left-tip {
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 18px;
+  bottom: 8px;
+}
+.left.nav-arrow-right-tip {
+  position: absolute;
+  transform: rotate(45deg);
+  right: 6px;
+  bottom: 18px;
 }

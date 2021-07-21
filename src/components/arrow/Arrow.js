@@ -1,14 +1,14 @@
 import './arrow.css'
 
-const Arrow = props => {
+const Arrow = ({direction, onClick}) => {
 
   return(
-    <>
-    <div className='nav-arrow' onClick={props.onClick}>
-      <div className='nav-arrow-left-tip'></div>
-      <div className='nav-arrow-right-tip'></div>
+    <div className='arrow-positioning-context'>
+      <div className={`${direction} nav-arrow`} onClick={onClick}>
+      <div className={`${direction} nav-arrow-left-tip`}></div>
+      <div className={`${direction} nav-arrow-right-tip`}></div>
       </div>
-    </>
+    </div>
   )
 }
 
