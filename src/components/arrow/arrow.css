@@ -3,7 +3,7 @@
   z-index: 2;
   margin: 0 auto;
   cursor: pointer;
-  outline: solid green 2px;
+  /* outline: solid green 2px; */
 }
 
 .down.nav-arrow-left-tip, 
@@ -45,36 +45,38 @@
 
 .left.nav-arrow,
 .right.nav-arrow {
-  height: 24px;
-  width: 16px;
+  height: 100%;
+  width: 40%;
+  /* outline: 2px solid green; */
+  cursor: pointer;
 }
 
 /* For left-pointing arrow */
 
 .left.nav-arrow-left-tip {
-  transform: translate(6px, 0) rotate(-45deg);
-  left: 0px;
-  bottom: 0px;
+  transform: translate(3px, 10px) rotate(-45deg);
+  left: 4px;
+  bottom: 50%;
 }
 
 .left.nav-arrow-right-tip {
-  transform: translate(6px, 0) rotate(45deg);
-  left: 0px;
-  bottom: 10px;
+  transform: translate(3px, 0px) rotate(45deg);
+  left: 4px;
+  bottom: 50%;
 }
 
 /* For right-pointing arrow */
 
 .right.nav-arrow-left-tip {
-  transform: translate(-6px, 0) rotate(-45deg);
-  right: 0px;
-  bottom: 10px;
+  transform: translate(-3px, 0px) rotate(-45deg);
+  right: 4px;
+  bottom: 50%;
 }
 
 .right.nav-arrow-right-tip {
-  transform: translate(-6px, 0) rotate(45deg);
-  right: 0px;
-  bottom: 0px;
+  transform: translate(-3px, 10px) rotate(45deg);
+  right: 4px;
+  bottom: 50%;
 }
 
 /* For arrow color */
@@ -89,11 +91,11 @@
 /* IMPORTANT: You must put this class inside an element with a positioning context */
 
 .slideshow-arrow-left {
-  top: 50%;
-  left: 2%;
+  /* top: 50%;
+  left: 20; */
 }
 
 .slideshow-arrow-right {
-  top: 50%;
-  right: 2%;
+  /* top: 50%; */
+  right: 0;
 }
