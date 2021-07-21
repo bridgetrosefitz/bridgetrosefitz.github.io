@@ -1,23 +1,17 @@
-
-.arrow-positioning-context {
-  position: relative;
-  margin-top: 2em;
-  padding-bottom: 10px;
-}
-
 .nav-arrow {
   position: absolute;
   z-index: 2;
   margin: 0 auto;
-  width: 25px;
-  height: 20px;
   cursor: pointer;
+  outline: solid green 2px;
 }
 
 .down.nav-arrow-left-tip, 
 .down.nav-arrow-right-tip, 
 .left.nav-arrow-left-tip, 
-.left.nav-arrow-right-tip {
+.left.nav-arrow-right-tip,
+.right.nav-arrow-left-tip, 
+.right.nav-arrow-right-tip {
   position: absolute;
   z-index: 2;
   width: 1px;
@@ -29,6 +23,8 @@
 
 .down.nav-arrow {
   position: absolute;
+  height: 24px;
+  width: 25px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -39,6 +35,7 @@
   left: 6px;
   bottom: 0;
 }
+
 .down.nav-arrow-right-tip {
   position: absolute;
   transform: rotate(55deg);
@@ -46,19 +43,57 @@
   bottom: 0;
 }
 
+.left.nav-arrow,
+.right.nav-arrow {
+  height: 24px;
+  width: 16px;
+}
 
 /* For left-pointing arrow */
 
-
 .left.nav-arrow-left-tip {
-  position: absolute;
-  transform: rotate(-45deg);
-  left: 18px;
-  bottom: 8px;
+  transform: translate(6px, 0) rotate(-45deg);
+  left: 0px;
+  bottom: 0px;
 }
+
 .left.nav-arrow-right-tip {
-  position: absolute;
-  transform: rotate(45deg);
-  right: 6px;
-  bottom: 18px;
+  transform: translate(6px, 0) rotate(45deg);
+  left: 0px;
+  bottom: 10px;
+}
+
+/* For right-pointing arrow */
+
+.right.nav-arrow-left-tip {
+  transform: translate(-6px, 0) rotate(-45deg);
+  right: 0px;
+  bottom: 10px;
+}
+
+.right.nav-arrow-right-tip {
+  transform: translate(-6px, 0) rotate(45deg);
+  right: 0px;
+  bottom: 0px;
+}
+
+/* For arrow color */
+
+.white-arrow.nav-arrow-left-tip, 
+.white-arrow.nav-arrow-right-tip {
+  background-color: black;
+}
+
+/* For slideshow arrows */
+
+/* IMPORTANT: You must put this class inside an element with a positioning context */
+
+.slideshow-arrow-left {
+  top: 50%;
+  left: 2%;
+}
+
+.slideshow-arrow-right {
+  top: 50%;
+  right: 2%;
 }

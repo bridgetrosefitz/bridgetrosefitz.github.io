@@ -96,7 +96,7 @@ const projectCells = projects.map((project, index) => {
     return(
       <>
         {/* <img alt={'ProjectPhoto'} src={project.photos[0]}></img> */}
-        <PhotoSlideshow photos={project.photos}/>
+        <PhotoSlideshow arrowColor='white' photos={project.photos}/>
         <div className='project-specs-container'>
           <h3 className='project-title'>{t(project.title)}</h3>
           <div className='tech-logo-container'>

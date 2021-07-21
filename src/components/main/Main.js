@@ -56,7 +56,9 @@ const Main = props => {
         </button>
       </div>
       <div className='main-content'>
-        <Arrow direction='down' onClick={() => {workRef.current.scrollIntoView()}}/>
+        <div className='arrow-positioning-context'>
+          <Arrow direction='down' onClick={() => {workRef.current.scrollIntoView()}}/>
+        </div>
         <Work workRef={workRef} />
       </div>
       <Footer/>

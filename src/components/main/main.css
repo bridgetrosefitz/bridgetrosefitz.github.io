@@ -19,3 +19,9 @@ canvas {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
+
+.arrow-positioning-context {
+  position: relative;
+  margin-top: 2em;
+  padding-bottom: 10px;
+}

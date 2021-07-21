@@ -1,7 +1,7 @@
   
 .projects-container {
   display: grid;
-  grid-template-columns: 30% 68%;
+  grid-template-columns: 35% 63%;
   grid-auto-rows: auto;
   grid-row-gap: 20vh;
   grid-column-gap: 5%;

@@ -1,14 +1,14 @@
 import './arrow.css'
 
-const Arrow = ({direction, onClick}) => {
+const Arrow = ({direction, onClick, color, slideshowArrow }) => {
 
   return(
-    <div className='arrow-positioning-context'>
-      <div className={`${direction} nav-arrow`} onClick={onClick}>
-      <div className={`${direction} nav-arrow-left-tip`}></div>
-      <div className={`${direction} nav-arrow-right-tip`}></div>
+    <>
+      <div className={` ${slideshowArrow ? `slideshow-arrow-${direction}` : null} ${direction} ${color}-arrow nav-arrow`} onClick={onClick}>
+        <div className={`${direction} ${color}-arrow nav-arrow-left-tip`}></div>
+        <div className={`${direction} ${color}-arrow nav-arrow-right-tip`}></div>
       </div>
-    </div>
+    </>
   )
 }
 

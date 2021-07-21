@@ -2,7 +2,7 @@ import './photo-slideshow.css'
 import { useState } from 'react'
 import Arrow from '../arrow/Arrow'
 
-const PhotoSlideshow = ({ photos }) => {
+const PhotoSlideshow = ({ photos, arrowColor }) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
 
   const changePhoto = direction => {
@@ -24,8 +24,10 @@ const PhotoSlideshow = ({ photos }) => {
 
   return (
     <div class="photo-slideshow-container">
-      <Arrow direction='left' onClick={() => changePhoto('left')} />
-      {/* <Arrow onClick={() => changePhoto('right')} /> */}
+      <div className='slideshow-panel-left'/>
+      <div className='slideshow-panel-right' />
+      <Arrow slideshowArrow direction='left' color={arrowColor} onClick={() => changePhoto('left')} />
+      <Arrow slideshowArrow direction='right' color={arrowColor} onClick={() => changePhoto('right')} />
       <img alt='project-snapshot' src={photos[currentPhotoIndex]}/>
     </div>
   )
