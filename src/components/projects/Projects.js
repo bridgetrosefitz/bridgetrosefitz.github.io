@@ -56,8 +56,8 @@ const projects = [
     techStackBackEnd: 'work.Particles.Tech stack back end',
     photos: ['/project-snapshots/particles/particles-1-basic.png', '/project-snapshots/particles/particles-2-small-particle-size.png', '/project-snapshots/particles/particles-3-zoom-intro.png', '/project-snapshots/particles/particles-4-tilted-plane.png', '/project-snapshots/particles/particles-5-massive-depth.png', '/project-snapshots/particles/particles-6-negative-depth.png', '/project-snapshots/particles/particles-7-large-particle-size.png'],
     role: 'Developer',
-    link: 'http://bridgetro.se',
-    github: 'https://github.com/bridgetrosefitz/personal-website',
+    link: 'http://bridgetro.se/particles/',
+    github: 'https://github.com/bridgetrosefitz/particles',
     userStories: 'bridgetro.se'
   },
   {
