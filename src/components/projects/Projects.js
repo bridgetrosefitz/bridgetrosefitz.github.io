@@ -4,20 +4,20 @@ import { AiOutlineGithub } from 'react-icons/ai'
 import { useTranslation } from 'react-i18next'
 import PhotoSlideshow from '../photo-slideshow/PhotoSlideshow'
 
-const techLogos = {
-  'React.js': '/tech-logos/react.svg',
-  'Rails': '/tech-logos/rails.svg', 
-  'Three.js': '/tech-logos/threejs.png', 
-  'Google Sheets API': '/tech-logos/google-sheets.png', 
-  'JWT': '/tech-logos/jwt.svg', 
-  'Semantic UI React': '/tech-logos/semantic-ui-react.png', 
-  'Bootstrap': '/tech-logos/bootstrap.png',
-  'JSON API': '/tech-logos/json-api.png',
-  'PostgreSQL': '/tech-logos/postgresql.png',
-  'webpack': 'tech-logos/webpack.png',
-  'Apex charts': 'tech-logos/apex-charts.png',
-  'drei': 'tech-logos/drei.png',
-  'GSAP': 'tech-logos/greensock.png'
+const techLookup = {
+  'React.js': { logo: '/tech-logos/react.svg', link:'https://reactjs.org/' },
+  'Rails': { logo: '/tech-logos/rails.svg', link: 'https://rubyonrails.org/'},
+  'Three.js': { logo: '/tech-logos/threejs.png', link: 'https://threejs.org/'},
+  'Google Sheets API': { logo: '/tech-logos/google-sheets.png', link: 'https://developers.google.com/sheets/api' },
+  'JWT': { logo: '/tech-logos/jwt.svg', link: 'https://jwt.io/'},
+  'Semantic UI React': { logo: '/tech-logos/semantic-ui-react.png', link: 'https://react.semantic-ui.com/'},
+  'Bootstrap': { logo: '/tech-logos/bootstrap.png', link: 'https://getbootstrap.com/'},
+  'JSON API': { logo: '/tech-logos/json-api.png', link: 'https://jsonapi.org/'},
+  'PostgreSQL': { logo: '/tech-logos/postgresql.png', link: 'https://www.postgresql.org/'},
+  'webpack': { logo: 'tech-logos/webpack.png', link: 'https://webpack.js.org/'},
+  'Apex charts': { logo: 'tech-logos/apex-charts.png', link: 'https://apexcharts.com/'},
+  'drei': { logo: 'tech-logos/drei.png', link: 'https://drei.pmnd.rs/'},
+  'GSAP': { logo: 'tech-logos/greensock.png', link: 'https://greensock.com/gsap/'}
 }
 
 const projects = [
@@ -82,13 +82,14 @@ const projectCells = projects.map((project, index) => {
 
     let projectTechLogos = project.techStack.map((techUsed, index) => {
       return (
-
-        <img
-          index={index}
-          className='tech-logo'
-          alt={techUsed}
-          src={techLogos[techUsed]}
-        />
+        <a href={techLookup[techUsed].link} target='_blank' rel='noreferrer'>
+          <img
+            index={index}
+            className='tech-logo'
+            alt={techUsed}
+            src={techLookup[techUsed].logo}
+          />
+        </a>
 
       )
     })
