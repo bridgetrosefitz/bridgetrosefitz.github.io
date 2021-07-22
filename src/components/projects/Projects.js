@@ -28,7 +28,7 @@ const projects = [
     techStack: ['React.js', 'Rails', 'JSON API', 'PostgreSQL', 'JWT', 'Semantic UI React'],
     techStackFrontEnd: 'work.RACI.Tech stack front end',
     techStackBackEnd: 'work.RACI.Tech stack back end',
-    photos: ['/project-snapshots/raci/raci-create-project-empty.png', '/project-snapshots/raci/raci-signup-filled.png'],
+    photos: ['/project-snapshots/raci/raci-1-signup.png', '/project-snapshots/raci/raci-2-login.png', '/project-snapshots/raci/raci-3-login-error.png', '/project-snapshots/raci/raci-4-projects-page.png', '/project-snapshots/raci/raci-5-project-and-tasks-page.png', '/project-snapshots/raci/raci-6-edit-project.png', '/project-snapshots/raci/raci-7-new-task.png', '/project-snapshots/raci/raci-8-delete-project.png', '/project-snapshots/raci/raci-9-loading.png'],
     role: 'Developer',
     link: 'https://bridgetro.se/raci/',
     github: 'https://github.com/bridgetrosefitz/raci',

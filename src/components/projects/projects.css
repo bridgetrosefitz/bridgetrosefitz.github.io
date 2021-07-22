@@ -5,18 +5,18 @@
   grid-auto-rows: auto;
   grid-row-gap: 20vh;
   grid-column-gap: 5%;
-  margin: 8vw 14vw 14vw 14vw;
+  margin: 10vw 14vw 14vw 14vw;
 }
 
 .project-specs-container {
   color: black;
-  /* background-color: tomato; */
 }
 
 .project-image {
   width: 100%;
-  aspect-ratio: 2880 / 1664;
+  aspect-ratio: 2880 / 1656;
   border-radius: 4px;
+  border: 1px solid lightgray;
 }
 
 .project-title {
@@ -39,9 +39,9 @@
 }
 
 .tech-logo {
-  width: 32px;
+  width: 25px;
   object-fit: contain;
-  margin-right: 40px;
+  margin-right: 20px;
   filter: grayscale(1) brightness(1);
   transition: filter 0.1s ease-in-out;
 }
