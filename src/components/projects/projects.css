@@ -39,9 +39,10 @@
 }
 
 .tech-logo {
-  width: 25px;
+  width: 45px;
   object-fit: contain;
-  margin-right: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
   filter: grayscale(1) brightness(1);
   transition: filter 0.1s ease-in-out;
 }
