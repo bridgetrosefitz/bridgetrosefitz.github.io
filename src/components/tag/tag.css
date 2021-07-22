@@ -1,12 +1,12 @@
 .tag {
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 1.1em;
   background-color: lightgrey;
   border-radius: 30px;
   text-align: center;
-  padding: 8px 16px;
+  padding: 1.7% 3.4%;
   margin-top: 10px;
-  margin-right: 8px;
+  margin-right: 3%;
   cursor: pointer;
 }
 

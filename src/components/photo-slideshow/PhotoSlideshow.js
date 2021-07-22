@@ -28,7 +28,7 @@ const PhotoSlideshow = ({ photos, arrowColor }) => {
       <div className='slideshow-panel-right' />
       <Arrow slideshowArrow direction='left' color={arrowColor} onClick={() => changePhoto('left')} />
       <Arrow slideshowArrow direction='right' color={arrowColor} onClick={() => changePhoto('right')} />
-      <img alt='project-snapshot' src={photos[currentPhotoIndex]}/>
+      <img className='project-image' alt='project-snapshot' src={photos[currentPhotoIndex]}/>
     </div>
   )
 }

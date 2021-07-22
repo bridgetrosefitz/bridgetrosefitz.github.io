@@ -28,7 +28,7 @@ const projects = [
     techStack: ['React.js', 'Rails', 'JSON API', 'PostgreSQL', 'JWT', 'Semantic UI React'],
     techStackFrontEnd: 'work.RACI.Tech stack front end',
     techStackBackEnd: 'work.RACI.Tech stack back end',
-    photos: ['/project-snapshots/raci.png', '/project-snapshots/raci-photo-2.png', '/project-snapshots/raci-photo-3.png'],
+    photos: ['/project-snapshots/raci/raci-create-project-empty.png', '/project-snapshots/raci/raci-signup-filled.png'],
     role: 'Developer',
     link: 'https://bridgetro.se/raci/',
     github: 'https://github.com/bridgetrosefitz/raci',
@@ -95,14 +95,13 @@ const projectCells = projects.map((project, index) => {
     
     return(
       <>
-        {/* <img alt={'ProjectPhoto'} src={project.photos[0]}></img> */}
-        <PhotoSlideshow arrowColor='white' photos={project.photos}/>
+        <PhotoSlideshow arrowColor='transparent' photos={project.photos}/>
         <div className='project-specs-container'>
           <h3 className='project-title'>{t(project.title)}</h3>
           <div className='tech-logo-container'>
             {projectTechLogos}
           </div>
-          <div className='project-short-text'>{t(project.shortText)}</div>
+          <p className='project-short-text'>{t(project.shortText)}</p>
           <div className='buttons-container'>
             <Tag name={'View site'} link={project.link}/>
             <Tag name='View the code' link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>

@@ -1,14 +1,13 @@
 .photo-slideshow-container {
   position: relative;
-  outline: 2px solid blue ;
 }
 
 .slideshow-panel-left {
   position: absolute;
   height: 100%;
   width: 8%;
-  background-color: pink;
-  opacity: 0.4;
+  /* background-color: white;
+  opacity: 0.4; */
 }
 
 .slideshow-panel-right {
@@ -16,7 +15,7 @@
   right: 0;
   height: 100%;
   width: 8%;
-  background-color: pink;
-  opacity: 0.4;
+  /* background-color: white;
+  opacity: 0.4; */
 }
 

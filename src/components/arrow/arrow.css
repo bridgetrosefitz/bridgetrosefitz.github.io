@@ -45,9 +45,8 @@
 
 .left.nav-arrow,
 .right.nav-arrow {
-  height: 100%;
   width: 40%;
-  /* outline: 2px solid green; */
+  aspect-ratio: 1 / 1.5;
   cursor: pointer;
 }
 
@@ -55,13 +54,13 @@
 
 .left.nav-arrow-left-tip {
   transform: translate(3px, 10px) rotate(-45deg);
-  left: 4px;
+  left: 8px;
   bottom: 50%;
 }
 
 .left.nav-arrow-right-tip {
   transform: translate(3px, 0px) rotate(45deg);
-  left: 4px;
+  left: 8px;
   bottom: 50%;
 }
 
@@ -69,13 +68,13 @@
 
 .right.nav-arrow-left-tip {
   transform: translate(-3px, 0px) rotate(-45deg);
-  right: 4px;
+  right: 8px;
   bottom: 50%;
 }
 
 .right.nav-arrow-right-tip {
   transform: translate(-3px, 10px) rotate(45deg);
-  right: 4px;
+  right: 8px;
   bottom: 50%;
 }
 
@@ -83,7 +82,12 @@
 
 .white-arrow.nav-arrow-left-tip, 
 .white-arrow.nav-arrow-right-tip {
-  background-color: black;
+  background-color: white;
+}
+
+.transparent-arrow.nav-arrow-left-tip, 
+.transparent-arrow.nav-arrow-right-tip {
+  background-color: transparent;
 }
 
 /* For slideshow arrows */
@@ -91,11 +95,10 @@
 /* IMPORTANT: You must put this class inside an element with a positioning context */
 
 .slideshow-arrow-left {
-  /* top: 50%;
-  left: 20; */
+  /* background: linear-gradient(90deg, #00000059, transparent 50%) */
 }
 
 .slideshow-arrow-right {
-  /* top: 50%; */
   right: 0;
+  /* background: linear-gradient(-90deg, #00000059, transparent 50%) */
 }
