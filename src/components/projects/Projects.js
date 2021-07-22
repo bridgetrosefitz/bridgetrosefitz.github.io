@@ -28,7 +28,7 @@ const projects = [
     techStack: ['React.js', 'Rails', 'JSON API', 'PostgreSQL', 'JWT', 'Semantic UI React'],
     techStackFrontEnd: 'work.RACI.Tech stack front end',
     techStackBackEnd: 'work.RACI.Tech stack back end',
-    photos: ['/project-snapshots/raci/raci-1-signup.png', '/project-snapshots/raci/raci-2-login.png', '/project-snapshots/raci/raci-3-login-error.png', '/project-snapshots/raci/raci-4-projects-page.png', '/project-snapshots/raci/raci-5-project-and-tasks-page.png', '/project-snapshots/raci/raci-6-edit-project.png', '/project-snapshots/raci/raci-7-new-task.png', '/project-snapshots/raci/raci-8-delete-project.png', '/project-snapshots/raci/raci-9-loading.png'],
+    photos: ['/project-snapshots/raci/raci-1-project-and-tasks-page.png', '/project-snapshots/raci/raci-2-signup.png', '/project-snapshots/raci/raci-3-login.png', '/project-snapshots/raci/raci-4-login-error.png', '/project-snapshots/raci/raci-5-projects-page.png', '/project-snapshots/raci/raci-6-edit-project.png', '/project-snapshots/raci/raci-7-new-task.png', '/project-snapshots/raci/raci-8-delete-project.png', '/project-snapshots/raci/raci-9-loading.png'],
     role: 'Developer',
     link: 'https://bridgetro.se/raci/',
     github: 'https://github.com/bridgetrosefitz/raci',
@@ -41,7 +41,7 @@ const projects = [
     techStack: ['Rails', 'Bootstrap', 'PostgreSQL', 'webpack', 'Apex charts'],
     techStackFrontEnd: 'work.Digital Innovation.Tech stack front end',
     techStackBackEnd: 'work.Digital Innovation.Tech stack back end',
-    photos: ['project-snapshots/digital-innovation.png'],
+    photos: ['/project-snapshots/digital-innovation/digital-innovation-1-landing-page.png', '/project-snapshots/digital-innovation/digital-innovation-2-signup.png', '/project-snapshots/digital-innovation/digital-innovation-3-login.png', '/project-snapshots/digital-innovation/digital-innovation-4-login-error.png', '/project-snapshots/digital-innovation/digital-innovation-5-capital.png', '/project-snapshots/digital-innovation/digital-innovation-6-new-ideas-with-comment.png', '/project-snapshots/digital-innovation/digital-innovation-6-new-ideas-with-comment.png', '/project-snapshots/digital-innovation/digital-innovation-7-activity.png'],
     role: 'Developer',
     link: 'http://digital-innovation-stats.herokuapp.com/',
     github: 'https://github.com/bridgetrosefitz/digital_innovation',
@@ -54,7 +54,7 @@ const projects = [
     techStack: ['React.js', 'Three.js', 'drei', 'GSAP', 'webpack'],
     techStackFrontEnd: 'work.Particles.Tech stack front end',
     techStackBackEnd: 'work.Particles.Tech stack back end',
-    photos: ['project-snapshots/particles.png'],
+    photos: ['/project-snapshots/particles/particles-1-basic.png', '/project-snapshots/particles/particles-2-small-particle-size.png', '/project-snapshots/particles/particles-3-zoom-intro.png', '/project-snapshots/particles/particles-4-tilted-plane.png', '/project-snapshots/particles/particles-5-massive-depth.png', '/project-snapshots/particles/particles-6-negative-depth.png', '/project-snapshots/particles/particles-7-large-particle-size.png'],
     role: 'Developer',
     link: 'http://bridgetro.se',
     github: 'https://github.com/bridgetrosefitz/personal-website',
@@ -67,7 +67,7 @@ const projects = [
     shortText: 'work.Food Systems Dialogues.Project short text',
     techStackFrontEnd: 'work.Food Systems Dialogues.Tech stack front end',
     techStackBackEnd: 'work.Food Systems Dialogues.Tech stack back end',
-    photos: ['project-snapshots/fsds.png'],
+    photos: ['/project-snapshots/fsds/fsds-1-event-insights.png', '/project-snapshots/fsds/fsds-2-landing-page.png', '/project-snapshots/fsds/fsds-3-summary.png', '/project-snapshots/fsds/fsds-4-participants.png', '/project-snapshots/fsds/fsds-5-participants-and-download-buttons.png', '/project-snapshots/fsds/fsds-6-table-plan.png', '/project-snapshots/fsds/fsds-7-table-plan-click-and-drag.png', '/project-snapshots/fsds/fsds-8-diversity-by-table.png'],
     role: 'Product-managed',
     link: 'https://fsds-tool.herokuapp.com/',
     github: 'https://github.com/Jesus-Escalona',
@@ -97,14 +97,14 @@ const projectCells = projects.map((project, index) => {
       <>
         <PhotoSlideshow arrowColor='transparent' photos={project.photos}/>
         <div className='project-specs-container'>
-          <h3 className='project-title'>{t(project.title)}</h3>
+          <h3 className='project-title'>{t(project.title)}{project.role === 'Product-managed' ? <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px'}}> (Product-managed)</span> : null}</h3>
           <div className='tech-logo-container'>
             {projectTechLogos}
           </div>
           <p className='project-short-text'>{t(project.shortText)}</p>
           <div className='buttons-container'>
             <Tag name={'View site'} link={project.link}/>
-            <Tag name='View the code' link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
+            <Tag name={project.role === 'Product-managed' ? 'Jesus Escalona' : 'View the code'} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
           </div>
         </div>
       </>

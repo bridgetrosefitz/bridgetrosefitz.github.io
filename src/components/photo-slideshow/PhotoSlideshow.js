@@ -4,6 +4,9 @@ import Arrow from '../arrow/Arrow'
 
 const PhotoSlideshow = ({ photos, arrowColor }) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
+  const altText = photos[currentPhotoIndex]
+    .split(`-${currentPhotoIndex + 1}-`)[1]
+    .split('.')[0]
 
   const changePhoto = direction => {
     const photosLastIndex = photos.length -1
@@ -28,7 +31,7 @@ const PhotoSlideshow = ({ photos, arrowColor }) => {
       <div className='slideshow-panel-right' />
       <Arrow slideshowArrow direction='left' color={arrowColor} onClick={() => changePhoto('left')} />
       <Arrow slideshowArrow direction='right' color={arrowColor} onClick={() => changePhoto('right')} />
-      <img className='project-image' alt='project-snapshot' src={photos[currentPhotoIndex]}/>
+      <img className='project-image' alt={altText} src={photos[currentPhotoIndex]}/>
     </div>
   )
 }
