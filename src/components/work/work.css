@@ -38,28 +38,8 @@
   grid-template-rows: repeat(2, 400px);
 }
 
-/* .spacing-element-between-logos-and-projects {
-  height: 100px;
-  position: relative;
-} */
-
-.grid-item img {
-  width: 10%;
-  /* display: block; */
-}
-
-.grid-item p {
-  /* background-color: #bebebe; */
-  color: #444;
-  font-size: 1.3rem;
-}
-
-.grid-item {
-  width: 100%;
-  font-size: 20px;
-  font-weight: normal;
-  cursor: pointer;
-
+a {
+  display: flex;
 }
 
 .small-text {
