@@ -4,6 +4,7 @@ import Arrow from '../arrow/Arrow'
 
 const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
+
   const altText = photos[currentPhotoIndex]
     .split(`-${currentPhotoIndex + 1}-`)[1]
     .split('.')[0]
@@ -26,7 +27,7 @@ const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
   }
 
   return (
-    <div data-aos={dataAos} data-aos-duration={dataAosDuration} class="photo-slideshow-container">
+    <div data-aos={dataAos} data-aos-duration={dataAosDuration} className="photo-slideshow-container">
       <div className='slideshow-panel-left'/>
       <div className='slideshow-panel-right' />
       <Arrow slideshowArrow direction='left' color={arrowColor} onClick={() => changePhoto('left')} />
