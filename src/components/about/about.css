@@ -58,13 +58,23 @@ img {
 
 .values-header {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 5em;
+  font-weight: 400;
+}
+
+.values-header:first-of-type {
+  text-align: center;
+  margin-top: 2em;
   font-weight: 400;
 }
 
 .photo-of-me {
   display: flex;
   justify-content: center;
-  margin: 80px;
+  margin: 3em;
   transform: rotate(2deg);
+}
+
+.spacing-element-after-photo {
+  height: 2em;
 }

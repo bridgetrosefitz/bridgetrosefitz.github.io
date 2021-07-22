@@ -29,13 +29,11 @@ const About = props => {
   const valuesDisplay = values.map((value, index) => {
       return(
         <>
-        <h3 key={index} className='values-header'>{t(value.title)}</h3>
-        <p key={index} className='values-p'>{t(value.text)}</p>
+          <h3 data-aos="fade-up" data-aos-duration="700" key={index} className='values-header'>{t(value.title)}</h3>
+          <p data-aos="fade-up" data-aos-duration="700" key={index} className='values-p'>{t(value.text)}</p>
         </>
       )
   })
-
-
 
   return(
     <>
@@ -45,8 +43,9 @@ const About = props => {
       <p className='about-p'>{t('about.About main text')}<span className='small-text'>{t('about.Asterisk')}</span></p>
       <br/>
       <div className='photo-of-me'>
-        <img alt='Me at Trolltunga, Norway' src='/photos/Trolltunga.jpeg'/>
+        <img data-aos="fade-up" data-aos-duration="700" alt='Me at Trolltunga, Norway' src='/photos/Trolltunga.jpeg'/>
       </div>
+      <div className='spacing-element-after-photo'/>
       <h2 className='about-header'>{t('about.My values')}</h2>
       {valuesDisplay}
     <Footer/>

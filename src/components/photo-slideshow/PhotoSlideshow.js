@@ -2,7 +2,7 @@ import './photo-slideshow.css'
 import { useState } from 'react'
 import Arrow from '../arrow/Arrow'
 
-const PhotoSlideshow = ({ photos, arrowColor }) => {
+const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
   const altText = photos[currentPhotoIndex]
     .split(`-${currentPhotoIndex + 1}-`)[1]
@@ -26,7 +26,7 @@ const PhotoSlideshow = ({ photos, arrowColor }) => {
   }
 
   return (
-    <div class="photo-slideshow-container">
+    <div data-aos={dataAos} data-aos-duration={dataAosDuration} class="photo-slideshow-container">
       <div className='slideshow-panel-left'/>
       <div className='slideshow-panel-right' />
       <Arrow slideshowArrow direction='left' color={arrowColor} onClick={() => changePhoto('left')} />

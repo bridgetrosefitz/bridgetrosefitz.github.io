@@ -96,8 +96,8 @@ const projectCells = projects.map((project, index) => {
     
     return(
       <>
-        <PhotoSlideshow arrowColor='transparent' photos={project.photos}/>
-        <div className='project-specs-container'>
+        <PhotoSlideshow dataAos='fade-up' dataAosDuration="1500" arrowColor='transparent' photos={project.photos}/>
+        <div data-aos='fade-up' data-aos-duration="1500" className='project-specs-container'>
           <h3 className='project-title'>{t(project.title)}{project.role === 'Product-managed' ? <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px'}}> (Product-managed)</span> : null}</h3>
           <div className='tech-logo-container'>
             {projectTechLogos}
