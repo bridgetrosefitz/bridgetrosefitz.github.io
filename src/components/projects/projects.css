@@ -59,3 +59,12 @@
   /* background: cyan; */
   /* padding: 12px 0; */
 }
+
+@media (max-width: 375px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 7vh;
+    margin: 1em;
+  }
+}
