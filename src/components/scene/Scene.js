@@ -1,6 +1,7 @@
 import React from 'react'
 import { CubeTextureLoader } from 'three'
 import { useSphere, usePlane} from '@react-three/cannon'
+import { useThree } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 
 const sphereMetalness = 1
@@ -19,7 +20,6 @@ const melbourneEnvironmentMapTexture = loader.load([
   '/environments/melbourne/pz.png',
   '/environments/melbourne/nz.png',
 ])
-
 
 const louvreEnvironmentMapTexture = loader.load([
   '/environments/louvre/px.png',
@@ -88,10 +88,10 @@ const setTexture = (city) => {
 export const Sphere = props => {
 
   const [spherePhysicsRef] = useSphere(() => ({ mass: 10, position: spherePosition, args: [sphereRadius]}))
-
   return (
       <mesh
         {...props}
+       
         castShadow
         ref={spherePhysicsRef}
         position={spherePosition}>
@@ -109,13 +109,19 @@ export const Sphere = props => {
 }
 
 export const Plane = () => {
-  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: planePosition, rotation: [-Math.PI * 0.5, 0, 0] }))
+  const { viewport } = useThree()
+  let aspectRatio = viewport.height / viewport.width
+  if (viewport.width <= 480) {
+    aspectRatio *= 1.5
+  }
+  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [planePosition[0], aspectRatio + planePosition[1], planePosition[2]], rotation: [-Math.PI * 0.5, 0, 0] }))
+  console.log(viewport)
     return(
       <mesh 
         receiveShadow
         ref={planePhysicsRef} 
-        position={planePosition}
-        rotation={[-Math.PI * 0.5, 0, 0]}  >
+        position={[planePosition[0], aspectRatio + planePosition[1], planePosition[2]]}
+        rotation={[-Math.PI * 0.5, 0, 0]} >
         <planeGeometry args={[100, 100]} />
         <shadowMaterial color="#171717" opacity={0.1} />
     </mesh>

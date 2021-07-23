@@ -20,6 +20,9 @@ const Main = props => {
   return (
     <>
       <Localization {...props}/>
+      <button className='side-button' onClick={() => props.history.push('/about')}>
+        {t('main.About')}
+      </button>
       <HeaderLarge cities={cities} city={city} setCity={setCity}/>
       <Canvas
         style={{ position: 'absolute', height: '100vh', width: '100%', top: 0, left: 0}}
@@ -51,9 +54,6 @@ const Main = props => {
         />
       </Canvas>
       <div className='spacing-element-for-canvas'>
-        <button className='side-button' onClick={() => props.history.push('/about')}>
-          {t('main.About')}
-        </button>
       </div>
       <div className='main-content'>
         <div className='arrow-positioning-context'>

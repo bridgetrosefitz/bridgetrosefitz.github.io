@@ -19,11 +19,11 @@ p {
 .side-button {
   background-color: transparent;
   border: none;
-  position: relative;
+  position: absolute;
   z-index: 2;
   cursor: pointer;
   left: 5px;
-  top: 50%;
+  top: 50vh;
   transform: rotate(270deg);
 }
 
