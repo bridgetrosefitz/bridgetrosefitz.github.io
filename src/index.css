@@ -18,7 +18,6 @@ p {
 
 .side-button {
   cursor: pointer;
-  position: absolute;
   left: 5px;
   top: 50%;
   transform: rotate(270deg);
@@ -59,7 +58,7 @@ canvas {
   font-weight: 700;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
 
   .side-button {
     cursor: pointer;
@@ -69,7 +68,7 @@ canvas {
     right: 0;
     padding-top: 3px;
     transform: rotate(0);
-}
+  }
 }
 
 
