@@ -65,6 +65,14 @@
     display: grid;
     grid-template-columns: 100%;
     grid-row-gap: 7vh;
-    margin: 1em;
+    margin-top: 8em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  .project-specs-container {
+    margin-top: -2em;
+    margin-bottom: 4em;
   }
 }

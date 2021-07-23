@@ -32,6 +32,11 @@
   .header {
     display: block;
     margin: 0;
+    padding-top: 1.5em;
     transform: translate(0, 0);
+  }
+
+  .header h2 {
+    display: none;
   }
 }

@@ -45,3 +45,18 @@
 .small-text {
   font-size: 12px;
 }
+
+.spacing-element-between-logos-and-projects {
+  /* Not being used at the moment, but available if necessary */
+}
+
+@media (max-width: 480px) {
+  .company-logo-display-container {
+    margin: 1em;
+  }
+  
+  .company-logo-display-container img {
+    margin: 2em 2em;
+    filter: initial brightness(1);
+  }
+}

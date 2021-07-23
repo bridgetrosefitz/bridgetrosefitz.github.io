@@ -1,4 +1,4 @@
-button {
+.localization-button {
   background-color: transparent;
   border: none;
   position: relative;
@@ -8,4 +8,12 @@ button {
 
 button:hover {
   color: grey;
+}
+
+@media (max-width: 480px) {
+  .localization-button {
+    font-size: 0.8em;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
 }

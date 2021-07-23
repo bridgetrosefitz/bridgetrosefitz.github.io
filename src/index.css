@@ -17,6 +17,10 @@ p {
 }
 
 .side-button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  z-index: 2;
   cursor: pointer;
   left: 5px;
   top: 50%;
@@ -61,13 +65,13 @@ canvas {
 @media (max-width: 480px) {
 
   .side-button {
-    cursor: pointer;
     position: absolute;
     top: 0;
     left: auto;
     right: 0;
     padding-top: 3px;
     transform: rotate(0);
+    font-size: 0.8em;
   }
 }
 
