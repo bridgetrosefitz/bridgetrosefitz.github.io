@@ -7,9 +7,9 @@
 
 .company-logo-display-container img {
   filter: grayscale(1) brightness(1);
-  max-width: 100px;
+  width: 6em;
   object-fit: contain;
-  margin: 40px 60px;
+  margin: 2em 3em;
   transition: filter 0.1s ease-in-out, transform 0.1s ease-in-out;
 
 }
