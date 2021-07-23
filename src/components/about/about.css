@@ -78,3 +78,23 @@ img {
 .spacing-element-after-photo {
   height: 2em;
 }
+
+@media (max-width: 480px) {
+  .about-p, .values-p {
+    margin: 0 1.5em;
+  }
+
+  .photo-of-me {
+    margin: 3em 0;
+    transform: rotate(2deg);
+}
+
+  img {
+    width: 80%;
+  }
+
+  .values-header, .about-header {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+}
