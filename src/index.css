@@ -1,3 +1,7 @@
+#root {
+  position: relative;
+}
+
 * {
   box-sizing: border-box;
   /* font-family: 'Roboto', sans-serif; */
@@ -35,24 +39,37 @@ canvas {
 }
 
 @font-face {
-font-family: "Gambetta";
-src: local("Gambettaight"),
- url('./fonts/Gambetta-Light.woff') format('woff');
-font-weight: 300;
+  font-family: "Gambetta";
+  src: local("Gambettaight"),
+  url('./fonts/Gambetta-Light.woff') format('woff');
+  font-weight: 300;
 }
 
 @font-face {
-font-family: "Gambetta";
-src: local("GambettaBold"),
- url('./fonts/Gambetta-Bold.woff') format('woff');
-font-weight: 700;
+  font-family: "Gambetta";
+  src: local("GambettaBold"),
+  url('./fonts/Gambetta-Bold.woff') format('woff');
+  font-weight: 700;
 }
 
 @font-face {
-font-family: "Gambetta";
-src: local("GambettaBold"),
- url('./fonts/Gambetta-Bold.woff') format('woff');
-font-weight: 700;
+  font-family: "Gambetta";
+  src: local("GambettaBold"),
+  url('./fonts/Gambetta-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+@media (max-width: 375px) {
+
+  .side-button {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    padding-top: 3px;
+    transform: rotate(0);
+}
 }
 
 

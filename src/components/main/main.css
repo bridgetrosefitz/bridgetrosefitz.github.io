@@ -25,3 +25,7 @@ canvas {
   margin-top: 2em;
   padding-bottom: 10px;
 }
+
+@media (max-width: 375px) {
+  
+}
