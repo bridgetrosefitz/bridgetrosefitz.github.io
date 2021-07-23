@@ -1,7 +1,8 @@
 body { 
 	max-width: 1440px; 
 	margin: 0 auto; 
-  margin-top: 1em;
+  margin-top: 0.5em;
+  margin-left: 0.2em;
 	float: none; 
 }
 
@@ -80,6 +81,13 @@ canvas {
     transform: rotate(0);
     font-size: 0.8em;
   }
+}
+
+@media (min-width: 1660px) {
+  body{  
+    margin-top: 2em;
+    margin-left: auto;
+  } 
 }
 
 

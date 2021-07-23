@@ -23,24 +23,25 @@
 
 .down.nav-arrow {
   position: absolute;
-  height: 24px;
-  width: 25px;
+  height: 30px;
+  width: 51px;
   left: 50%;
   transform: translate(-50%, 0);
+  /* outline: 2px solid rebeccapurple; */
 }
 
 .down.nav-arrow-left-tip {
   position: absolute;
   transform: rotate(-55deg);
-  left: 6px;
-  bottom: 0;
+  left: 19px;
+  bottom: 7px;
 }
 
 .down.nav-arrow-right-tip {
   position: absolute;
   transform: rotate(55deg);
-  right: 6px;
-  bottom: 0;
+  right: 19px;
+  bottom: 7px;
 }
 
 .left.nav-arrow,
