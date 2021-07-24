@@ -61,10 +61,10 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1680px) {
   .company-logo-display-container {
-    margin: 0 auto;
     margin-top: 2em;
-    max-width: 1440px; 
+    margin-left: 17em;
+    margin-right: 17em;
   }
 }

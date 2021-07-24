@@ -3,13 +3,14 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-auto-rows: auto;
-  grid-row-gap: 20vh;
-  grid-column-gap: 5%;
+  grid-row-gap: 10em;
+  /* grid-column-gap: 3em; */
   margin: 10vw 14vw 8vw 14vw;
 }
 
 .project-specs-container {
   color: black;
+  padding-left: 3em;
 }
 
 .project-image {
@@ -74,14 +75,12 @@
   .project-specs-container {
     margin-top: -2em;
     margin-bottom: 4em;
+    padding-left: 0;
   }
 }
 
 @media (min-width: 1440px) {
   .projects-container {
-    margin: 0 auto;
     margin-top: 10em;
-    max-width: 1440px; 
-
   }
 }
