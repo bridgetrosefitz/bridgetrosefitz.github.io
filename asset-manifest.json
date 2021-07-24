@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.31cdec34.chunk.css",
-    "main.js": "/static/js/main.019c0f1e.chunk.js",
-    "main.js.map": "/static/js/main.019c0f1e.chunk.js.map",
+    "main.css": "/static/css/main.c010e963.chunk.css",
+    "main.js": "/static/js/main.ee763163.chunk.js",
+    "main.js.map": "/static/js/main.ee763163.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.644d410c.js",
     "runtime-main.js.map": "/static/js/runtime-main.644d410c.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/static/css/2.7fc9bc2b.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.033c20f8.chunk.js.map": "/static/js/2.033c20f8.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.7fc9bc2b.chunk.css.map": "/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/css/main.31cdec34.chunk.css.map": "/static/css/main.31cdec34.chunk.css.map",
+    "static/css/main.c010e963.chunk.css.map": "/static/css/main.c010e963.chunk.css.map",
     "static/js/2.033c20f8.chunk.js.LICENSE.txt": "/static/js/2.033c20f8.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Gambetta-Light.42bd64d0.woff",
     "static/media/Gambetta-Bold.619ea7c4.woff2": "/static/media/Gambetta-Bold.619ea7c4.woff2",
@@ -21,7 +21,7 @@
     "static/js/runtime-main.644d410c.js",
     "static/css/2.7fc9bc2b.chunk.css",
     "static/js/2.033c20f8.chunk.js",
-    "static/css/main.31cdec34.chunk.css",
-    "static/js/main.019c0f1e.chunk.js"
+    "static/css/main.c010e963.chunk.css",
+    "static/js/main.ee763163.chunk.js"
   ]
 }
