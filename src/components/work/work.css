@@ -1,6 +1,8 @@
 .company-logo-display-container {
   display: flex;
-  margin: 5rem;
+  margin: 5em;
+  margin-left: 10em;
+  margin-right: 10em;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -11,7 +13,6 @@
   object-fit: contain;
   margin: 2em 3em;
   transition: filter 0.1s ease-in-out, transform 0.1s ease-in-out;
-
 }
 
 .company-logo-display-container img:hover {
