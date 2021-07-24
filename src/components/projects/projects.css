@@ -76,3 +76,9 @@
     margin-bottom: 4em;
   }
 }
+
+@media (min-width: 1440px) {
+  .projects-container {
+    margin: 0 auto;
+  }
+}
