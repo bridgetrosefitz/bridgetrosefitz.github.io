@@ -30,41 +30,42 @@
     "Front end": "Front end",
     "Back end": "Back end",
     "See it live or view the user stories, or code.": "See it live or view the user stories, or code.",
+    "View site": "Voir le site",
+    "View the code": "Voir le code",
     "RACI": {
-      "Title": "RACI Project Management",
+      "Title": "Outil de project management",
       "Tech stack front end": "React, Semantic UI React, JWT",
       "Tech stack back end": "Rails, BCrypt",
       "Project main text": "I built this app to help solve the problem of managing roles on a team.\n\n'RACI' stands for Responsible, Accountable, Consulted, Informed. From my experience, the RACI (or DACI) framework provides a helpful level of detail to make clear who is responsible for getting a job done well. It reduces the risk of low quality work arising from murky or pooled accountability, it helps make sure the right people have input on tasks (and conversely, gives team members explicit authority to make decisions without input!), and it prompts conversations about workload and capacity.\n\nOn past projects, I used Google Sheets to build my own RACI frameworks. This app has the advantage of being a standardized process which is simple to use, and of supporting functionality such as flags and alerts, issue-tracking and workflow tools.",
-      "Project short text": "A simple and standardized app for teams to designate who is Responsible, Accountable, Consulted and Informed on a given task. It helps reduce the risk of low quality work due to murky or pooled accountability, and prompts conversations about capacity, through the ability to flag tasks."
+      "Project short text": "Une application simple et standardisée destinée à aider les équipes à désigner clairement les rôles sur un projet particulier. Elle aide à réduire le risque d’une mauvaise qualité de travail dûe à une répartition de responsabilité floue, et elle encourage les conversations autour de la capacité de chaque équipier."
     },
-    "Digital Innovation Statistics": "Digital Innovation Statistics App",
     "Digital Innovation": {
-      "Title": "Digital Innovation Statistics",
+      "Title": "Données sur l’innovation numérique",
       "Tech stack front end": "Rails, Bootstrap",
       "Tech stack back end": "Rails API, BCrypt",
       "Project main text": "This app is a platform to compare digital innovation in different countries. It provides initial thinking and dynamic metrics about factors which lead to innovative digital products being created in a country, such as the amount of activity on GitHub, and the availability of capital.\n\nIn future, the site could crowdsource ideas and data about what makes a ripe environment for digital innovation (indicators about mindset, access to tech education, the price of a computer, who knows!), with the goal of helping people in tech connect and travel to places where they can contribute to innovative projects.\n\n This project was inspired by a research paper completed during my Masters.",
-      "Project short text": "Inspired by my Masters research, this app is a platform to compare metrics for digital innovation across countries. Its goal is to help people in tech travel to places where they can contribute to innovative projects."
+      "Project short text": "Inspirée de recherches effectuées pendant mon Master, cette application permet de comparer des indicateurs pour l’innovation numérique à travers les pays. Son but et d’aider ceux qui travaillent dans la tech à repérer les endroits où ils pourraient participer à des projets innovants."
     },
     "Particles": {
-      "Title": "Particles",
+      "Title": "Particules 3D",
       "Tech stack front end": "React, React Three Fiber, Three.js",
       "Tech stack back end": "N/A",
       "Project main text": "These particles started as an experiment for my personal website. I find the dancing dots endlessly beautiful - please have a play!\n\nI built custom GLSL shaders in Three.js to transform photos into millions of tiny dots, and to allow the user to disturb the dots' movements by dragging their cursor.",
-      "Project short text": "I find these dancing dots endlessly beautiful - please have a play! Using Three.js and custom GLSL shaders, this site transforms an image into millions of tiny dots, and allows the user to disturb the dots' movements by dragging the cursor."
+      "Project short text": "Je trouve ces particules dansantes tellement belles. En employant Three.js et des shaders GLSL customisés, ce cite prend une image et la transforme en des millions de petites particules, et permet à l’usager de perturber le mouvement de celles-ci en déplaçant le curseur."
     },
     "Food Systems Dialogues": {
-      "Title": "Food Systems Dialogues Seating Plan Tool",
+      "Title": "Food Systems Dialogues - générateur de plans de table",
       "Tech stack front end": "React, Google Sheets API (built by the awesome Jesus Escalona)",
       "Tech stack back end": "N/A",
       "Project main text": "While managing the Food Systems Dialogues (FSDs) on behalf of the World Economic Forum and other sponsors, I product-managed the creation of a seating plan and reporting tool.\n\nThe FSDs promise to bring together people from all different sectors of food production (e.g. farmers, manufacturers, nutritionists) to - literally - the same table to devise strategies for promoting nutrition and sustainability. \n\nWith this tool, generating diverse seating plans went from taking days, to being at the click of a button. It also gives visibility on where representation is low, allowing organizers to seek more balanced participation.",
-      "Project short text": "A tool to generate seating plans and report on diversity for Food Systems Dialogues (FSDs) events. The process went from taking days, to being at the click of a button. I oversaw the creation of this tool while managing the FSDs on behalf of the World Economic Forum and other sponsors. Built by Jesus Escalona."
+      "Project short text": "Un outil qui permet de générer un plan de table pour les événements Food Systems Dialogues (FSDs), et d’analyser la diversité de participants à ces événements. J’ai piloté la création de cet outil lorsque j'étais manager des FSDs, dont le Forum Économique Mondial était parmi les sponsors principaux. Application développée par Jesus Escalona."
     },
     "Personal website": {
-      "Title": "Personal website",
+      "Title": "Site-web personnel",
       "Tech stack front end": "React.js, Three.js, drei, i18next",
       "Tech stack back end": "N/A",
       "Project main text": "",
-      "Project short text": "This website was a labor of ♡. I implemented 3D meshes and physics, rolled my own CSS, wrote and applied translations, and enjoyed building and developing the design. I hope you feel like you know me a little better by taking a look around. In any case, welcome."
+      "Project short text": "Ce site a été un travail d’ ♡. Il comprend des éléments 3D, du CSS écrit à partir de zéro, des traductions réalisés moi-même et mises en œuvre à l’aide de i18next. J’espère que tu auras le sentiment de me connaître un peu mieux en parcourant le site. En tout cas, tu es le bienvenue. N’hésite pas à me faire parvenir tes feedbacks!"
     }
   },
   "footer": {
