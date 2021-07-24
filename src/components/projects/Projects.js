@@ -119,13 +119,14 @@ const projectCells = projects.map((project, index) => {
           </div>
           <p className='project-short-text'>{t(project.shortText)}</p>
           <div className='buttons-container'>
-            <Tag show={project.title === 'work.Personal website.Title' ? false : true} name={'View site'} link={project.link}/>
-            <Tag show name={project.role === 'Product-managed' ? 'Jesus Escalona' : 'View the code'} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
+            <Tag show={project.title === 'work.Personal website.Title' ? false : true} name={t('work.View site')} link={project.link}/>
+            <Tag show name={project.role === 'Product-managed' ? 'Jesus Escalona' : t('work.View the code')} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
           </div>
         </div>
       </>
     )
 
+  // { t('about.About me') }
   })
 
   return (

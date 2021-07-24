@@ -30,6 +30,8 @@
       "Front end": "Front end",
       "Back end": "Back end",
       "See it live or view the user stories, or code.": "See it live or view the user stories, or code.",
+      "View site": "View site",
+      "View the code": "View the code",
       "RACI": {
         "Title": "RACI Project Management",
         "Tech stack front end": "React, Semantic UI React, JWT",
