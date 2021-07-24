@@ -59,6 +59,13 @@
           "Tech stack back end": "N/A",
           "Project main text": "While managing the Food Systems Dialogues (FSDs) on behalf of the World Economic Forum and other sponsors, I product-managed the creation of a seating plan and reporting tool.\n\nThe FSDs promise to bring together people from all different sectors of food production (e.g. farmers, manufacturers, nutritionists) to - literally - the same table to devise strategies for promoting nutrition and sustainability. \n\nWith this tool, generating diverse seating plans went from taking days, to being at the click of a button. It also gives visibility on where representation is low, allowing organizers to seek more balanced participation.",
           "Project short text": "A tool to generate seating plans and report on diversity for Food Systems Dialogues (FSDs) events. The process went from taking days, to being at the click of a button. I oversaw the creation of this tool while managing the FSDs on behalf of the World Economic Forum and other sponsors. Built by Jesus Escalona."
+        },
+        "Personal website": {
+          "Title": "Personal website",
+          "Tech stack front end": "React.js, Three.js, drei, i18next",
+          "Tech stack back end": "N/A",
+          "Project main text": "",
+          "Project short text": "This website was a labor of ♡. I implemented 3D meshes and physics, rolled my own CSS, wrote and applied translations, and enjoyed building and developing the design. I hope you feel like you know me a little better by taking a look around. In any case, welcome."
         }
       },
     "footer": {

@@ -17,7 +17,8 @@ const techLookup = {
   'webpack': { logo: 'tech-logos/webpack.png', link: 'https://webpack.js.org/'},
   'Apex charts': { logo: 'tech-logos/apex-charts.png', link: 'https://apexcharts.com/'},
   'drei': { logo: 'tech-logos/drei.png', link: 'https://drei.pmnd.rs/'},
-  'GSAP': { logo: 'tech-logos/greensock.png', link: 'https://greensock.com/gsap/'}
+  'GSAP': { logo: 'tech-logos/greensock.png', link: 'https://greensock.com/gsap/'},
+  'i18next': { logo: '/tech-logos/i18next.png', link: 'https://react.i18next.com/'}
 }
 
 const projects = [
@@ -73,6 +74,20 @@ const projects = [
     github: 'https://github.com/Jesus-Escalona',
     userStories: 'https://docs.google.com/spreadsheets/d/1SICeapZqaMtsvrVGJHqvYo3tOVagKm988AiR43vGt58/edit?usp=sharing'
   },
+  {
+    title: 'work.Personal website.Title',
+    text: 'work.Personal website.Project main text',
+    techStack: ['React.js', 'Three.js', 'drei', 'i18next'],
+    shortText: 'work.Personal website.Project short text',
+    techStackFrontEnd: 'work.Personal Website.Tech stack front end',
+    techStackBackEnd: 'work.Personal Website.Tech stack back end',
+    photos: ['/project-snapshots/personal-website/personal-website-1-landing-page.png'],
+    role: 'Developer',
+    link: 'https://bridgetro.se',
+    github: 'https://github.com/bridgetrosefitz/bridgetrosefitz.github.io',
+    userStories: 'https://bridgetrosefitz.notion.site/Bridget-Fitzgerald-Personal-website-57cf2e253112453884670a3cb9b44ecc'
+
+  }
 ]
 
 const Projects = props => {
@@ -104,8 +119,8 @@ const projectCells = projects.map((project, index) => {
           </div>
           <p className='project-short-text'>{t(project.shortText)}</p>
           <div className='buttons-container'>
-            <Tag name={'View site'} link={project.link}/>
-            <Tag name={project.role === 'Product-managed' ? 'Jesus Escalona' : 'View the code'} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
+            <Tag show={project.title === 'work.Personal website.Title' ? false : true} name={'View site'} link={project.link}/>
+            <Tag show name={project.role === 'Product-managed' ? 'Jesus Escalona' : 'View the code'} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
           </div>
         </div>
       </>

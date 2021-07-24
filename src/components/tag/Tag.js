@@ -1,6 +1,6 @@
 import './tag.css'
 
-const Tag = ({ img, name, link }) => {
+const Tag = ({ img, name, link, show }) => {
 
 
     return (
@@ -9,6 +9,7 @@ const Tag = ({ img, name, link }) => {
         href={link}
         rel='noreferrer'
         target='_blank'
+        style={{ display: !show ? 'none' : '' }}
         >
         {img} 
         {name}
