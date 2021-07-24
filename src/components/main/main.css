@@ -64,7 +64,7 @@ canvas {
     }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 1920px) {
       .spacing-element-for-canvas {
         height: 1000px;
     }

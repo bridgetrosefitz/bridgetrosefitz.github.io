@@ -40,6 +40,7 @@ const About = props => {
     <Localization {...props}/>
     <button onClick={() => props.history.push('/')} className='side-button'>{t('work.Work button')}</button>
       <h2 className='about-header' >{t('about.About me')}</h2>
+      <div className='spacing-element-after-about-header' />
       <p className='about-p'>{t('about.About main text')}<span className='small-text'>{t('about.Asterisk')}</span></p>
       <br/>
       <div className='photo-of-me'>
