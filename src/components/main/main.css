@@ -31,9 +31,21 @@ canvas {
   }
 }
 
-@media(min-width: 1660px) {
+@media(min-width: 1441px) {
     .spacing-element-for-canvas {
-      height: 710px;
+      height: 550px;
     }
 
+}
+
+@media (min-width: 1660px) {
+    .spacing-element-for-canvas {
+      height: 650px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .spacing-element-for-canvas {
+      height: 700px;
+    }
 }

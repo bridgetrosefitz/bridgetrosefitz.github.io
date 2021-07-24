@@ -2,7 +2,6 @@ body {
 	max-width: 1440px; 
 	margin: 0 auto; 
   margin-top: 0.5em;
-  margin-left: 0.2em;
 	float: none; 
 }
 
@@ -83,11 +82,20 @@ canvas {
   }
 }
 
-@media (min-width: 1660px) {
-  body{  
+@media (min-width: 1441px) {
+  body {  
     margin-top: 2em;
-    margin-left: auto;
   } 
+
+  .side-button {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    padding-top: 3px;
+    transform: rotate(0);
+    font-size: 1.17em;
+  }
 }
 
 

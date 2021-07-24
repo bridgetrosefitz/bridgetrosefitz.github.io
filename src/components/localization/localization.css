@@ -4,6 +4,7 @@
   position: relative;
   z-index: 2;
   cursor: pointer;
+  margin-left: 0.2em;
 }
 
 button:hover {
@@ -16,4 +17,13 @@ button:hover {
     padding-left: 3px;
     padding-right: 3px;
   }
+}
+
+@media (min-width: 1441px) {
+  .localization-button {  
+    /* Same font size as H3 */
+    font-size: 1.17em; 
+    margin-left: auto;
+  } 
+
 }
