@@ -81,9 +81,17 @@ canvas {
   }
 }
 
+@media (max-width: 1441px) {
+  .side-button {
+    /* Increases font size, while still at side */
+    font-size: 1.17em;
+  }
+}
+
 @media (min-width: 1681px) {
 
   .side-button {
+    /* Moves the button to the side */
     position: absolute;
     top: 0;
     left: auto;
@@ -91,7 +99,6 @@ canvas {
     margin-top: 0.2em;
     margin-right: 0.8em;
     transform: rotate(0);
-    font-size: 1.17em;
   }
 }
 
