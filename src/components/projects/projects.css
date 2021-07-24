@@ -80,5 +80,8 @@
 @media (min-width: 1440px) {
   .projects-container {
     margin: 0 auto;
+    margin-top: 10em;
+    max-width: 1440px; 
+
   }
 }

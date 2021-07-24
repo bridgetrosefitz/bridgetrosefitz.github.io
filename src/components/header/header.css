@@ -40,3 +40,17 @@
     display: none;
   }
 }
+
+@media (min-width: 2160px) {
+  .header h1 {
+    font-size: 3em;
+  }
+
+  .header h2 {
+    font-size: 2.25em;
+  }
+
+  .header h3 {
+    font-size: 1.755em;
+  }
+}

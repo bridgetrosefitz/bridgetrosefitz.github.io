@@ -59,6 +59,7 @@ const Main = props => {
         <div className='arrow-positioning-context'>
           <Arrow color='black' direction='down' onClick={() => {workRef.current.scrollIntoView()}}/>
         </div>
+        <div className='spacing-element-between-arrow-and-logos'></div>
         <Work workRef={workRef} />
       </div>
       <Footer/>

@@ -57,6 +57,14 @@
   
   .company-logo-display-container img {
     margin: 2em 2em;
-    filter: initial brightness(1);
+    /* filter: initial brightness(1); */
+  }
+}
+
+@media (min-width: 1440px) {
+  .company-logo-display-container {
+    margin: 0 auto;
+    margin-top: 2em;
+    max-width: 1440px; 
   }
 }

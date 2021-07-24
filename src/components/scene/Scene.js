@@ -1,7 +1,6 @@
 import React from 'react'
 import { CubeTextureLoader } from 'three'
 import { useSphere, usePlane} from '@react-three/cannon'
-import { useThree } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 
 const sphereMetalness = 1
@@ -109,18 +108,20 @@ export const Sphere = props => {
 }
 
 export const Plane = () => {
-  const { viewport } = useThree()
-  let aspectRatio = viewport.height / viewport.width
-  if (viewport.width <= 480) {
-    aspectRatio *= 1.5
+  const windowInnerWidth = window.innerWidth
+  const windowInnerHeight = window.innerHeight
+  let sizeAdjuster = windowInnerWidth / windowInnerHeight
+  if (windowInnerWidth <= 480) {
+    sizeAdjuster *= 1.5
+  } else if (windowInnerWidth > 1440) {
+    sizeAdjuster *= 1
   }
-  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [planePosition[0], aspectRatio + planePosition[1], planePosition[2]], rotation: [-Math.PI * 0.5, 0, 0] }))
-  console.log(viewport)
+  const [planePhysicsRef] = usePlane(() => ({ mass: 0, position: [planePosition[0], sizeAdjuster + planePosition[1], planePosition[2]], rotation: [-Math.PI * 0.5, 0, 0] }))
     return(
       <mesh 
         receiveShadow
         ref={planePhysicsRef} 
-        position={[planePosition[0], aspectRatio + planePosition[1], planePosition[2]]}
+        position={[planePosition[0], sizeAdjuster + planePosition[1], planePosition[2]]}
         rotation={[-Math.PI * 0.5, 0, 0]} >
         <planeGeometry args={[100, 100]} />
         <shadowMaterial color="#171717" opacity={0.1} />

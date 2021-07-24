@@ -23,7 +23,16 @@ button:hover {
   .localization-button {  
     /* Same font size as H3 */
     font-size: 1.17em; 
-    margin-left: auto;
+    margin-top: 0.2em;
+    margin-left: 0.8em;
   } 
 
+}
+
+@media (min-width: 2160px) {
+
+  .localization-button {
+    font-size: 1.755em;
+  }
+  
 }
