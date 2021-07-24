@@ -9,7 +9,7 @@ b {
 }
 
 .about-p, .values-p {
-  margin: 0px 280px;
+  margin: 0 15em;
 }
 
 /* .values-p:after {
@@ -95,5 +95,11 @@ img {
   .values-header, .about-header {
     margin-left: 1.5em;
     margin-right: 1.5em;
+  }
+}
+
+@media (min-width: 1680px) {
+  .about-p, .values-p {
+    margin: 0 20em;
   }
 }
