@@ -4,7 +4,11 @@ I'd be honored to welcome you to my very own nook of the internet. I designed it
 
 View it at [bridgetro.se](https://bridgetro.se)
 
-![Landing page](https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png)
+<img src="drawing.jpg" alt="drawing" width="200"/>
+
+<img class="project-image" alt="landing-page" src="/project-snapshots/personal-website/personal-website-1-landing-page.png" width='200'>
+
+<!-- ![Landing page](https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png) -->
 
 ![Exploding spheres](https://bridgetro.se/project-snapshots/personal-website/personal-website-2-exploding-spheres.png)
 
