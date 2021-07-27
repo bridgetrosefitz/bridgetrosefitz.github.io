@@ -1,4 +1,4 @@
-# My personal website
+<h1 align='center'>Personal website</h1>
 
 <p align='center'>I'd be honored to welcome you to my very own nook of the internet. I designed it to represent important parts of who I am.</p> 
 
