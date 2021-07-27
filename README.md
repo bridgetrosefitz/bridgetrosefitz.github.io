@@ -21,7 +21,7 @@ This website was a labor of ♡. I implemented 3D meshes and physics, rolled my 
 * i18next, for translations
 * AOS, for the scroll animations
 
-###User Stories
+### User Stories
 
 I kept myself organized with my user stories, available [here](https://bridgetrosefitz.notion.site/Bridget-Fitzgerald-Personal-website-57cf2e253112453884670a3cb9b44ecc).
 
