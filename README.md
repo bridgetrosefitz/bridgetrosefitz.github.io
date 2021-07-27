@@ -2,18 +2,14 @@
 
 <p align='center'>I'd be honored to welcome you to my very own nook of the internet. I designed it to represent important parts of who I am.</p> 
 
-<p align='center' >View it at [bridgetro.se](https://bridgetro.se)</p>
+<p align='center'>View it at <a href='https://bridgetro.se' target='_blank' /></p>
   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
  / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
 `-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
 
 <img class="project-image" alt="landing-page" src="https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png" width='500'>
-
-<!-- ![Landing page](https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png) -->
-
-![Exploding spheres](https://bridgetro.se/project-snapshots/personal-website/personal-website-2-exploding-spheres.png)
-
-![Company logos and first project](https://bridgetro.se/project-snapshots/personal-website/personal-website-3-company-logos-and-first-project.png)
+<img class="project-image" alt="landing-page" src="https://bridgetro.se/project-snapshots/personal-website/personal-website-2-exploding-spheres.png" width='500'>
+<img class="project-image" alt="landing-page" src="https://bridgetro.se/project-snapshots/personal-website/personal-website-3-company-logos-and-first-project.png" width='500'>
 
 ## Why I made it
 
