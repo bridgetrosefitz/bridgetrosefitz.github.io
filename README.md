@@ -31,11 +31,11 @@ I kept myself organized with my user stories, available [here](https://bridgetro
 * [Screenly.com](https://www.screely.com/), where you can easily turn screenshots into browser mock-ups
 * These sources for my HDRi city textures:
 * * Paris: [Xuan Prada](http://www.xuanprada.com/blog/2014/7/28/louvre-hdri-panorama)
-* * Melbourne: 
-* * NYC: RenderHub (Purchased)
+* * Melbourne: XXX (Purchased)
+* * NYC: RenderHub(https://www.renderhub.com/cadforge/times-square-manhattan-nightlights-hdri#) (Purchased)
 * * Tokyo: [Textures.com](https://www.textures.com/download/HDRPanoramas0091/134023)
-* * Oslo: [Textures.com] (https://www.textures.com/download/HDRPanoramas0078/134005)
-* [This](https://matheowis.github.io/HDRI-to-CubeMap/) simple tool to convert HDRi equirectangular images to cube maps
+* * Oslo: [Textures.com](https://www.textures.com/download/HDRPanoramas0078/134005)
+* [This simple tool](https://matheowis.github.io/HDRI-to-CubeMap/) to convert HDRi equirectangular images to cube maps
 * Michał Sajnóg, the creator of the [AOS (Animate on Scroll) library](https://michalsnik.github.io/aos/)
 
 
