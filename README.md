@@ -2,7 +2,7 @@
 
 <p align='center'>I'd be honored to welcome you to my very own nook of the internet. I designed it to represent important parts of who I am.</p> 
 
-<p align='center'>View it at <a href='https://bridgetro.se' target='_blank' /></p>
+<p align='center'>View it at <a href='https://bridgetro.se' target='_blank'>bridgetro.se</a></p>
   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
  / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
 `-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
