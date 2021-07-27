@@ -9,21 +9,21 @@
 
 ## Why I made it
 
-This website was a labor of ♡. I implemented 3D meshes and physics, rolled my own CSS, wrote and applied translations, and enjoyed developing the design. I hope you feel like you know me a little better by taking a look around. In any case, welcome. Please do drop me a line with feedback! 
+This website was a labor of ♡. I implemented 3D meshes and physics, rolled my own CSS, wrote and applied translations, and enjoyed developing the design. I hope you feel like you know me a little better by taking a look around. In any case, welcome. Please do drop me a line with feedback, I'm hungry to hear what you think and how I could make the site better.
 
 ## How it's made
 
 ### Technology
 
-* React.js
-* Three.js, to create the sphere (implemented with React Three Fiber) 
-* Cannon, to apply physics to the scene
-* i18next, for translations
-* AOS, for the scroll animations
+* [React.js](https://reactjs.org/)
+* [Three.js](https://threejs.org/), to create the sphere (implemented with [React Three Fiber](https://github.com/pmndrs/react-three-fiber)) 
+* [Cannon](https://github.com/pmndrs/use-cannon), to apply physics to the scene
+* [i18next](https://react.i18next.com/), for translations
+* [AOS](https://michalsnik.github.io/aos/), for the scroll animations
 
 ### User Stories
 
-I kept myself organized with my user stories, available [here](https://bridgetrosefitz.notion.site/Bridget-Fitzgerald-Personal-website-57cf2e253112453884670a3cb9b44ecc).
+I kept myself organized with user stories, available [here](https://bridgetrosefitz.notion.site/Bridget-Fitzgerald-Personal-website-57cf2e253112453884670a3cb9b44ecc).
 
 ### I couldn't have made it without the help of...
 
@@ -41,5 +41,8 @@ I kept myself organized with my user stories, available [here](https://bridgetro
 
 ## What's next
 
-* I'm still working on a bunch of tweaks...and the fun will be ongoing! But next-up priorities (as of 07/27/21) are:
-  *
+* I'm still working on a bunch of tweaks...and the fun will be ongoing! But major next-up priorities (as of 07/27/21) are:
+  * Improve UI affordances so it's easy to see how you can play with the sphere
+  * Review and improve accessibility
+  * Create a dark mode
+  * Create video tours of projects
