@@ -7,7 +7,7 @@
  / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
 `-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
 
-<img class="project-image" alt="landing-page" display='block' margin-left='auto' margin-right='auto' width='50%'; src="https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png" width='500'>
+<img class="project-image" alt="landing-page" display='block' margin-left='auto' margin-right='auto' width='50%' src="https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png" width='500'>
 <img class="project-image" alt="landing-page" align='center' src="https://bridgetro.se/project-snapshots/personal-website/personal-website-2-exploding-spheres.png" width='500'>
 <img class="project-image" alt="landing-page" align='center' src="https://bridgetro.se/project-snapshots/personal-website/personal-website-3-company-logos-and-first-project.png" width='500'>
 
