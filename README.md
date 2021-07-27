@@ -1,8 +1,11 @@
 # My personal website
 
-I'd be honored to welcome you to my very own nook of the internet. I designed it to represent important parts of who I am. 
+<p align='center'>I'd be honored to welcome you to my very own nook of the internet. I designed it to represent important parts of who I am.</p> 
 
-View it at [bridgetro.se](https://bridgetro.se)
+<p align='center' >View it at [bridgetro.se](https://bridgetro.se)</p>
+  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
+ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
+`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
 
 <img class="project-image" alt="landing-page" src="https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png" width='500'>
 
