@@ -6,7 +6,7 @@ View it at [bridgetro.se](https://bridgetro.se)
 
 <img src="drawing.jpg" alt="drawing" width="200"/>
 
-<img class="project-image" alt="landing-page" src="/project-snapshots/personal-website/personal-website-1-landing-page.png" width='200'>
+<img class="project-image" alt="landing-page" src="https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png" width='200'>
 
 <!-- ![Landing page](https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png) -->
 
