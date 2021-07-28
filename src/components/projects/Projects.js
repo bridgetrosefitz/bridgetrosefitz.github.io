@@ -81,7 +81,7 @@ const projects = [
     shortText: 'work.Personal website.Project short text',
     techStackFrontEnd: 'work.Personal Website.Tech stack front end',
     techStackBackEnd: 'work.Personal Website.Tech stack back end',
-    photos: ['/project-snapshots/personal-website/personal-website-1-landing-page.png', '/project-snapshots/personal-website/personal-website-2-exploding-spheres.png', '/project-snapshots/personal-website/personal-website-3-company-logos-and-first-project.png'],
+    photos: ['/project-snapshots/personal-website/personal-website-1-landing-page.png', '/project-snapshots/personal-website/personal-website-2-exploding-spheres.png', '/project-snapshots/personal-website/personal-website-3-company-logos-and-first-project.png', '/project-snapshots/personal-website/personal-website-8-about-page-french.png'],
     role: 'Developer',
     link: 'https://bridgetro.se',
     github: 'https://github.com/bridgetrosefitz/bridgetrosefitz.github.io',
