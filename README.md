@@ -21,6 +21,7 @@ This website was a labor of ♡. I implemented 3D meshes and physics, rolled my 
 * [React.js](https://reactjs.org/)
 * [Three.js](https://threejs.org/), to create the sphere (implemented with [React Three Fiber](https://github.com/pmndrs/react-three-fiber)) 
 * [Cannon](https://github.com/pmndrs/use-cannon), to apply physics to the scene
+* [drei](https://drei.pmnd.rs/), to attach an HTML element to the sphere which makes it clickable
 * [i18next](https://react.i18next.com/), for translations
 * [AOS](https://michalsnik.github.io/aos/), for the scroll animations
 
