@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import Localization from '../localization/Localization'
 import Footer from '../footer/Footer'
 import './about.css'
+import i18next from 'i18next'
 
 const values = [
   {
@@ -41,7 +42,7 @@ const About = props => {
     <button onClick={() => props.history.push('/')} className='side-button'>{t('work.Work button')}</button>
       <h2 className='about-header' >{t('about.About me')}</h2>
       <div className='spacing-element-after-about-header' />
-      <p className='about-p'>{t('about.About main text')}<span className='small-text'>{t('about.Asterisk')}</span></p>
+      <p className='about-p'>{t('about.About main text')}<span hidden={i18next.language === 'jp' ? true : false} className='small-text'>{t('about.Asterisk')}</span></p>
       <br/>
       <div className='photo-of-me'>
         <img data-aos="fade-up" data-aos-duration="700" alt='Me at Trolltunga, Norway' src='/photos/Trolltunga.jpeg'/>

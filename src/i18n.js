@@ -8,7 +8,7 @@ i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
-  // for all options read: https://www.i18next.com/overview/configuration-options
+  // all options: https://www.i18next.com/overview/configuration-options
   .init({
     fallbackLng: 'en',
     debug: true,
