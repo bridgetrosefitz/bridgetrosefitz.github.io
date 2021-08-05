@@ -34,39 +34,39 @@
         "View site": "サイトを見る",
         "View the code": "コードを見る",
         "RACI": {
-          "Title": "RACI Project Management",
+          "Title": "プロジェクト管理のアプリ",
           "Tech stack front end": "React, Semantic UI React, JWT",
           "Tech stack back end": "Rails, BCrypt",
           "Project main text": "I built this app to help solve the problem of managing roles on a team.\n\n'RACI' stands for Responsible, Accountable, Consulted, Informed. From my experience, the RACI (or DACI) framework provides a helpful level of detail to make clear who is responsible for getting a job done well. It reduces the risk of low quality work arising from murky or pooled accountability, it helps make sure the right people have input on tasks (and conversely, gives team members explicit authority to make decisions without input!), and it prompts conversations about workload and capacity.\n\nOn past projects, I used Google Sheets to build my own RACI frameworks. This app has the advantage of being a standardized process which is simple to use, and of supporting functionality such as flags and alerts, issue-tracking and workflow tools.",
-          "Project short text": "A simple and standardized app for teams to designate who is Responsible, Accountable, Consulted and Informed on a given task. It helps reduce the risk of low quality work due to murky or pooled accountability, and prompts conversations about capacity, through the ability to flag tasks."
+          "Project short text": "このシンプルなUIのアプリはチームが一人一人の役割を明確に定具するためのツールです。不透明な責任に関する問題を解決することを目指します。"
         },
         "Digital Innovation": {
-          "Title": "Digital Innovation Statistics",
+          "Title": "デジタルイノベーションの統計",
           "Tech stack front end": "Rails, Bootstrap",
           "Tech stack back end": "Rails API, BCrypt",
           "Project main text": "This app is a platform to compare digital innovation in different countries. It provides initial thinking and dynamic metrics about factors which lead to innovative digital products being created in a country, such as the amount of activity on GitHub, and the availability of capital.\n\nIn future, the site could crowdsource ideas and data about what makes a ripe environment for digital innovation (indicators about mindset, access to tech education, the price of a computer, who knows!), with the goal of helping people in tech connect and travel to places where they can contribute to innovative projects.\n\n This project was inspired by a research paper completed during my Masters.",
-          "Project short text": "Inspired by my Masters research, this app is a platform to compare metrics for digital innovation across countries. Its goal is to help people in tech travel to places where they can contribute to innovative projects."
+          "Project short text": "大学院の研究に基づいて、このアプリは色々な国のデジタルイノベーションに関する能力を比べるための統計を表します。"
         },
         "Particles": {
-          "Title": "Particles",
+          "Title": "パーティクル",
           "Tech stack front end": "React, React Three Fiber, Three.js",
           "Tech stack back end": "N/A",
           "Project main text": "These particles started as an experiment for my personal website. I find the dancing dots endlessly beautiful - please have a play!\n\nI built custom GLSL shaders in Three.js to transform photos into millions of tiny dots, and to allow the user to disturb the dots' movements by dragging their cursor.",
-          "Project short text": "I find these dancing dots endlessly beautiful - please have a play! Using Three.js and custom GLSL shaders, this site transforms an image into millions of tiny dots, and allows the user to disturb the dots' movements by dragging the cursor."
+          "Project short text": "このパーティクルをぜひ遊んでみてください！私が自分で作ったGLSLシェーダーにより、このアプリはイメージを何戦もの小さいドットにします。"
         },
         "Food Systems Dialogues": {
-          "Title": "Food Systems Dialogues Seating Plan Tool",
+          "Title": "フードシステムダイアログの座席配置を作るツール",
           "Tech stack front end": "React, Google Sheets API (built by the awesome Jesus Escalona)",
           "Tech stack back end": "N/A",
           "Project main text": "While managing the Food Systems Dialogues (FSDs) on behalf of the World Economic Forum and other sponsors, I product-managed the creation of a seating plan and reporting tool.\n\nThe FSDs promise to bring together people from all different sectors of food production (e.g. farmers, manufacturers, nutritionists) to - literally - the same table to devise strategies for promoting nutrition and sustainability. \n\nWith this tool, generating diverse seating plans went from taking days, to being at the click of a button. It also gives visibility on where representation is low, allowing organizers to seek more balanced participation.",
-          "Project short text": "A tool to generate seating plans and report on diversity for Food Systems Dialogues (FSDs) events. The process went from taking days, to being at the click of a button. I oversaw the creation of this tool while managing the FSDs on behalf of the World Economic Forum and other sponsors. Built by Jesus Escalona."
+          "Project short text": "フードシステムダイアログというイベントのための座席配置を作るアプリです。座席配置を作るプロセスはこのツールを使わずに数日を要していました。アプリを使って、ダイバーシティレポートも作れます。私はプロジェクトマネージャー、エスカローナヘズスは開発者です。"
         },
         "Personal website": {
-          "Title": "Personal website",
+          "Title": "私の個人ウェブサイト",
           "Tech stack front end": "React.js, Three.js, drei, i18next",
           "Tech stack back end": "N/A",
           "Project main text": "",
-          "Project short text": "This website was a labor of ♡. I implemented 3D meshes and physics, rolled my own CSS, wrote and applied translations, and enjoyed building and developing the design. I hope you feel like you know me a little better by taking a look around. In any case, welcome."
+          "Project short text": "このウェブサイトは心をこめて作りました。3Dメッシュを使って、CSSをゼロから作って、自分でフランス語・日本語・英語の翻訳をしました。サイトを越関すると私を少し知っている印象があるといいと思います。ようこそ！"
         }
       },
     "footer": {
