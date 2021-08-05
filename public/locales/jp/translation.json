@@ -53,7 +53,7 @@
           "Tech stack front end": "React, React Three Fiber, Three.js",
           "Tech stack back end": "N/A",
           "Project main text": "These particles started as an experiment for my personal website. I find the dancing dots endlessly beautiful - please have a play!\n\nI built custom GLSL shaders in Three.js to transform photos into millions of tiny dots, and to allow the user to disturb the dots' movements by dragging their cursor.",
-          "Project short text": "このパーティクルをぜひ遊んでみてください！私が自分で作ったGLSLシェーダーにより、このアプリはイメージを何戦もの小さいドットにします。"
+          "Project short text": "このパーティクルをぜひ遊んでみてください！私が自分で作ったGLSLシェーダーを使って、このアプリはイメージを何千もの小さいドットにします。"
         },
         "Food Systems Dialogues": {
           "Title": "フードシステムダイアログの座席配置を作るツール",
