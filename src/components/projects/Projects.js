@@ -113,14 +113,14 @@ const projectCells = projects.map((project, index) => {
       <>
         <PhotoSlideshow dataAos='fade-up' dataAosDuration="1500" arrowColor='transparent' photos={project.photos}/>
         <div data-aos='fade-up' data-aos-duration="1500" className='project-specs-container'>
-          <h3 className='project-title'>{t(project.title)}{project.role === 'Product-managed' ? <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px'}}> (Product-managed)</span> : null}</h3>
+          <h3 className='project-title'>{t(project.title)}{project.role === 'Product-managed' ? <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px' }}> {(t('work.Product-managed'))} </span> : null}</h3>
           <div className='tech-logo-container'>
             {projectTechLogos}
           </div>
           <p className='project-short-text'>{t(project.shortText)}</p>
           <div className='buttons-container'>
             <Tag show={project.title === 'work.Personal website.Title' ? false : true} name={t('work.View site')} link={project.link}/>
-            <Tag show name={project.role === 'Product-managed' ? 'Jesus Escalona' : t('work.View the code')} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
+            <Tag show name={project.role === 'Product-managed' ? t('work.Jesus Escalona') : t('work.View the code')} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
           </div>
         </div>
       </>
