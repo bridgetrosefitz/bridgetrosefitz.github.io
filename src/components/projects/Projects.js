@@ -44,8 +44,8 @@ const projects = [
     techStackBackEnd: 'work.Digital Innovation.Tech stack back end',
     photos: ['/project-snapshots/digital-innovation/digital-innovation-1-landing-page.png', '/project-snapshots/digital-innovation/digital-innovation-2-signup.png', '/project-snapshots/digital-innovation/digital-innovation-3-login.png', '/project-snapshots/digital-innovation/digital-innovation-4-login-error.png', '/project-snapshots/digital-innovation/digital-innovation-5-capital.png', '/project-snapshots/digital-innovation/digital-innovation-6-new-ideas-with-comment.png', '/project-snapshots/digital-innovation/digital-innovation-7-activity.png'],
     role: 'Developer',
-    link: 'http://digital-innovation-stats.herokuapp.com/',
-    github: 'https://digitalinnovation.fyi',
+    link: 'https://digitalinnovation.fyi',
+    github: 'https://github.com/bridgetrosefitz/digital_innovation',
     userStories: 'https://www.notion.so/Bridget-Fitzgerald-Digital-Innovation-0c0a03caf93f4643bfa85f634bd0d8ae'
   },
   {
