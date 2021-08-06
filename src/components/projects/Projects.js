@@ -31,7 +31,7 @@ const projects = [
     techStackBackEnd: 'work.RACI.Tech stack back end',
     photos: ['/project-snapshots/raci/raci-1-project-and-tasks-page.png', '/project-snapshots/raci/raci-2-signup.png', '/project-snapshots/raci/raci-3-login.png', '/project-snapshots/raci/raci-4-login-error.png', '/project-snapshots/raci/raci-5-projects-page.png', '/project-snapshots/raci/raci-6-edit-project.png', '/project-snapshots/raci/raci-7-new-task.png', '/project-snapshots/raci/raci-8-delete-project.png', '/project-snapshots/raci/raci-9-loading.png'],
     role: 'Developer',
-    link: 'https://bridgetro.se/raci/',
+    link: 'https://raci.team',
     github: 'https://github.com/bridgetrosefitz/raci',
     userStories: 'https://www.notion.so/Bridget-Fitzgerald-RACI-3166a2742268438889473e69c943d72e'
   },
@@ -45,7 +45,7 @@ const projects = [
     photos: ['/project-snapshots/digital-innovation/digital-innovation-1-landing-page.png', '/project-snapshots/digital-innovation/digital-innovation-2-signup.png', '/project-snapshots/digital-innovation/digital-innovation-3-login.png', '/project-snapshots/digital-innovation/digital-innovation-4-login-error.png', '/project-snapshots/digital-innovation/digital-innovation-5-capital.png', '/project-snapshots/digital-innovation/digital-innovation-6-new-ideas-with-comment.png', '/project-snapshots/digital-innovation/digital-innovation-7-activity.png'],
     role: 'Developer',
     link: 'http://digital-innovation-stats.herokuapp.com/',
-    github: 'https://github.com/bridgetrosefitz/digital_innovation',
+    github: 'https://digitalinnovation.fyi',
     userStories: 'https://www.notion.so/Bridget-Fitzgerald-Digital-Innovation-0c0a03caf93f4643bfa85f634bd0d8ae'
   },
   {
