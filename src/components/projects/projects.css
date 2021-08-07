@@ -27,6 +27,13 @@
   font-weight: 400;
 }
 
+.project-title.japanese {
+  font-size: 1.8em;
+  margin: 0;
+  padding-bottom: 12px;
+  font-weight: 400;
+}
+
 .project-short-text {
   line-height: 1.4em;
   padding-top: 12px;

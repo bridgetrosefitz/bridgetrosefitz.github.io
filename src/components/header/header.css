@@ -39,6 +39,11 @@
   .header h2 {
     display: none;
   }
+
+  .japanese.header h3 {
+    margin: 0 auto;
+    width: 70%;
+    }
 }
 
 @media (min-width: 2160px) {
