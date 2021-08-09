@@ -19,15 +19,15 @@
     "Make it ok to be wrong": "間違えることも大丈夫にしましょう",
     "Make it ok to be wrong text": "間違えても大丈夫だと言う考え方があれば、いつまでも向上することができると思います。最先端であるために努力するからこそ、間違えることは避けられないものです。エラーを隠す方が良いというチーム文化があると、失敗から学ぶことができません。その結果、自分を制限するようになってしまいます。\n\n普段の仕事の中で「私は間違えました。私は知りません。」と言うことは、大変難しいです。これはとても残念だと思います。私は自分の知らないことや、エラーを誠実に伝える仕事環境を構築したいと思います。",
     "Be the one to change": "変化する責任は自分のもの",
-    "Be the one to change text": "弱点を見て、自分を変えることは、とても難しいです。理解できないことに直面すると、不安や危険も感じるかもしれません。しかし、異なる文化から来る人とつながることは、素晴らしいと思います。そうできるために、他人が変化するのを待たずに、自分を変えるほうがいいでしょう。\n\n私の一番いい思い出にはグリーンランドに行った時です。ホストしてくれたグリーンランド人のおばあちゃんと一緒に、伝統的な民族衣装を作るようになりました。おばあちゃんも私もお互いの言語が話せませんでした。それでも、接続するために言葉がいりませんでした。\n\n自分と違う人と色々なことを共有て、自分の視点を超えて見ると、きっと豊かな経験になると思います。",
-    "Care about the people you work with": "同僚を真本当に気につけて",
-    "Care about the people you work with text": "仕事でチームメンバーを気につけてと言っても、実は表面的にしか気につけないと言うのがあります。本当に気につけるのは、チームメンバーが言っていることを理解してみたり、犠牲を払ったり、成功を支援したりするようなことだと思います。私の経験で、そうするとチームと一緒に頑張る能力が上がります。\n\n「ラディカル・キャンダー」と言うコンセプトが大好きです。グーグルとアップルで働いたスコットキムはこのコンセプトを発明しました。スコットさんによると、同僚とのいい関係を作るには二つのことがあります。第一側面は心から相手を気にかけることです。第二側面は言いにくいことをズバリと言うことです。その二つの原則は職場でとても大切だと思います。",
-    "People can change": "人が変化する動力があります",
-    "People can change text": "適正な環境があって、成長型マインドセットを持っていたら、自分の望む人になることができると思います。成長型マインドセットを持つようになるのは簡単ではなくて、私は個人的にまだ頑張っています。いつも、どのような習性を身に付けたいか捨てたいかを考えています。\n\n詳しくないことや変化は怖くて、この怖さを乗り越えるにはエネルギが必要です。そして、多分変化するために適切な環境適切なタイミングじゃないかもしれません。たといえ、変化を安くする戦略が絶対にあります。"
+    "Be the one to change text": "弱点を見て、自分を変えることは、とても難しいです。理解できないことに直面すると、不安や危険も感じるかもしれません。しかし、異なる文化から来る人とつながることは、素晴らしいと思います。そうできるために、他人が変化するのを待たずに、自分を変えるほうがいいでしょう。\n\n私の一番思い出深いことは、グリーンランドに行った時のことです。ホストしてくれたグリーンランド人のおばあさんと一緒に、伝統的な民族衣装を作りました。おばあさんも私も、お互いの言語が話せませんでした。それでも、コミュニケーションをとるために言葉がいりませんでした。\n\n自分と違う人と色々なことを共有して、自分の視点を超えて見ると、きっと豊かな経験になると思います。",
+    "Care about the people you work with": "同僚のこと真剣に想う",
+    "Care about the people you work with text": "仕事でチームのメンバーのことを考えると言っても、実は表面的にしか考えないと言うことがあります。本当に気につけるのは、チームメンバーが言っていることを理解しようとしたり、犠牲を払ったり、成功を支援したりするようなことだと思います。私の経験上、それによりチームと一緒に協力する能力が上がります。\n\n「ラディカル・キャンダー」と言うコンセプトが大好きです。グーグルとアップルで働いたスコットキムは、このコンセプトを発明しました。スコットによると、同僚とのいい関係を作るには、二つのことが必要です。一つ目は、心から相手を気にかけることです。二つ目は、言いにくいことをズバリと言うことです。この二つの原則は、職場でとても大切だと思います。",
+    "People can change": "人は変化する力があります",
+    "People can change text": "適切な環境があって、成長型マインドセットを持っていたら、自分の望む人になることができると思います。成長型マインドセットを持つようになるのは簡単ではなくて、私は個人的に、まだ努力をしています。いつも、どのような習性を身に付けたいか、または、捨てたいかを考えています。\n\n詳しくないことや変化することは怖くて、この怖さを乗り越えるには、エネルギーが必要です。そして、おそらく、変化するために適切な環境、適切なタイミングではないかもしれません。それでも、変化をより簡単にする戦略が、必ずあります。"
   },
   "work": {
     "Work button": "メインページ",
-        "Product-managed": "(プロダクト マネージャー)",
+        "Product-managed": "(プロジェクトマネージャー)",
         "Front end": "Front end",
         "Back end": "Back end",
         "See it live or view the user stories, or code.": "See it live or view the user stories, or code.",
@@ -39,28 +39,28 @@
           "Tech stack front end": "React, Semantic UI React, JWT",
           "Tech stack back end": "Rails, BCrypt",
           "Project main text": "I built this app to help solve the problem of managing roles on a team.\n\n'RACI' stands for Responsible, Accountable, Consulted, Informed. From my experience, the RACI (or DACI) framework provides a helpful level of detail to make clear who is responsible for getting a job done well. It reduces the risk of low quality work arising from murky or pooled accountability, it helps make sure the right people have input on tasks (and conversely, gives team members explicit authority to make decisions without input!), and it prompts conversations about workload and capacity.\n\nOn past projects, I used Google Sheets to build my own RACI frameworks. This app has the advantage of being a standardized process which is simple to use, and of supporting functionality such as flags and alerts, issue-tracking and workflow tools.",
-          "Project short text": "このシンプルなUIのアプリはチームが一人一人の役割を明確に定具するためのツールです。不透明な責任に関する問題を解決することを目指します。"
+          "Project short text": "このシンプルなUIのアプリは、チームの一人一人が役割を明確に定義するためのツールです。不透明な責任に関する問題を解決することを目指します。"
         },
         "Digital Innovation": {
           "Title": "デジタルイノベーションの統計",
           "Tech stack front end": "Rails, Bootstrap",
           "Tech stack back end": "Rails API, BCrypt",
           "Project main text": "This app is a platform to compare digital innovation in different countries. It provides initial thinking and dynamic metrics about factors which lead to innovative digital products being created in a country, such as the amount of activity on GitHub, and the availability of capital.\n\nIn future, the site could crowdsource ideas and data about what makes a ripe environment for digital innovation (indicators about mindset, access to tech education, the price of a computer, who knows!), with the goal of helping people in tech connect and travel to places where they can contribute to innovative projects.\n\n This project was inspired by a research paper completed during my Masters.",
-          "Project short text": "大学院の研究に基づいて、このアプリは色々な国のデジタルイノベーションに関する能力を比べるための統計を表します。"
+          "Project short text": "大学院の研究に基づいて、このアプリは色々な国のデジタルイノベーションに関する能力を比較するための統計を表します。"
         },
         "Particles": {
-          "Title": "パーティクル",
+          "Title": "小さなドット",
           "Tech stack front end": "React, React Three Fiber, Three.js",
           "Tech stack back end": "N/A",
           "Project main text": "These particles started as an experiment for my personal website. I find the dancing dots endlessly beautiful - please have a play!\n\nI built custom GLSL shaders in Three.js to transform photos into millions of tiny dots, and to allow the user to disturb the dots' movements by dragging their cursor.",
-          "Project short text": "このパーティクルをぜひ遊んでみてください！私が自分で作ったGLSLシェーダーを使って、このアプリはイメージを何千もの小さいドットにします。"
+          "Project short text": "この小さなドットを作るアプリをぜひ遊んでみてください！私が自分で作ったGLSLシェーダーを使って、このアプリはイメージを何千もの小さなドットにします。"
         },
         "Food Systems Dialogues": {
-          "Title": "フードシステムダイアログの座席配置を作るツール",
+          "Title": "適切な座席を配置するアプリ",
           "Tech stack front end": "React, Google Sheets API (built by the awesome Jesus Escalona)",
           "Tech stack back end": "N/A",
           "Project main text": "While managing the Food Systems Dialogues (FSDs) on behalf of the World Economic Forum and other sponsors, I product-managed the creation of a seating plan and reporting tool.\n\nThe FSDs promise to bring together people from all different sectors of food production (e.g. farmers, manufacturers, nutritionists) to - literally - the same table to devise strategies for promoting nutrition and sustainability. \n\nWith this tool, generating diverse seating plans went from taking days, to being at the click of a button. It also gives visibility on where representation is low, allowing organizers to seek more balanced participation.",
-          "Project short text": "フードシステムダイアログというイベントのための座席配置を作るアプリです。座席配置を作るプロセスはこのツールを使わずに数日を要していました。アプリを使って、ダイバーシティレポートも作れます。私はプロジェクトマネージャー、エスカローナヘズスは開発者です。"
+          "Project short text": "フードシステムダイアログというイベントのための、適切な座席を配置するアプリです。座席を配置するプロセスは、このアプリを使わずに数日を要していました。そして、アプリを使って、ダイバーシティレポートを作ることもできます。エスカローナヘズスは開発者で、私はプロジェクトマネージャーでした。"
         },
         "Personal website": {
           "Title": "私の個人ウェブサイト",
