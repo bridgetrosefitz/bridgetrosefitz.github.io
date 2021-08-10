@@ -19,7 +19,8 @@ const techLookup = {
   'Apex charts': { logo: 'tech-logos/apex-charts.png', link: 'https://apexcharts.com/'},
   'drei': { logo: 'tech-logos/drei.png', link: 'https://drei.pmnd.rs/'},
   'GSAP': { logo: 'tech-logos/greensock.png', link: 'https://greensock.com/gsap/'},
-  'i18next': { logo: '/tech-logos/i18next.png', link: 'https://react.i18next.com/'}
+  'i18next': { logo: '/tech-logos/i18next.png', link: 'https://react.i18next.com/'},
+  'BigQuery': { logo: '/tech-logos/big-query.png', link: 'https://cloud.google.com/bigquery'}
 }
 
 const projects = [
@@ -40,7 +41,7 @@ const projects = [
     title: 'work.Digital Innovation.Title',
     text: 'work.Digital Innovation.Project main text',
     shortText: 'work.Digital Innovation.Project short text',
-    techStack: ['Rails', 'Bootstrap', 'PostgreSQL', 'webpack', 'Apex charts'],
+    techStack: ['Rails', 'Bootstrap', 'PostgreSQL', 'webpack', 'BigQuery', 'Apex charts'],
     techStackFrontEnd: 'work.Digital Innovation.Tech stack front end',
     techStackBackEnd: 'work.Digital Innovation.Tech stack back end',
     photos: ['/project-snapshots/digital-innovation/digital-innovation-1-landing-page.png', '/project-snapshots/digital-innovation/digital-innovation-2-signup.png', '/project-snapshots/digital-innovation/digital-innovation-3-login.png', '/project-snapshots/digital-innovation/digital-innovation-4-login-error.png', '/project-snapshots/digital-innovation/digital-innovation-5-capital.png', '/project-snapshots/digital-innovation/digital-innovation-6-new-ideas-with-comment.png', '/project-snapshots/digital-innovation/digital-innovation-7-activity.png'],
