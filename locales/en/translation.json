@@ -49,7 +49,7 @@
           "Project short text": "Inspired by my Masters research, this app is a platform to compare metrics for digital innovation across countries. Its goal is to help people in tech travel to places where they can contribute to innovative projects."
         },
         "Particles": {
-          "Title": "Particles",
+          "Title": "3D Particles",
           "Tech stack front end": "React, React Three Fiber, Three.js",
           "Tech stack back end": "N/A",
           "Project main text": "These particles started as an experiment for my personal website. I find the dancing dots endlessly beautiful - please have a play!\n\nI built custom GLSL shaders in Three.js to transform photos into millions of tiny dots, and to allow the user to disturb the dots' movements by dragging their cursor.",
