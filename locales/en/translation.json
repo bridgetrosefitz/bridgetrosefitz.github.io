@@ -33,6 +33,13 @@
       "View site": "View site",
       "View the code": "View the code",
       "Jesus Escalona": "Jesus Escalona",
+      "gmxdropbox": {
+        "Title": "Geoff McFetridge x DropBox",
+        "Tech stack front end": "ECMAScript 6",
+        "Tech stack back end": "N/A",
+        "Project main text": "I created a web experience to support an event for artist Geoff McFetridge, in collaboration with DropBox. The brief was to enable a one-off download of a digital copy of Geoff’s art, accompanied by a time-stamped certificate of authenticity, optimized for desktop and mobile.",
+        "Project short text": "I created a web experience to support an event for artist Geoff McFetridge, in collaboration with DropBox. The brief was to enable a one-off download of a digital copy of Geoff’s art, accompanied by a time-stamped certificate of authenticity, optimized for desktop and mobile."
+      },
       "RACI": {
         "Title": "RACI Project Management",
         "Tech stack front end": "React, Semantic UI React, JWT",
