@@ -20,10 +20,25 @@ const techLookup = {
   'drei': { logo: 'tech-logos/drei.png', link: 'https://drei.pmnd.rs/'},
   'GSAP': { logo: 'tech-logos/greensock.png', link: 'https://greensock.com/gsap/'},
   'i18next': { logo: '/tech-logos/i18next.png', link: 'https://react.i18next.com/'},
-  'BigQuery': { logo: '/tech-logos/big-query.png', link: 'https://cloud.google.com/bigquery'}
+  'BigQuery': { logo: '/tech-logos/big-query.png', link: 'https://cloud.google.com/bigquery'},
+  'Forge': { logo: '/tech-logos/atlassian.png', link: 'https://developer.atlassian.com/platform/forge/'},
+  'ECMAScript 6': { logo: '/tech-logos/ecmascript.png', link: 'https://www.ecma-international.org/technical-committees/tc39/'}
 }
 
 const projects = [
+  {
+    title: 'work.gmxdropbox.Title',
+    text: 'work.gmxdropbox.Project main text',
+    shortText: 'work.gmxdropbox.Project short text',
+    techStack: ['ECMAScript 6'],
+    techStackFrontEnd: 'work.RACI.Tech stack front end',
+    techStackBackEnd: 'work.RACI.Tech stack back end',
+    photos: ['/project-snapshots/gmxdropbox/gmxdropbox-1-landing-page-desktop.png', '/project-snapshots/gmxdropbox/gmxdropbox-2-success-screen-desktop.png', '/project-snapshots/gmxdropbox/gmxdropbox-3-dropbox-screen-with-download-desktop.png', '/project-snapshots/gmxdropbox/gmxdropbox-4-certificate-desktop.png'],
+    role: 'Developer',
+    link: 'https://www.instagram.com/p/CTmxNw4FROX/',
+    github: null,
+    userStories: null
+  },
   {
     title: 'work.RACI.Title',
     text: 'work.RACI.Project main text',
@@ -61,7 +76,7 @@ const projects = [
     role: 'Developer',
     link: 'http://bridgetro.se/particles/',
     github: 'https://github.com/bridgetrosefitz/particles',
-    userStories: 'bridgetro.se'
+    userStories: null
   },
   {
     title: 'work.Food Systems Dialogues.Title',
@@ -110,7 +125,8 @@ const projectCells = projects.map((project, index) => {
 
       )
     })
-    
+  
+  
     return(
       <>
         <PhotoSlideshow dataAos='fade-up' dataAosDuration="1500" arrowColor='transparent' photos={project.photos}/>
@@ -122,7 +138,7 @@ const projectCells = projects.map((project, index) => {
           <p className={i18n.language === 'jp' ? 'japanese project-short-text' : 'project-short-text'}>{t(project.shortText)}</p>
           <div className='buttons-container'>
             <Tag show={project.title === 'work.Personal website.Title' ? false : true} name={t('work.View site')} link={project.link}/>
-            <Tag show name={project.role === 'Product-managed' ? t('work.Jesus Escalona') : t('work.View the code')} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
+            <Tag show={project.github ? true : false} name={project.role === 'Product-managed' ? t('work.Jesus Escalona') : t('work.View the code')} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
           </div>
         </div>
       </>
