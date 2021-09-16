@@ -1,6 +1,7 @@
 import './photo-slideshow.css'
 import { useState } from 'react'
 import Arrow from '../arrow/Arrow'
+import MockBrowser from '../mock-browser/MockBrowser'
 
 const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
@@ -32,7 +33,8 @@ const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
       <div className='slideshow-panel-right' />
       <Arrow slideshowArrow direction='left' color={arrowColor} onClick={() => changePhoto('left')} />
       <Arrow slideshowArrow direction='right' color={arrowColor} onClick={() => changePhoto('right')} />
-      <img className='project-image' alt={altText} src={photos[currentPhotoIndex]}/>
+      <MockBrowser image={photos[currentPhotoIndex]} alt={altText}></MockBrowser>
+      {/* <img className='project-image' alt={altText} src={photos[currentPhotoIndex]}/> */}
     </div>
   )
 }

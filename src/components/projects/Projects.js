@@ -32,7 +32,7 @@ const projects = [
     title: 'work.gmxdropbox.Title',
     text: 'work.gmxdropbox.Project main text',
     shortText: 'work.gmxdropbox.Project short text',
-    techStack: ['ECMAScript 6', 'CSS', 'HTML'],
+    techStack: ['ECMAScript 6', 'HTML', 'CSS'],
     techStackFrontEnd: 'work.RACI.Tech stack front end',
     techStackBackEnd: 'work.RACI.Tech stack back end',
     photos: ['/project-snapshots/gmxdropbox/gmxdropbox-1-landing-page-desktop.png', '/project-snapshots/gmxdropbox/gmxdropbox-2-success-screen-desktop.png', '/project-snapshots/gmxdropbox/gmxdropbox-3-dropbox-screen-with-download-desktop.png', '/project-snapshots/gmxdropbox/gmxdropbox-4-certificate-desktop.png'],
