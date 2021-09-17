@@ -1,7 +1,37 @@
-/* .mock-browser-outline {
-  outline: solid 1px #d3d3d3;
-  border-radius: 3px;
-  height: 100px;
 
-} */
+.mock-browser-top {
+  height: 0.55em;
+  display: flex;
+  background-color: #e8e8e8;
+  padding-left: 0.125em;
+  padding-top: 0.125em;
+}
+
+/* .mock-browser-circles-container {
+  display: flex;
+  background-color: blue;
+  height: 100%;
+  width: 7%;
+  margin: 0.5% 0 */
+
+/* } */
+
+.mock-browser-circle {
+  background-color: #979799;
+  border-radius: 50%;
+  height: 0.25rem;
+  width: 0.25rem;
+  /* outline: 1px solid pink; */
+  margin-left: 0.125rem;
+}
+
+.mock-browser-outline {
+  display: grid;
+  border: solid 1px #d3d3d3;
+  position: relative;
+  overflow: hidden;
+  /* border: solid 5px purple; */
+  border-radius: 4px;
+
+}
 

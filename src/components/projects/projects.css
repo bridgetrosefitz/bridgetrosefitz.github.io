@@ -15,9 +15,9 @@
 
 .project-image {
   width: 100%;
-  aspect-ratio: 2880 / 1656;
   border-radius: 4px;
-  border: 1px solid lightgray;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .project-title {
