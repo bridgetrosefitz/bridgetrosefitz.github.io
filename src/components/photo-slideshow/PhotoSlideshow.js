@@ -31,9 +31,20 @@ const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
     <div data-aos={dataAos} data-aos-duration={dataAosDuration} className="photo-slideshow-container">
       <div className='slideshow-panel-left'/>
       <div className='slideshow-panel-right' />
-      <Arrow slideshowArrow direction='left' color={arrowColor} onClick={() => changePhoto('left')} />
-      <Arrow slideshowArrow direction='right' color={arrowColor} onClick={() => changePhoto('right')} />
-      <MockBrowser image={photos[currentPhotoIndex]} alt={altText}></MockBrowser>
+      <Arrow 
+        slideshowArrow 
+        direction='left' 
+        arrowHeightClass={photos[currentPhotoIndex].split(".")[1] === 'png' ? 'nav-arrow-container-height-full' : 'nav-arrow-container-height-small'} 
+        color={arrowColor} onClick={() => changePhoto('left')} />
+      <Arrow 
+        slideshowArrow 
+        direction='right'
+        arrowHeightClass={photos[currentPhotoIndex].split(".")[1] === 'png' ? 'nav-arrow-container-height-full' : 'nav-arrow-container-height-small'}
+        color={arrowColor} 
+        onClick={() => changePhoto('right')} />
+      <MockBrowser 
+        image={photos[currentPhotoIndex]} 
+        alt={altText}/>
     </div>
   )
 }

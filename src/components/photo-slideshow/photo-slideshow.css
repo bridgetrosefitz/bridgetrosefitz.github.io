@@ -1,6 +1,7 @@
 .photo-slideshow-container {
   position: relative;
   overflow: hidden;
+  height: fit-content;
 }
 
 
@@ -22,8 +23,3 @@
   /* background-color: white;
   opacity: 0.4; */
 }
-
-/* .photo-slideshow-container img {
-  cursor: pointer;
-}
- */

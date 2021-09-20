@@ -16,7 +16,6 @@ const MockBrowser = ({image, altText}) => {
             alt={altText} 
             src={image} />) : (
           <video
-            // onClick={e => e.stopEventPropagation()}
             className='project-video' 
             controls>
           <source 
