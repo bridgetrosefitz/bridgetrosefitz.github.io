@@ -17,7 +17,8 @@ const MockBrowser = ({image, altText}) => {
             src={image} />) : (
           <video
             className='project-video' 
-            controls>
+            controls
+            autoPlay>
           <source 
             src={image}
             type="video/webm"/>

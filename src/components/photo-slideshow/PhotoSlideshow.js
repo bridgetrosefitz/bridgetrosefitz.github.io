@@ -28,7 +28,10 @@ const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
   }
 
   return (
-    <div data-aos={dataAos} data-aos-duration={dataAosDuration} className="photo-slideshow-container">
+    <div 
+      data-aos={dataAos} 
+      data-aos-duration={dataAosDuration} 
+      className="photo-slideshow-container">
       <div className='slideshow-panel-left'/>
       <div className='slideshow-panel-right' />
       <Arrow 
