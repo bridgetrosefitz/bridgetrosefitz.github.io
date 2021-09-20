@@ -6,15 +6,25 @@ const MockBrowser = ({image, altText}) => {
   return(
       <div className='mock-browser-outline'>
         <div className='mock-browser-top'>
-        {/* <div className='mock-browser-circles-container'> */}
             <div className='mock-browser-circle'></div>
             <div className='mock-browser-circle'></div>
             <div className='mock-browser-circle'></div>
-        {/* </div> */}
-          
         </div>
-        <img className='project-image' alt={altText} src={image} />
-
+        {image.split(".")[1] === 'png' ? (
+          <img 
+            className='project-image' 
+            alt={altText} 
+            src={image} />) : (
+          <video
+            // onClick={e => e.stopEventPropagation()}
+            className='project-video' 
+            controls>
+          <source 
+            src={image}
+            type="video/webm"/>
+            Sorry, your browser doesn't support embedded videos.
+          </video>)
+          }
       </div>
   )
 

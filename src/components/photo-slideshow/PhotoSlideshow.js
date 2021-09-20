@@ -34,7 +34,6 @@ const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
       <Arrow slideshowArrow direction='left' color={arrowColor} onClick={() => changePhoto('left')} />
       <Arrow slideshowArrow direction='right' color={arrowColor} onClick={() => changePhoto('right')} />
       <MockBrowser image={photos[currentPhotoIndex]} alt={altText}></MockBrowser>
-      {/* <img className='project-image' alt={altText} src={photos[currentPhotoIndex]}/> */}
     </div>
   )
 }

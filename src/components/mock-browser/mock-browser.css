@@ -35,3 +35,11 @@
 
 }
 
+
+.project-video {
+  width: 100%;
+}
+
+video::-webkit-media-controls-panel {
+  z-index: 10;
+}
