@@ -40,7 +40,15 @@
           "Tech stack back end": "N/A",
           "Project main text": "ジェフマクフェットリジュというアーティストとDropboxのために、このウェブサイトを作りました。サイトで、ジェフさんが描かれた作品とユーザに個別化された証明書をダウンロードすることができます。モバイル最適化バージョンもあります。",
           "Project short text": "ジェフマクフェットリジュというアーティストとDropboxのために、このウェブサイトを作りました。サイトで、ジェフさんが描かれた作品とユーザに個別化された証明書をダウンロードすることができます。モバイル最適化バージョンもあります。"
-        },"RACI": {
+        },
+        "codegeist": {
+          "Title": "Atlassian の商品のアドオン",
+          "Tech stack front end": "Forge, React",
+          "Tech stack back end": "N/A",
+          "Project main text": "Atlassian のJira とConfluence という商品のためのアプリで、DACI役割に対してのタスクをプログラム的に生成します。Codegeist ハッカソンに提出、三日間で作りました。",
+          "Project short text": "Atlassian のJira とConfluence という商品のためのアプリで、DACI役割に対してのタスクをプログラム的に生成します。Codegeist ハッカソンに提出、三日間で作りました。"
+        },
+        "RACI": {
           "Title": "プロジェクト管理のアプリ",
           "Tech stack front end": "React, Semantic UI React, JWT",
           "Tech stack back end": "Rails, BCrypt",

@@ -40,6 +40,13 @@
       "Project main text": "Un site-web pour soutenir un événement proposé par l’artiste Geoff McFetridge, en collaboration avec Dropbox. Le brief était de créer une expérience où l’on pouvait télécharger un exemplaire unique d’un oeuvre realisé par Geoff, accompagné d’un certificat d’authenticité horodaté. Également optimisé pour mobile.",
       "Project short text": "Un site-web pour soutenir un événement proposé par l’artiste Geoff McFetridge, en collaboration avec Dropbox. Le brief était de créer une expérience où l’on pouvait télécharger un exemplaire unique d’un oeuvre realisé par Geoff, accompagné d’un certificat d’authenticité horodaté. Également optimisé pour mobile."
     },
+    "codegeist": {
+      "Title": "Atlassian marketplace add-on",
+      "Tech stack front end": "Forge, React",
+      "Tech stack back end": "N/A",
+      "Project main text": "Une appli destinée aux utilisateurs des produits Atlassian, Jira et Confluence. Elle crée une série d’actions à entreprendre pour chaque membre d’une équipe en fonction de leur rôle “DACI”. Créée en trois jours pour le hackathon Codegeist 2021 en utilisant le cadre de développement Forge.",
+      "Project short text": "Une appli destinée aux utilisateurs des produits Atlassian, Jira et Confluence. Elle crée une série d’actions à entreprendre pour chaque membre d’une équipe en fonction de leur rôle “DACI”. Créée en trois jours pour le hackathon Codegeist 2021 en utilisant le cadre de développement Forge."
+    },
     "RACI": {
       "Title": "Outil de project management",
       "Tech stack front end": "React, Semantic UI React, JWT",
