@@ -6,7 +6,7 @@ import PhotoSlideshow from '../photo-slideshow/PhotoSlideshow'
 import i18n from 'i18next';
 
 const techLookup = {
-  'React.js': { logo: '/tech-logos/react.svg', link:'https://reactjs.org/' },
+  'React': { logo: '/tech-logos/react.svg', link:'https://reactjs.org/' },
   'Rails': { logo: '/tech-logos/rails.svg', link: 'https://rubyonrails.org/'},
   'Three.js': { logo: '/tech-logos/threejs.png', link: 'https://threejs.org/'},
   'Google Sheets API': { logo: '/tech-logos/google-sheets.png', link: 'https://developers.google.com/sheets/api' },
@@ -50,7 +50,7 @@ const projects = [
     title: 'work.codegeist.Title',
     text: 'work.codegeist.Project main text',
     shortText: 'work.codegeist.Project short text',
-    techStack: ['Forge', 'React.js'],
+    techStack: ['Forge', 'React'],
     techStackFrontEnd: 'work.codegeist.Tech stack front end',
     techStackBackEnd: 'work.codegeist.Tech stack back end',
     photos: [
@@ -64,7 +64,7 @@ const projects = [
     title: 'work.RACI.Title',
     text: 'work.RACI.Project main text',
     shortText: 'work.RACI.Project short text',
-    techStack: ['React.js', 'Rails', 'JSON API', 'PostgreSQL', 'JWT', 'Semantic UI React'],
+    techStack: ['React', 'Rails', 'JSON API', 'PostgreSQL', 'JWT', 'Semantic UI React'],
     techStackFrontEnd: 'work.RACI.Tech stack front end',
     techStackBackEnd: 'work.RACI.Tech stack back end',
     photos: [
@@ -106,7 +106,7 @@ const projects = [
     title: 'work.Particles.Title',
     text: 'work.Particles.Project main text',
     shortText: 'work.Particles.Project short text',
-    techStack: ['React.js', 'Three.js', 'drei', 'GSAP', 'webpack'],
+    techStack: ['React', 'Three.js', 'drei', 'GSAP', 'webpack'],
     techStackFrontEnd: 'work.Particles.Tech stack front end',
     techStackBackEnd: 'work.Particles.Tech stack back end',
     photos: [
@@ -125,7 +125,7 @@ const projects = [
   {
     title: 'work.Food Systems Dialogues.Title',
     text: 'work.Food Systems Dialogues.Project main text',
-    techStack: ['React.js', 'Google Sheets API'],
+    techStack: ['React', 'Google Sheets API'],
     shortText: 'work.Food Systems Dialogues.Project short text',
     techStackFrontEnd: 'work.Food Systems Dialogues.Tech stack front end',
     techStackBackEnd: 'work.Food Systems Dialogues.Tech stack back end',
@@ -146,7 +146,7 @@ const projects = [
   {
     title: 'work.Personal website.Title',
     text: 'work.Personal website.Project main text',
-    techStack: ['React.js', 'Three.js', 'drei', 'i18next'],
+    techStack: ['React', 'Three.js', 'drei', 'i18next'],
     shortText: 'work.Personal website.Project short text',
     techStackFrontEnd: 'work.Personal Website.Tech stack front end',
     techStackBackEnd: 'work.Personal Website.Tech stack back end',
