@@ -10,7 +10,7 @@ const MockBrowser = ({image, altText}) => {
             <div className='mock-browser-circle'></div>
             <div className='mock-browser-circle'></div>
         </div>
-        {image.split(".")[1] === 'png' ? (
+        { image.split(".")[1] === 'png' ? (
           <img 
             className='project-image' 
             alt={altText} 

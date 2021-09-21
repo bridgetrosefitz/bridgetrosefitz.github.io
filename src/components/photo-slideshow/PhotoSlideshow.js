@@ -38,7 +38,8 @@ const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
         slideshowArrow 
         direction='left' 
         arrowHeightClass={photos[currentPhotoIndex].split(".")[1] === 'png' ? 'nav-arrow-container-height-full' : 'nav-arrow-container-height-small'} 
-        color={arrowColor} onClick={() => changePhoto('left')} />
+        color={arrowColor} 
+        onClick={() => changePhoto('left')} />
       <Arrow 
         slideshowArrow 
         direction='right'

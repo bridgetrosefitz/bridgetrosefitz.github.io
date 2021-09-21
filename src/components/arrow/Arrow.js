@@ -6,7 +6,6 @@ const Arrow = ({direction, onClick, color, slideshowArrow, arrowHeightClass }) =
     <>
       <div 
         className={` ${slideshowArrow ? `slideshow-arrow-${direction}` : ''} ${direction} ${color}-arrow nav-arrow ${arrowHeightClass}`} 
-        onTouchStart={onClick} 
         onClick={onClick}>
         <div 
           className={`${direction} ${color}-arrow nav-arrow-left-tip`}/>
