@@ -23,7 +23,7 @@ const MockBrowser = ({image, altText}) => {
             autoPlay>
           <source 
             src={image}
-            type="video/quicktime"/>
+            type="video/mp4"/>
             Sorry, your browser doesn't support embedded videos.
           </video>)
           }
