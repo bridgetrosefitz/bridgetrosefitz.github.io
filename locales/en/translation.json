@@ -40,6 +40,13 @@
         "Project main text": "I created a web experience to support an event for artist Geoff McFetridge, in collaboration with Dropbox. The brief was to enable a one-off download of a digital copy of Geoff’s art, accompanied by a time-stamped certificate of authenticity, optimized for desktop and mobile.",
         "Project short text": "I created a web experience to support an event for artist Geoff McFetridge, in collaboration with Dropbox. The brief was to enable a one-off download of a digital copy of Geoff’s art, accompanied by a time-stamped certificate of authenticity, optimized for desktop and mobile."
       },
+      "codegeist": {
+        "Title": "Atlassian marketplace add-on",
+        "Tech stack front end": "Forge, React",
+        "Tech stack back end": "N/A",
+        "Project main text": "An add-on to Atlassian’s Jira and Confluence platforms. Through a programmatically generated queue of tasks, this app translates the DACI framework directly into users' workflows. Built in three days as a submission to the 2021 Atlassian Codegeist Hackathon, using the Forge development framework.",
+        "Project short text": "An add-on to Atlassian’s Jira and Confluence platforms. Through a programmatically generated queue of tasks, this app translates the DACI framework directly into users' workflows. Built in three days as a submission to the 2021 Atlassian Codegeist Hackathon, using the Forge development framework."
+      },
       "RACI": {
         "Title": "RACI Project Management",
         "Tech stack front end": "React, Semantic UI React, JWT",
