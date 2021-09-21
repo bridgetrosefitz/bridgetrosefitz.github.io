@@ -3,12 +3,17 @@ import { useState } from 'react'
 import Arrow from '../arrow/Arrow'
 import MockBrowser from '../mock-browser/MockBrowser'
 
-const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor }) => {
+const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor, photoType }) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
 
-  const altText = photos[currentPhotoIndex]
-    .split(`-${currentPhotoIndex + 1}-`)[1]
-    .split('.')[0]
+  let altText
+  if(photoType === 'link'){
+    altText = 'project-media'
+  } else {
+    altText = photos[currentPhotoIndex]
+      .split(`-${currentPhotoIndex + 1}-`)[1]
+      .split('.')[0]
+  }
 
   const changePhoto = direction => {
     const photosLastIndex = photos.length -1

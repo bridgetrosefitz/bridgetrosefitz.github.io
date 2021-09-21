@@ -33,8 +33,8 @@ const projects = [
     text: 'work.gmxdropbox.Project main text',
     shortText: 'work.gmxdropbox.Project short text',
     techStack: ['ECMAScript 6', 'HTML', 'CSS'],
-    techStackFrontEnd: 'work.RACI.Tech stack front end',
-    techStackBackEnd: 'work.RACI.Tech stack back end',
+    techStackFrontEnd: 'work.gmxdropbox.Tech stack front end',
+    techStackBackEnd: 'work.gmxdropbox.Tech stack back end',
     photos: [
       '/project-snapshots/gmxdropbox/gmxdropbox-1-landing-page-desktop.png', 
       '/project-snapshots/gmxdropbox/gmxdropbox-2-success-screen-desktop.png', 
@@ -44,6 +44,20 @@ const projects = [
     role: 'Developer',
     link: 'https://www.instagram.com/p/CTmxNw4FROX/',
     github: null,
+    userStories: null
+  },
+  {
+    title: 'work.codegeist.Title',
+    text: 'work.codegeist.Project main text',
+    shortText: 'work.codegeist.Project short text',
+    techStack: ['Forge', 'React.js'],
+    techStackFrontEnd: 'work.codegeist.Tech stack front end',
+    techStackBackEnd: 'work.codegeist.Tech stack back end',
+    photos: [
+      'https://user-images.githubusercontent.com/41013984/134103950-498f7b9e-b6f5-4e9f-b1ad-73d9d4c46c7f.mp4',],
+    role: 'Developer',
+    link: 'https://devpost.com/software/raci-project-management',
+    github: 'https://github.com/bridgetrosefitz/codegeist-daci-project-management',
     userStories: null
   },
   {
@@ -173,7 +187,12 @@ const projectCells = projects.map((project, index) => {
   
     return(
       <>
-        <PhotoSlideshow dataAos='fade-up' dataAosDuration="1500" arrowColor='transparent' photos={project.photos}/>
+        <PhotoSlideshow 
+          dataAos='fade-up' 
+          dataAosDuration="1500" 
+          arrowColor='transparent' 
+          photoType={project.photos[0].includes('http') ? 'link' : 'files'} 
+          photos={project.photos}/>
         <div data-aos='fade-up' data-aos-duration="1500" className='project-specs-container'>
           <h3 className={i18n.language === 'jp' ? 'japanese project-title' : 'project-title'} >{t(project.title)}{project.role === 'Product-managed' ? <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px' }}> {(t('work.Product-managed'))} </span> : null}</h3>
           <div className='tech-logo-container'>
