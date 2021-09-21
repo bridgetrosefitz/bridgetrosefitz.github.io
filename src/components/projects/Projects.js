@@ -43,6 +43,7 @@ const projects = [
       '/project-snapshots/gmxdropbox/gmxdropbox-5-demo-desktop.mov',
       '/project-snapshots/gmxdropbox/gmxdropbox-6-gallery.png'],
     role: 'Developer',
+    mediaIncludesLink: false,
     link: 'https://www.instagram.com/p/CTmxNw4FROX/',
     github: null,
     userStories: null
@@ -55,8 +56,14 @@ const projects = [
     techStackFrontEnd: 'work.codegeist.Tech stack front end',
     techStackBackEnd: 'work.codegeist.Tech stack back end',
     photos: [
+      '/project-snapshots/codegeist/codegeist-1-driver-actions.png',
+      '/project-snapshots/codegeist/codegeist-2-approver-health-metrics.png',
+      '/project-snapshots/codegeist/codegeist-3-contributor-actions.png',
+      '/project-snapshots/codegeist/codegeist-4-informed-actions.png',
+      '/project-snapshots/codegeist/codegeist-5-settings.png',
       'https://user-images.githubusercontent.com/41013984/134103950-498f7b9e-b6f5-4e9f-b1ad-73d9d4c46c7f.mp4',],
     role: 'Developer',
+    mediaIncludesLink: true,
     link: 'https://devpost.com/software/raci-project-management',
     github: 'https://github.com/bridgetrosefitz/codegeist-daci-project-management',
     userStories: null
@@ -79,6 +86,7 @@ const projects = [
       '/project-snapshots/raci/raci-8-delete-project.png', 
       '/project-snapshots/raci/raci-9-loading.png'],
     role: 'Developer',
+    mediaIncludesLink: false,
     link: 'https://raci.team',
     github: 'https://github.com/bridgetrosefitz/raci',
     userStories: 'https://www.notion.so/Bridget-Fitzgerald-RACI-3166a2742268438889473e69c943d72e'
@@ -99,6 +107,7 @@ const projects = [
       '/project-snapshots/digital-innovation/digital-innovation-6-new-ideas-with-comment.png', 
       '/project-snapshots/digital-innovation/digital-innovation-7-activity.png'],
     role: 'Developer',
+    mediaIncludesLink: false,
     link: 'http://digitalinnovation.fyi',
     github: 'https://github.com/bridgetrosefitz/digital_innovation',
     userStories: 'https://www.notion.so/Bridget-Fitzgerald-Digital-Innovation-0c0a03caf93f4643bfa85f634bd0d8ae'
@@ -119,6 +128,7 @@ const projects = [
       '/project-snapshots/particles/particles-6-negative-depth.png', 
       '/project-snapshots/particles/particles-7-large-particle-size.png'],
     role: 'Developer',
+    mediaIncludesLink: false,
     link: 'http://bridgetro.se/particles/',
     github: 'https://github.com/bridgetrosefitz/particles',
     userStories: null
@@ -139,7 +149,8 @@ const projects = [
       '/project-snapshots/fsds/fsds-6-table-plan.png', 
       '/project-snapshots/fsds/fsds-7-table-plan-click-and-drag.png', 
       '/project-snapshots/fsds/fsds-8-diversity-by-table.png'],
-    role: 'Product-managed',
+    mediaIncludesLink: false,
+      role: 'Product-managed',
     link: 'https://fsds-tool.herokuapp.com/',
     github: 'https://github.com/Jesus-Escalona',
     userStories: 'https://docs.google.com/spreadsheets/d/1SICeapZqaMtsvrVGJHqvYo3tOVagKm988AiR43vGt58/edit?usp=sharing'
@@ -159,6 +170,7 @@ const projects = [
       '/project-snapshots/personal-website/personal-website-5-footer-japanese.png',
       '/project-snapshots/personal-website/personal-website-6-about-page-french.png'],
     role: 'Developer',
+    mediaIncludesLink: false,
     link: 'https://bridgetro.se',
     github: 'https://github.com/bridgetrosefitz/bridgetrosefitz.github.io',
     userStories: 'https://bridgetrosefitz.notion.site/Bridget-Fitzgerald-Personal-website-57cf2e253112453884670a3cb9b44ecc'
@@ -192,7 +204,7 @@ const projectCells = projects.map((project, index) => {
           dataAos='fade-up' 
           dataAosDuration="1500" 
           arrowColor='transparent' 
-          photoType={project.photos[0].includes('http') ? 'link' : 'files'} 
+          photoType={project.mediaIncludesLink ? 'link' : 'files'}
           photos={project.photos}/>
         <div data-aos='fade-up' data-aos-duration="1500" className='project-specs-container'>
           <h3 className={i18n.language === 'jp' ? 'japanese project-title' : 'project-title'} >{t(project.title)}{project.role === 'Product-managed' ? <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px' }}> {(t('work.Product-managed'))} </span> : null}</h3>
