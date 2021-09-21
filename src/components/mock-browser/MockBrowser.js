@@ -18,10 +18,12 @@ const MockBrowser = ({image, altText}) => {
           <video
             className='project-video' 
             controls
+            playsInline
+            muted
             autoPlay>
           <source 
             src={image}
-            type="video/webm"/>
+            type="video/quicktime"/>
             Sorry, your browser doesn't support embedded videos.
           </video>)
           }
