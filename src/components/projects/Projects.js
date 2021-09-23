@@ -159,7 +159,7 @@ const projects = [
   {
     title: 'work.Personal website.Title',
     text: 'work.Personal website.Project main text',
-    techStack: ['React', 'Three.js', 'drei', 'i18next'],
+    techStack: ['React', 'Three.js', 'drei', 'i18next', 'CSS'],
     shortText: 'work.Personal website.Project short text',
     techStackFrontEnd: 'work.Personal Website.Tech stack front end',
     techStackBackEnd: 'work.Personal Website.Tech stack back end',
