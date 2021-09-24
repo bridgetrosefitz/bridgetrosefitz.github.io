@@ -3,11 +3,17 @@
   z-index: 2;
   margin: 0 auto;
   cursor: pointer;
-  /* outline: solid green 2px; */
 }
 
 .down.nav-arrow-left-tip, 
-.down.nav-arrow-right-tip, 
+.down.nav-arrow-right-tip {
+    position: absolute;
+  z-index: 2;
+  width: 1px;
+  height: 15px;
+}
+
+
 .left.nav-arrow-left-tip, 
 .left.nav-arrow-right-tip,
 .right.nav-arrow-left-tip, 
@@ -15,8 +21,7 @@
   position: absolute;
   z-index: 2;
   width: 1px;
-  height: 15px;
-  background-color: black;
+  height: 9px;
 }
 
 /* For downwards-pointing arrow */
@@ -27,7 +32,6 @@
   width: 51px;
   left: 50%;
   transform: translate(-50%, 0);
-  /* outline: 2px solid rebeccapurple; */
 }
 
 .down.nav-arrow-left-tip {
@@ -70,13 +74,13 @@
 /* For left-pointing arrow */
 
 .left.nav-arrow-left-tip {
-  transform: translate(3px, 10px) rotate(-45deg);
+  transform: translate(3px, 8px) rotate(-45deg);
   left: 20px;
   bottom: 50%;
 }
 
 .left.nav-arrow-right-tip {
-  transform: translate(3px, 0px) rotate(45deg);
+  transform: translate(3px, 2px) rotate(45deg);
   left: 20px;
   bottom: 50%;
 }
@@ -84,13 +88,13 @@
 /* For right-pointing arrow */
 
 .right.nav-arrow-left-tip {
-  transform: translate(-3px, 0px) rotate(-45deg);
+  transform: translate(-3px, 2px) rotate(-45deg);
   right: 20px;
   bottom: 50%;
 }
 
 .right.nav-arrow-right-tip {
-  transform: translate(-3px, 10px) rotate(45deg);
+  transform: translate(-3px, 8px) rotate(45deg);
   right: 20px;
   bottom: 50%;
 }

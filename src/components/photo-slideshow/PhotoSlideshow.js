@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Arrow from '../arrow/Arrow'
 import MockBrowser from '../mock-browser/MockBrowser'
 
-const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor, photoType }) => {
+const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowType, arrowColor, photoType }) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
 
   let altText
@@ -43,12 +43,14 @@ const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowColor, photoTyp
         slideshowArrow 
         direction='left' 
         arrowHeightClass={photos[currentPhotoIndex].split(".")[1] === 'png' ? 'nav-arrow-container-height-full' : 'nav-arrow-container-height-small'} 
+        type={arrowType}
         color={arrowColor} 
         onClick={() => changePhoto('left')} />
       <Arrow 
         slideshowArrow 
         direction='right'
         arrowHeightClass={photos[currentPhotoIndex].split(".")[1] === 'png' ? 'nav-arrow-container-height-full' : 'nav-arrow-container-height-small'}
+        type={arrowType}
         color={arrowColor} 
         onClick={() => changePhoto('right')} />
       <MockBrowser 

@@ -204,7 +204,8 @@ const projectCells = projects.map((project, index) => {
         <PhotoSlideshow 
           dataAos='fade-up' 
           dataAosDuration="1500" 
-          arrowColor='transparent' 
+          arrowType='circle-background'
+          arrowColor='black' 
           photoType={project.mediaIncludesLink ? 'link' : 'files'}
           photos={project.photos}/>
         <div data-aos='fade-up' data-aos-duration="1500" className='project-specs-container'>
