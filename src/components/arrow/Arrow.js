@@ -1,5 +1,17 @@
 import './arrow.css'
 
+const returnArrows = (direction, color) => {
+  return (
+    <>
+      <div
+        className={`${direction} ${color}-arrow nav-arrow-left-tip`} />
+      <div
+        className={`${direction} ${color}-arrow nav-arrow-right-tip`} />
+    </>
+    )
+}
+
+
 const Arrow = ({direction, onClick, type, color, slideshowArrow, arrowHeightClass }) => {
 
   return(
@@ -7,12 +19,7 @@ const Arrow = ({direction, onClick, type, color, slideshowArrow, arrowHeightClas
       <div 
         className={` ${slideshowArrow ? `slideshow-arrow-${direction}` : ''} ${direction} ${color}-arrow nav-arrow ${arrowHeightClass}`} 
         onClick={onClick}>
-        {/* {type === 'background-circle' ? } */}
-
-        <div 
-          className={`${direction} ${color}-arrow nav-arrow-left-tip`}/>
-        <div 
-          className={`${direction} ${color}-arrow nav-arrow-right-tip`}/>
+        {type === 'circle-background' ? <div className='arrow-circle'>{returnArrows(direction, color)}</div> : returnArrows(direction, color)}
       </div>
     </>
   )

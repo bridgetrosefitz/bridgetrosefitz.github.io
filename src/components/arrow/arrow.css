@@ -133,3 +133,10 @@
   right: 0;
   /* background: linear-gradient(-90deg, #00000059, transparent 50%) */
 }
+
+/* For arrow circle */
+
+.arrow-circle {
+  background-color: blue;
+  border-radius: 50%;
+}
