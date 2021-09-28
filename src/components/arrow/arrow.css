@@ -137,6 +137,19 @@
 /* For arrow circle */
 
 .arrow-circle {
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
   background-color: blue;
+  height: 2em;
+  width: 2em;
   border-radius: 50%;
+}
+
+.arrow-circle-right {
+  right: 5px;
+}
+
+.arrow-circle-left {
+  left: 5px;
 }
