@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './work.css'
-import Project from '../project/Project'
 import { useTranslation } from 'react-i18next'
 import Projects from '../projects/Projects'
 
@@ -64,7 +63,6 @@ const Work = props => {
 
   return (
     <>  
-      <Project hidden={hidden} onClose={() => setHidden(prev => !prev)} project={currentProject} />
       <div ref={props.workRef} className='company-logo-display-container'>
        {companyLogos}
       </div>
