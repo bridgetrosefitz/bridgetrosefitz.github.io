@@ -6,6 +6,7 @@ import Localization from '../localization/Localization'
 import HeaderLarge from '../header/HeaderLarge'
 import Group from '../group/Group'
 import Work from '../work/Work'
+import { iconsGroup } from '../footer/Footer'
 import Footer from '../footer/Footer'
 import Arrow from '../arrow/Arrow'
 import { OrbitControls } from '@react-three/drei'
@@ -20,6 +21,9 @@ const Main = props => {
   return (
     <>
       <Localization {...props}/>
+      {/* <div className='external-links'>
+        {iconsGroup}
+      </div> */}
       <button className='side-button' onClick={() => props.history.push('/about')}>
         {t('main.About')}
       </button>

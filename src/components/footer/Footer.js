@@ -20,7 +20,7 @@ const allIcons = [
   }
 ]
 
-const iconsGroup = allIcons.map((icon, index) => {
+export const iconsGroup = allIcons.map((icon, index) => {
   return (
     <a key={index} className='contact-logos' href={icon.link} rel='noreferrer' target="_blank">
       {icon.component}
