@@ -153,6 +153,10 @@
   border-radius: 50%;
 }
 
+.nav-arrow-container-height-small > .arrow-circle {
+  top: 83%
+}
+
 .arrow-circle-right {
   right: 10px;
 }
