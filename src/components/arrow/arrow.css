@@ -154,6 +154,7 @@
 }
 
 .nav-arrow-container-height-small > .arrow-circle {
+  /* This is so that the arrow circles are centered vertically when the panel is reduced to 60% for videos */
   top: 83%
 }
 
