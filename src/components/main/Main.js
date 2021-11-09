@@ -20,10 +20,10 @@ const Main = props => {
 
   return (
     <>
-      <Localization {...props}/>
-      {/* <div className='external-links'>
+      <div className="external-links">
         {iconsGroup}
-      </div> */}
+      </div>
+      <Localization {...props}/>
       <button className='side-button' onClick={() => props.history.push('/about')}>
         {t('main.About')}
       </button>
