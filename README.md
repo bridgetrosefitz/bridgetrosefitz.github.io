@@ -45,7 +45,7 @@ I kept myself organized with user stories, available [here](https://bridgetrosef
 
 ## What's next
 
-* I'm still working on a bunch of tweaks...and the fun will be ongoing! But major next-up priorities (as of 07/27/21) are:
+* I'm still working on a bunch of tweaks...and the fun will be ongoing! But major next-up priorities are:
   * Improve UI affordances so it's easy to see how you can play with the sphere
   * Review and improve accessibility
   * Create a dark mode
