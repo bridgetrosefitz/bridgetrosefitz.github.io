@@ -5,6 +5,7 @@ const Localization = ({ changeLanguage, currentLanguage }) => {
 
   switch (currentLanguage) {
     case 'en':
+    case 'en-US':
       return (
         <div>
           <button className='localization-button' onClick={() => changeLanguage('fr')}>Français</button>·
