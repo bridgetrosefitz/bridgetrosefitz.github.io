@@ -1,5 +1,6 @@
 .localization-button {
   background-color: transparent;
+  color: black;
   border: none;
   position: relative;
   z-index: 2;
