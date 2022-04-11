@@ -3,38 +3,45 @@ import './localization.css'
 
 const Localization = ({ changeLanguage, currentLanguage }) => {
 
+  let buttons
+
   switch (currentLanguage) {
     case 'en':
     case 'en-US':
-      return (
-        <div>
-          <button className='localization-button' onClick={() => changeLanguage('fr')}>Français</button>·
-          <button className='localization-button' onClick={() => changeLanguage('jp')}>日本語</button>
-        </div>
-      )
+        buttons = (
+          <>
+            <button className='localization-button' onClick={() => changeLanguage('fr')}>Français</button>·
+            <button className='localization-button' onClick={() => changeLanguage('jp')}>日本語</button>
+          </>
+        )
+        break;
     case 'fr':
-      return (
-        <div>
+        buttons = (
+          <>
           <button className='localization-button' onClick={() => changeLanguage('en')}>English</button>·
           <button className='localization-button' onClick={() => changeLanguage('jp')}>日本語</button>
-        </div>
+          </>
       )
+      break;
     case 'jp':
-      return (
-        <div>
+      buttons = (
+        <>
           <button className='localization-button' onClick={() => changeLanguage('fr')}>Français</button>·
           <button className='localization-button' onClick={() => changeLanguage('en')}>English</button>
-        </div>
+        </>
       )
+      break;
     default:
-      return (
-        <div>
+      buttons = (
+        <>
           <button className='localization-button' onClick={() => changeLanguage('fr')}>Français</button>·
           <button className='localization-button' onClick={() => changeLanguage('jp')}>日本語</button>·
           <button className='localization-button' onClick={() => changeLanguage('en')}>English</button>
-        </div>
+        </>
       )
   }
+
+  return (<div className='localization-container'>{buttons}</div>)
   
 }
 

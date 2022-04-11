@@ -11,6 +11,7 @@ import Footer from '../footer/Footer'
 import Arrow from '../arrow/Arrow'
 import { OrbitControls } from '@react-three/drei'
 import { useTranslation } from 'react-i18next'
+import CustomMessage from '../custom-message/CustomMessage'
 
 const Main = props => {
   const { t } = useTranslation()
@@ -21,6 +22,7 @@ const Main = props => {
   return (
     <>
       <Localization {...props}/>
+      <CustomMessage/>
       {/* <div className='external-links'>
         {iconsGroup}
       </div> */}

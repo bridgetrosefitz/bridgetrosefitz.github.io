@@ -1,3 +1,8 @@
+.localization-container {
+  width: 50%;
+  display: inline-block;
+}
+
 .localization-button {
   background-color: transparent;
   color: black;

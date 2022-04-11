@@ -1,0 +1,10 @@
+.custom-message-container {
+    width: 50%;
+    display: inline-block;
+    right: 0;
+    text-align: right;
+}
+
+.custom-message {
+    font-size: 0.8em;
+}
