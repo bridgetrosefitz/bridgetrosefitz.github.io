@@ -10,7 +10,6 @@ body {
 
 * {
   box-sizing: border-box;
-  /* font-family: 'Roboto', sans-serif; */
   font-family: 'Karla', sans-serif;
   font-weight: 300;
   scroll-behavior: smooth;
@@ -37,6 +36,10 @@ p {
 a {
   text-decoration: none;
   color: black;
+}
+
+button {
+  font-size: 0.9em;
 }
 
 a:visited { 
