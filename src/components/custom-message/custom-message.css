@@ -6,9 +6,15 @@
 }
 
 .custom-message {
-    font-size: 0.9em;
+    font-size: 1.5em;
+    background-color: black;
+    color: white;
     margin-right: 0.2em;
     padding: 1px 6px;
+}
+
+.custom-message-hide {
+    display: none;
 }
 
 
