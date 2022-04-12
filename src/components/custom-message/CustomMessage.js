@@ -6,11 +6,16 @@ const CustomMessage = () => {
   const [sentenceIndex, setSentenceIndex] = useState(0)
   const [maxSentenceIndex, setMaxSentenceIndex] = useState(8)
 
+  const allowableNames = ["notion", "google", "apple", "slack"]
+
   const generateNameForMessage = (path) => {
     const lowerCase = path.split("/").slice(-1)[0]
-    const properCase = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1)
-    return properCase
+    if(allowableNames.includes(lowerCase)) {
+      const properCase = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1)
+      return properCase
+    } else return "there"
   }
+
 
   // If you add a new sentence, remember to update maxSentenceIndex
 
