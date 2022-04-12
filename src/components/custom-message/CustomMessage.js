@@ -4,11 +4,18 @@ import { useSpring, animated, config } from 'react-spring'
 
 const CustomMessage = () => {
   const [sentenceIndex, setSentenceIndex] = useState(0)
-  const [maxSentenceIndex, setMaxSentenceIndex] = useState(1)
+  const [maxSentenceIndex, setMaxSentenceIndex] = useState(8)
+
+  const generateNameForMessage = (path) => {
+    const lowerCase = path.split("/").slice(-1)[0]
+    const properCase = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1)
+    return properCase
+  }
 
   // If you add a new sentence, remember to update maxSentenceIndex
+
   const sentences = [
-    "Hi, Notion.",
+    `Hi, ${generateNameForMessage(window.location.href)}.`,
     "Welcome to my site.",
     "It's lovely to have you here.",
     "You can browse my projects below.",
