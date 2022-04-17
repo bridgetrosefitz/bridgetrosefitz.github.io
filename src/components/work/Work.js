@@ -51,12 +51,9 @@ const companies = [
 
 const Work = props => {
 
-  const [hidden, setHidden] = useState(true)
-  const [currentProject, setCurrentProject] = useState(null)
-
-  const companyLogos = companies.map(company => {
+  const companyLogos = companies.map((company, index) => {
     return(
-      <a className='logoLink'rel='noreferrer' target='_blank' href={company.link}>
+      <a key={index} className='logoLink'rel='noreferrer' target='_blank' href={company.link}>
         <img alt={company.name} src={company.logo}/>
       </a>)
   })

@@ -3,14 +3,20 @@
     display: inline-block;
     right: 0;
     text-align: right;
+    border: 1px solid green;
 }
 
 .custom-message {
+    display: block;
     font-size: 1.5em;
     background-color: black;
     color: white;
     margin-right: 0.2em;
     padding: 1px 6px;
+}
+
+.custom-message-text {
+
 }
 
 .custom-message-hide {

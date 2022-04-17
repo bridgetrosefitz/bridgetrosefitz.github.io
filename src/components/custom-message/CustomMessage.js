@@ -1,10 +1,44 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import './custom-message.css'
 import { useSpring, animated, config } from 'react-spring'
+import { Route } from 'react-router-dom'
+
+const useWidth = () => {
+  const ref = useRef(null)
+  const [width, setWidth] = useState(0)
+  const widthRef = useRef(width)
+  const [resizeObserver] = useState(
+    () => 
+      new ResizeObserver(packet => {
+        if(ref.current && widthRef.current !== ref.current.offsetWidth) {
+          widthRef.current = ref.current.offsetWidth
+          setWidth(ref.current.offsetWidth)
+        }
+      })
+  )
+
+  useLayoutEffect(() => {
+    if(ref.current) {
+      setWidth(ref.current.offsetWidth)
+      resizeObserver.observe(ref.current, {})
+    }
+    return () => resizeObserver.disconnect()
+  }, [ref.current])
+
+  return [ref, width]
+}
 
 const CustomMessage = () => {
   const [sentenceIndex, setSentenceIndex] = useState(0)
   const [maxSentenceIndex, setMaxSentenceIndex] = useState(8)
+  const [widthRef, width] = useWidth()
+
+  const props = useSpring({
+    from: { opacity: 0, width: 0 },
+    to: { opacity: 1, width: width },
+    loop: { reverse: true },
+    config: config.molasses,
+  })
 
   const allowableNames = ["notion", "google", "apple", "slack"]
 
@@ -15,7 +49,6 @@ const CustomMessage = () => {
       return properCase
     } else return "there"
   }
-
 
   // If you add a new sentence, remember to update maxSentenceIndex
 
@@ -31,13 +64,6 @@ const CustomMessage = () => {
     "Most of all, I hope you enjoy having a look around.",
   ]
 
-  const props = useSpring({
-    to: { opacity: 1 }, 
-    from: { opacity: 0 },
-    loop: {reverse: true},
-    config: config.molasses,
-  })
-
   useEffect(() => {
     const interval = setInterval(() => setSentenceIndex(prevSentenceIndex => {
       return prevSentenceIndex <= maxSentenceIndex ? prevSentenceIndex + 1 : prevSentenceIndex}), 5000)
@@ -47,7 +73,14 @@ const CustomMessage = () => {
 
   return (
     <div className='custom-message-container'>
-      <animated.div className={`custom-message ${sentenceIndex > maxSentenceIndex ? 'custom-message-hide' : ''}`} style={props}>{sentences[sentenceIndex]}</animated.div>
+        <animated.div 
+          className={`custom-message ${sentenceIndex > maxSentenceIndex ? 'custom-message-hide' : ''}`} 
+          style={{...props, overflow: 'hidden'}}
+        >
+          <div ref={widthRef}>
+            {sentences[0]}
+          </div>
+        </animated.div>
     </div>
   )
 }

@@ -182,13 +182,12 @@ const projects = [
 const Projects = props => {
   const { t } = useTranslation()
 
-const projectCells = projects.map((project, index) => {
+const projectCells = projects.map((project) => {
 
     let projectTechLogos = project.techStack.map((techUsed, index) => {
       return (
-        <a href={techLookup[techUsed].link} target='_blank' rel='noreferrer'>
+        <a key={index} href={techLookup[techUsed].link} target='_blank' rel='noreferrer'>
           <img
-            index={index}
             className='tech-logo'
             alt={techUsed}
             src={techLookup[techUsed].logo}
@@ -198,7 +197,6 @@ const projectCells = projects.map((project, index) => {
       )
     })
   
-  
     return(
       <>
         <PhotoSlideshow 
@@ -207,7 +205,8 @@ const projectCells = projects.map((project, index) => {
           arrowType='circle-background'
           arrowColor='white' 
           photoType={project.mediaIncludesLink ? 'link' : 'files'}
-          photos={project.photos}/>
+          photos={project.photos}
+        />
         <div data-aos='fade-up' data-aos-duration="1500" className='project-specs-container'>
           <h3 className={i18n.language === 'jp' ? 'japanese project-title' : 'project-title'} >{t(project.title)}{project.role === 'Product-managed' ? <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px' }}> {(t('work.Product-managed'))} </span> : null}</h3>
           <div className='tech-logo-container'>
@@ -221,8 +220,6 @@ const projectCells = projects.map((project, index) => {
         </div>
       </>
     )
-
-  // { t('about.About me') }
   })
 
   return (
