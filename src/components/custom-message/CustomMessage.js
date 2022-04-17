@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import './custom-message.css'
 import { useSpring, animated, config } from 'react-spring'
-import { Route } from 'react-router-dom'
 
 const useWidth = () => {
   const ref = useRef(null)

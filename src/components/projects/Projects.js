@@ -1,5 +1,6 @@
 import './projects.css'
 import Tag from '../tag/Tag'
+import React from 'react'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { useTranslation } from 'react-i18next'
 import PhotoSlideshow from '../photo-slideshow/PhotoSlideshow'
@@ -182,7 +183,7 @@ const projects = [
 const Projects = props => {
   const { t } = useTranslation()
 
-const projectCells = projects.map((project) => {
+const projectCells = projects.map((project, index) => {
 
     let projectTechLogos = project.techStack.map((techUsed, index) => {
       return (
@@ -198,8 +199,8 @@ const projectCells = projects.map((project) => {
     })
   
     return(
-      <>
-        <PhotoSlideshow 
+      <React.Fragment key={index}>
+        <PhotoSlideshow
           dataAos='fade-up' 
           dataAosDuration="1500" 
           arrowType='circle-background'
@@ -208,17 +209,29 @@ const projectCells = projects.map((project) => {
           photos={project.photos}
         />
         <div data-aos='fade-up' data-aos-duration="1500" className='project-specs-container'>
-          <h3 className={i18n.language === 'jp' ? 'japanese project-title' : 'project-title'} >{t(project.title)}{project.role === 'Product-managed' ? <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px' }}> {(t('work.Product-managed'))} </span> : null}</h3>
+          <h3 className={i18n.language === 'jp' ? 'japanese project-title' : 'project-title'} >
+            {t(project.title)}
+            {project.role === 'Product-managed' ? (
+              <span style={{ fontSize: '0.5em', fontWeight: '400', paddingLeft: '2px' }}> {(t('work.Product-managed'))} </span>
+             ) : null}
+          </h3>
           <div className='tech-logo-container'>
             {projectTechLogos}
           </div>
           <p className={i18n.language === 'jp' ? 'japanese project-short-text' : 'project-short-text'}>{t(project.shortText)}</p>
           <div className='buttons-container'>
-            <Tag show={project.title === 'work.Personal website.Title' ? false : true} name={t('work.View site')} link={project.link}/>
-            <Tag show={project.github ? true : false} name={project.role === 'Product-managed' ? t('work.Jesus Escalona') : t('work.View the code')} link={`${project.github}/#readme`} img={<AiOutlineGithub/>}/>
+            <Tag 
+              show={project.title === 'work.Personal website.Title' ? false : true} 
+              name={t('work.View site')} 
+              link={project.link}/>
+            <Tag 
+              show={project.github ? true : false} 
+              name={project.role === 'Product-managed' ? t('work.Jesus Escalona') : t('work.View the code')} 
+              link={`${project.github}/#readme`} 
+              img={<AiOutlineGithub/>}/>
           </div>
         </div>
-      </>
+      </React.Fragment>
     )
   })
 
