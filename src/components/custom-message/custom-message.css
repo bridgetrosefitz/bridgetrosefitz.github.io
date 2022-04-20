@@ -7,45 +7,21 @@
 }
 
 .custom-message {
-    display: block;
     font-size: 1.5em;
-    background-color: black;
     color: white;
     margin-right: 0.2em;
     padding: 1px 6px;
+    width: 300px;
+    overflow-wrap: normal;
 }
 
 .custom-message-text {
-
+    background-color: black;
+    padding: 0 2px;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .custom-message-hide {
     display: none;
-}
-
-
-@media (max-width: 480px) {
-    .custom-message {
-        font-size: 0.8em;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-}
-
-@media (min-width: 1441px) {
-    .custom-message {
-        /* Same font size as H3 */
-        font-size: 1.17em;
-        margin-top: 0.2em;
-        margin-right: 0.8em;
-    }
-
-}
-
-@media (min-width: 2160px) {
-
-    .custom-message {
-        font-size: 1.755em;
-    }
-
 }
