@@ -1,38 +1,10 @@
-import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import './custom-message.css'
 import { useSpring, animated, config } from 'react-spring'
-
-const useWidth = () => {
-  const initialWidth = 0
-  const ref = useRef(null)
-  const [width, setWidth] = useState(initialWidth)
-  const widthRef = useRef(initialWidth)
-  const [resizeObserver] = useState(
-    () =>
-      new ResizeObserver(packet => {
-        if (ref.current && widthRef.current !== ref.current.offsetWidth) {
-          console.log('inside observer width:', ref.current.offsetWidth)
-          widthRef.current = ref.current.offsetWidth;
-          setWidth(ref.current.offsetWidth);
-        }
-      })
-  );
-
-  useLayoutEffect(() => {
-    if(ref.current) {
-      resizeObserver.observe(ref.current, {});
-      setWidth(ref.current.offsetWidth)
-    }
-    return () => resizeObserver.disconnect();
-  }, [ref.current])
-
-  return [ref, width]
-}
 
 const CustomMessage = () => {
   const [sentenceIndex, setSentenceIndex] = useState(0)
   const maxSentenceIndex = 8
-  // const [ref, width] = useWidth()
 
   const showGreeting = () => {
     api.start({
@@ -91,9 +63,7 @@ const CustomMessage = () => {
           className={`custom-message ${sentenceIndex > maxSentenceIndex ? 'custom-message-hide' : ''}`} 
         style={{ ...props, overflow: 'hidden'}}
         >
-          <span 
-          // ref={ref} 
-          className='custom-message-text'>
+          <span className='custom-message-text'>
             {sentences[sentenceIndex]}
           </span>
         </animated.div>
