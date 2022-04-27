@@ -1,9 +1,9 @@
 .custom-message-container {
-    width: 50%;
-    display: inline-block;
     right: 0;
+    top: 0;
+    position: fixed;
     text-align: right;
-    border: 1px solid green;
+    /* z-index: 9999; */
 }
 
 .custom-message {
@@ -11,15 +11,15 @@
     color: white;
     margin-right: 0.2em;
     padding: 1px 6px;
-    width: 300px;
-    overflow-wrap: normal;
 }
 
 .custom-message-text {
     background-color: black;
     padding: 0 2px;
-    display: inline-block;
-    white-space: nowrap;
+    margin-bottom: 10px;
+    padding: 2px 8px;
+    line-height: 40px;
+    white-space: pre;
 }
 
 .custom-message-hide {

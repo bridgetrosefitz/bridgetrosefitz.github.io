@@ -31,15 +31,34 @@ const useWidth = () => {
 
 const CustomMessage = () => {
   const [sentenceIndex, setSentenceIndex] = useState(0)
-  const [maxSentenceIndex, setMaxSentenceIndex] = useState(8)
-  const [widthRef, width] = useWidth()
-  console.log(width)
-  const props = useSpring({
+  const maxSentenceIndex = 8
+  // const [ref, width] = useWidth()
+
+  const showGreeting = () => {
+    api.start({
+      to: { opacity: 1, width: 400 },
+      onResolve: hideGreeting
+    })
+  }
+
+  const hideGreeting = () => {
+    api.start({ 
+      to: { opacity: 0, width: 0},
+      onResolve: () => {
+        if (sentenceIndex <= maxSentenceIndex) {
+          setSentenceIndex(prevSentenceIndex => prevSentenceIndex + 1)
+          showGreeting()
+        }
+      }
+    })
+  }
+  
+  const [props, api] = useSpring(() => ({
     from: { opacity: 0, width: 0 },
-    to: { opacity: 1, width: width },
-    loop: { reverse: true },
+    to: { opacity: 1, width: 400 },
+    onResolve: hideGreeting,
     config: config.molasses,
-  })
+  }))
 
   const allowableNames = ["notion", "google", "apple", "slack"]
 
@@ -54,33 +73,27 @@ const CustomMessage = () => {
   // If you add a new sentence, remember to update maxSentenceIndex
 
   const sentences = [
-    // `Hi, ${generateNameForMessage(window.location.href)}.`,
+    `Hi, ${generateNameForMessage(window.location.href)}.`,
     "Welcome to my site.",
     "It's lovely to have you here.",
     "You can browse my projects below.",
-    "And see my process to build them, including user stories and ERDs.",
-    "I taught myself React-Three-Fiber (Three.js) to make this site.",
-    "I'd love to chat more about how I built it.",
+    "And see my process to build them, \n including user stories and ERDs.",
+    "I taught myself \n React-Three-Fiber (Three.js) \n to make this site.",
+    "I'd love to chat more \n about how I built it.",
     "Just let me know :)",
-    "Most of all, I hope you enjoy having a look around.",
+    "Most of all, \n I hope you enjoy having \n a look around.",
+    "Bridget x"
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => setSentenceIndex(prevSentenceIndex => {
-      return prevSentenceIndex <= maxSentenceIndex ? prevSentenceIndex + 1 : prevSentenceIndex}), 5000)
-    return () => clearInterval(interval)
-  }, [])
-
-  if(widthRef.current) {
-    console.log('Width REF:', widthRef.current.offsetWidth)
-  }
   return (
     <div className='custom-message-container'>
         <animated.div 
           className={`custom-message ${sentenceIndex > maxSentenceIndex ? 'custom-message-hide' : ''}`} 
         style={{ ...props, overflow: 'hidden'}}
         >
-          <span className='custom-message-text' ref={widthRef}>
+          <span 
+          // ref={ref} 
+          className='custom-message-text'>
             {sentences[sentenceIndex]}
           </span>
         </animated.div>
