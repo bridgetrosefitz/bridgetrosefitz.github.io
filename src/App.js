@@ -13,6 +13,7 @@ const App = () => {
     i18n.changeLanguage(selectedLanguage)
   };
 
+
   useEffect(() => {
     AOS.init()
   }, [])

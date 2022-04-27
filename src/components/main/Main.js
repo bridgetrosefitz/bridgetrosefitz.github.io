@@ -2,16 +2,16 @@ import React, { useState, useRef } from 'react'
 import './main.css'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/cannon'
+import { OrbitControls } from '@react-three/drei'
+import { useTranslation } from 'react-i18next'
 import Localization from '../localization/Localization'
 import HeaderLarge from '../header/HeaderLarge'
 import Group from '../group/Group'
 import Work from '../work/Work'
-import { iconsGroup } from '../footer/Footer'
 import Footer from '../footer/Footer'
 import Arrow from '../arrow/Arrow'
-import { OrbitControls } from '@react-three/drei'
-import { useTranslation } from 'react-i18next'
 import CustomMessage from '../custom-message/CustomMessage'
+import { mobileCheck } from '../../helpers'
 
 const Main = props => {
   const { t } = useTranslation()
@@ -22,10 +22,7 @@ const Main = props => {
   return (
     <>
       <Localization {...props}/>
-      <CustomMessage/>
-      {/* <div className='external-links'>
-        {iconsGroup}
-      </div> */}
+      { mobileCheck() ? null : <CustomMessage /> }
       <button className='side-button' onClick={() => props.history.push('/about')}>
         {t('main.About')}
       </button>
