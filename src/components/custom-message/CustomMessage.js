@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './custom-message.css'
 import { useSpring, animated, config } from 'react-spring'
 import { useTranslation } from 'react-i18next'
-import i18next from 'i18next'
 
 const CustomMessage = () => {
   const { t } = useTranslation()
