@@ -5,7 +5,7 @@ import { useSpring, animated, config } from 'react-spring'
 const CustomMessage = () => {
   const [sentenceIndex, setSentenceIndex] = useState(0)
   const maxSentenceIndex = 8
-  
+
   const showGreeting = () => {
     api.start({
       to: { opacity: 1, width: 400 },
@@ -32,7 +32,8 @@ const CustomMessage = () => {
     config: config.molasses,
   }))
 
-  const allowableNames = ["notion", "google", "apple", "slack"]
+  // A little bit of obfuscation for you sneaker buggers out there
+  const allowableNames = ['bm90aW9u','Z29vZ2xl','YXBwbGU=','c2xhY2s='].map(encodedName => atob(encodedName))
 
   const generateNameForMessage = (path) => {
     const lowerCase = path.split("/").slice(-1)[0]
