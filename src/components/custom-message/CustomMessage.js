@@ -32,11 +32,11 @@ const CustomMessage = () => {
     from: { opacity: 0, width: 0 },
     to: { opacity: 1, width: 400 },
     onResolve: hideGreeting,
-    config: config.molasses,
+    config: { mass: 0.5, tension: 170, friction: 60 },
   }))
 
   // A little bit of obfuscation for you sneaker buggers out there
-  const allowableNames = ['bm90aW9u','Z29vZ2xl','YXBwbGU=','c2xhY2s=','a2F0aGxlZW4='].map(encodedName => atob(encodedName))
+  const allowableNames = ['bm90aW9u','Z29vZ2xl','YXBwbGU=','c2xhY2s=','a2F0aGxlZW4=', 'dHJhY3RhYmxl'].map(encodedName => atob(encodedName))
 
   const generateNameForMessage = (path) => {
     const lowerCase = path.split("/").slice(-1)[0]
