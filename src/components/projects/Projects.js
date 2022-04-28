@@ -25,7 +25,8 @@ const techLookup = {
   'Forge': { logo: '/tech-logos/atlassian.png', link: 'https://developer.atlassian.com/platform/forge/'},
   'ECMAScript 6': { logo: '/tech-logos/ecmascript.png', link: 'https://www.ecma-international.org/technical-committees/tc39/'},
   'CSS': { logo: '/tech-logos/css.png', link: 'https://www.w3.org/Style/CSS/' },
-  'HTML': { logo: '/tech-logos/html.png', link: 'https://html.spec.whatwg.org/multipage/' }
+  'HTML': { logo: '/tech-logos/html.png', link: 'https://html.spec.whatwg.org/multipage/' },
+  'react-spring': { logo: '/tech-logos/react-spring.png', link: 'https://react-spring.io/'}
 }
 
 const projects = [
@@ -160,7 +161,7 @@ const projects = [
   {
     title: 'work.Personal website.Title',
     text: 'work.Personal website.Project main text',
-    techStack: ['React', 'Three.js', 'drei', 'i18next', 'CSS'],
+    techStack: ['React', 'Three.js', 'drei', 'react-spring', 'i18next', 'CSS'],
     shortText: 'work.Personal website.Project short text',
     techStackFrontEnd: 'work.Personal Website.Tech stack front end',
     techStackBackEnd: 'work.Personal Website.Tech stack back end',

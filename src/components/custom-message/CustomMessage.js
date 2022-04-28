@@ -4,7 +4,7 @@ import { useSpring, animated, config } from 'react-spring'
 
 const CustomMessage = () => {
   const [sentenceIndex, setSentenceIndex] = useState(0)
-  const maxSentenceIndex = 8
+  const maxSentenceIndex = 9
 
   const showGreeting = () => {
     api.start({
