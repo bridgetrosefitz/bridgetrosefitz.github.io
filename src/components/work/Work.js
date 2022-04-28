@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './work.css'
-import { useTranslation } from 'react-i18next'
 import Projects from '../projects/Projects'
 
 const companies = [
