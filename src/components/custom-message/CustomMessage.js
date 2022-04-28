@@ -7,7 +7,7 @@ import i18n from 'i18next';
 const CustomMessage = () => {
   const { t } = useTranslation()
   const [sentenceIndex, setSentenceIndex] = useState(0)
-  const maxSentenceIndex = 9
+  const maxSentenceIndex = 6
 
   const showGreeting = () => {
     api.start({
@@ -50,14 +50,11 @@ const CustomMessage = () => {
   const sentences = [
     `${t('custom-message.Hi')}${i18n.language === 'jp' || 'fr' ? (generateNameForMessage(window.location.href) === '' ? (`${generateNameForMessage(window.location.href)}`) : ` ${generateNameForMessage(window.location.href)}`) : ` ${generateNameForMessage(window.location.href)}` }`,
     `${t("custom-message.Welcome to my site")}`,
-    `${t("custom-message.It's lovely to have you here")}`,
     `${t("custom-message.You can browse my projects below")}`,
-    `${t("custom-message.And see my process to build them, including user stories and ERDs")}`,
     `${t("custom-message.I taught myself React-Three-Fiber (Three.js) to make this site")}`,
     `${t("custom-message.I'd love to chat more about how I built it")}`,
     `${t("custom-message.Just let me know")}`,
     `${t("custom-message.Most of all, I hope you enjoy having a look around")}`,
-    `${t("custom-message.Bridget x")}`
   ]
 
   return (

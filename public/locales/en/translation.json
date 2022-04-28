@@ -10,14 +10,14 @@
   "custom-message" : {
     "Hi": "Hi",
     "there": "there",
-    "Welcome to my site": "Welcome to my site.",
+    "Welcome to my site": "Welcome to my site. \n It's lovely to have you here.",
     "It's lovely to have you here": "It's lovely to have you here.",
-    "You can browse my projects below": "You can browse my projects below.",
+    "You can browse my projects below": "You can browse my projects below. \n And see my process to build them, \n including user stories and ERDs.",
     "And see my process to build them, including user stories and ERDs": "And see my process to build them, \n including user stories and ERDs.",
     "I taught myself React-Three-Fiber (Three.js) to make this site": "I taught myself \n React Three Fiber (Three.js) \n to make this site.",
     "I'd love to chat more about how I built it": "I'd love to chat more \n about how I built it.",
     "Just let me know": "Just let me know :)",
-    "Most of all, I hope you enjoy having a look around": "Most of all, \n I hope you enjoy having \n a look around.",
+    "Most of all, I hope you enjoy having a look around": "Most of all, \n I hope you enjoy having \n a look around. \n -Bridget x",
     "Bridget x": "Bridget x"
   },
   "main": {
