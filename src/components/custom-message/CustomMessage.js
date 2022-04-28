@@ -36,7 +36,7 @@ const CustomMessage = () => {
   }))
 
   // A little bit of obfuscation for you sneaker buggers out there
-  const allowableNames = ['bm90aW9u','Z29vZ2xl','YXBwbGU=','c2xhY2s=','a2F0aGxlZW4=', 'dHJhY3RhYmxl'].map(encodedName => atob(encodedName))
+  const allowableNames = ['bm90aW9u', 'Z29vZ2xl', 'YXBwbGU=', 'c2xhY2s=', 'a2F0aGxlZW4=', 'dHJhY3RhYmxl', 'cGFwZXJjdXA='].map(encodedName => atob(encodedName))
 
   const generateNameForMessage = (path) => {
     const lowerCase = path.split("/").slice(-1)[0]
