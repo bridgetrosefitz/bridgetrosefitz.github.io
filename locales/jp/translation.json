@@ -8,6 +8,19 @@
     "Tokyo": "東京",
     "Oslo": "オスロ"
   },
+  "custom-message": {
+    "Hi": "こんにちは、",
+    "there": "",
+    "Welcome to my site": "私のホームページへようこそ。",
+    "It's lovely to have you here": "ここに来てくださって嬉しいです。",
+    "You can browse my projects below": "以下で私のプロジェクトを　\n ご覧できます。",
+    "And see my process to build them, including user stories and ERDs": "ユーザーストーリー と　ERD  \n もご覧できます。",
+    "I taught myself React-Three-Fiber (Three.js) to make this site": "ホームページを作るために \n React-Three-Fiber (Three.js)を \n 学びました。",
+    "I'd love to chat more about how I built it": "一緒に話し合いましょう。",
+    "Just let me know": "いつでも、\n メッセージしてください。",
+    "Most of all, I hope you enjoy having a look around": "あなたがここにいる間、\n 楽しい時間をお過ごしください。",
+    "Bridget x": "よろしくお願いします。"
+  },
   "main": {
     "About": "私について"
   },
