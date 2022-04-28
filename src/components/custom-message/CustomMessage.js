@@ -36,12 +36,23 @@ const CustomMessage = () => {
   }))
 
   // A little bit of obfuscation for you sneaker buggers out there
-  const allowableNames = ['bm90aW9u', 'Z29vZ2xl', 'YXBwbGU=', 'c2xhY2s=', 'a2F0aGxlZW4=', 'dHJhY3RhYmxl', 'cGFwZXJjdXA='].map(encodedName => atob(encodedName))
+  const allowableNames = [
+    'bm90aW9u', 
+    'Z29vZ2xl', 
+    'YXBwbGU=', 
+    'c2xhY2s=', 
+    'a2F0aGxlZW4=', 
+    'dHJhY3RhYmxl', 
+    'cGFwZXJjdXA=',
+    'VHJ1ZUxheWVy'
+  ].map(encodedName => atob(encodedName))
 
   const generateNameForMessage = (path) => {
-    const lowerCase = path.split("/").slice(-1)[0]
-    if(allowableNames.includes(lowerCase)) {
-      const properCase = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1)
+    const nameInUrl = path.split("/").slice(-1)[0]
+    
+    // The test below is case sensitive
+    if (allowableNames.includes(nameInUrl)) {
+      const properCase = nameInUrl.charAt(0).toUpperCase() + nameInUrl.slice(1)
       return properCase
     } else return t('custom-message.there')
   }
