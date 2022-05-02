@@ -55,7 +55,8 @@ const CustomMessage = () => {
     'a2l0',
     'Y2xlbw==',
     'c3ludGhhY2U=',
-    'amFjdW5h'
+    'amFjdW5h',
+    'YmVoYXZpb3VyLWxhYg=='
   ].map(encodedName => atob(encodedName))
 
   const generateNameForMessage = (path) => {
@@ -64,6 +65,13 @@ const CustomMessage = () => {
     // The test below is case sensitive
     if (allowableNames.includes(nameInUrl)) {
       const properCase = nameInUrl.charAt(0).toUpperCase() + nameInUrl.slice(1)
+      // Adds a space for a two-word company, and a capital letter to the second word
+      if (properCase.includes('-')) {
+        const indexOfHyphen = properCase.indexOf('-')
+        const letterToCaptalize = properCase[indexOfHyphen + 1]
+        const capitalizedLetter = letterToCaptalize.toUpperCase()
+        return properCase.slice(0, indexOfHyphen) + ' ' + capitalizedLetter + properCase.slice(indexOfHyphen + 2, properCase.length + 1)
+      }
       return properCase
     } else return t('custom-message.there')
   }
