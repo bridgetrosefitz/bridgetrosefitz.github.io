@@ -56,7 +56,7 @@ const norwayEnvironmentMapTexture = loader.load([
   '/environments/norway/nz.png',
 ])
 
-const setTexture = (city) => {
+const setTexture = city => {
 
   let textureToUse = melbourneEnvironmentMapTexture
 

@@ -9,7 +9,7 @@ import "aos/dist/aos.css"
 const App = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (selectedLanguage) => {
+  const changeLanguage = selectedLanguage => {
     i18n.changeLanguage(selectedLanguage)
   };
 

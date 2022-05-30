@@ -47,13 +47,15 @@ const Main = props => {
         shadow-camera-top={50}
         shadow-camera-bottom={-50}
       />
-      <Physics gravity={[0, -120, 0]} defaultContactMaterial={{friction: 0.05, restitution: 0.5}}>
+      <Physics 
+        gravity={[0, -120, 0]} 
+        defaultContactMaterial={{friction: 0.05, restitution: 0.5}}>
         <Group city={city}/>
       </Physics>
-        <OrbitControls
-          minPolarAngle={Math.PI * 0.5}
-          maxPolarAngle={Math.PI * 0.5}
-          enableZoom={false}
+      <OrbitControls
+        minPolarAngle={Math.PI * 0.5}
+        maxPolarAngle={Math.PI * 0.5}
+        enableZoom={false}
         />
       </Canvas>
       <div className='spacing-element-for-canvas'>
