@@ -3,10 +3,10 @@
 '·..·''·..·''·..·' View it at [https://bridgetro.se](https://bridgetro.se) '·..·''·..·''·..·'
 
 <p float="left">
-  <img alt='landing-page' src="https://bridgetro.se/images/project-snapshots/personal-website/personal-website-1-landing-page.png" width='400' />
-  <img alt="exploding-spheres" src="https://bridgetro.se/images/project-snapshots/personal-website/personal-website-2-exploding-spheres.png" width='400'/>
-  <img alt="company-logos-and-first-project" src="https://bridgetro.se/images/project-snapshots/personal-website/personal-website-3-company-logos-and-first-project.png" width='400'/>
-    <img alt="about-page-french" src="https://bridgetro.se/images/project-snapshots/personal-website/personal-website-4-about-page-french.png" width='400'/>
+  <img alt='landing-page' src="https://bridgetro.se/project-snapshots/personal-website/personal-website-1-landing-page.png" width='400' />
+  <img alt="exploding-spheres" src="https://bridgetro.se/project-snapshots/personal-website/personal-website-2-exploding-spheres.png" width='400'/>
+  <img alt="company-logos-and-first-project" src="https://bridgetro.se/project-snapshots/personal-website/personal-website-3-company-logos-and-first-project.png" width='400'/>
+    <img alt="about-page-french" src="https://bridgetro.se/project-snapshots/personal-website/personal-website-6-about-page-french.png" width='400'/>
 
 </p>
 
