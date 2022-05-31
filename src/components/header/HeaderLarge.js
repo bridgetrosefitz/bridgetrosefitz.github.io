@@ -9,12 +9,28 @@ const HeaderLarge = props => {
   const citySpans = () => {
     const arrayOfSpans = props.cities.map((city, index) => {
       let classNameForCitySpan = ''
-      if(props.city === city) {classNameForCitySpan = 'selected'}
+
+      if(props.city === city) {
+        classNameForCitySpan = 'selected'
+      }
+      
       if (index === 0) {
-        return <span key={index} className={`city ${classNameForCitySpan}`} onMouseEnter={() => props.setCity(city)}>{t(`header.${city}`)}</span>
+        return (
+          <span 
+            key={index} 
+            className={`city ${classNameForCitySpan}`} 
+            onMouseEnter={() => props.setCity(city)}>
+              {t(`header.${city}`)}
+          </span>)
         }
       else {
-        return (<span key={index} className={`city ${classNameForCitySpan}`} onMouseEnter={() => props.setCity(city)}>{` · ${t(`header.${city}`)}`}</span>)
+        return (
+          <span 
+            key={index} 
+            className={`city ${classNameForCitySpan}`} 
+            onMouseEnter={() => props.setCity(city)}>
+              {` · ${t(`header.${city}`)}`}
+          </span>)
       }
   })
 
