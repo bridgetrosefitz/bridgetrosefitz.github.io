@@ -20,7 +20,6 @@ const Group = props => {
       {!showButtload && <Sphere city={props.city} onClick={() => setShowButtload(!showButtload)} />}
       <Plane />
       {showButtload && <MakeAButtloadOfSpheres city={props.city} number={100} />}
-
     </group>
   )
 }

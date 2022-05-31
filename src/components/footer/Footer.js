@@ -37,8 +37,12 @@ const Footer = props => {
         <p>{t("footer.Don't hesitate to say hello")}</p>
         <p>{t("footer.I would love to hear from you")}</p>
       </div>
-      <div className='email-div'><a href='mailto:bridgetrosefitz@gmail.com' rel='noreferrer' target='_blank'>bridgetrosefitz@gmail.com</a></div>
-      <div className='icons-container'>{iconsGroup}</div>
+      <div className='email-div'>
+        <a href='mailto:bridgetrosefitz@gmail.com' rel='noreferrer' target='_blank'>bridgetrosefitz@gmail.com</a>
+      </div>
+      <div className='icons-container'>
+        {iconsGroup}
+      </div>
     </div>
   )
 }

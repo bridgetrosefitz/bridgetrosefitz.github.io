@@ -16,7 +16,7 @@ const PhotoSlideshow = ({ dataAos, dataAosDuration, photos, arrowType, arrowColo
   }
 
   const changePhoto = direction => {
-    const photosLastIndex = photos.length -1
+    const photosLastIndex = photos.length - 1
     if(direction === 'left') {
       if (currentPhotoIndex === 0) {
         setCurrentPhotoIndex(photosLastIndex)

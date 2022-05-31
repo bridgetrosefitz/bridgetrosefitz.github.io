@@ -184,20 +184,20 @@ const projects = [
 const Projects = props => {
   const { t } = useTranslation()
 
-const projectCells = projects.map((project, index) => {
+  const projectCells = projects.map((project, index) => {
 
-    let projectTechLogos = project.techStack.map((techUsed, index) => {
-      return (
-        <a key={index} href={techLookup[techUsed].link} target='_blank' rel='noreferrer'>
-          <img
-            className='tech-logo'
-            alt={techUsed}
-            src={techLookup[techUsed].logo}
-          />
-        </a>
+  let projectTechLogos = project.techStack.map((techUsed, index) => {
+    return (
+      <a key={index} href={techLookup[techUsed].link} target='_blank' rel='noreferrer'>
+        <img
+          className='tech-logo'
+          alt={techUsed}
+          src={techLookup[techUsed].logo}
+        />
+      </a>
 
-      )
-    })
+    )
+  })
   
     return(
       <React.Fragment key={index}>
@@ -209,7 +209,10 @@ const projectCells = projects.map((project, index) => {
           photoType={project.mediaIncludesLink ? 'link' : 'files'}
           photos={project.photos}
         />
-        <div data-aos='fade-up' data-aos-duration="1500" className='project-specs-container'>
+        <div 
+          data-aos='fade-up' 
+          data-aos-duration="1500" 
+          className='project-specs-container'>
           <h3 className={i18n.language === 'jp' ? 'japanese project-title' : 'project-title'} >
             {t(project.title)}
             {project.role === 'Product-managed' ? (
