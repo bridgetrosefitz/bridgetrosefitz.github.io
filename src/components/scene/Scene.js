@@ -12,48 +12,48 @@ const loader = new CubeTextureLoader()
 
 
 const melbourneEnvironmentMapTexture = loader.load([
-  '/environments/melbourne/px.png',
-  '/environments/melbourne/nx.png',
-  '/environments/melbourne/py.png',
-  '/environments/melbourne/ny.png',
-  '/environments/melbourne/pz.png',
-  '/environments/melbourne/nz.png',
+  'images/environment-maps/melbourne/px.png',
+  'images/environment-maps/melbourne/nx.png',
+  'images/environment-maps/melbourne/py.png',
+  'images/environment-maps/melbourne/ny.png',
+  'images/environment-maps/melbourne/pz.png',
+  'images/environment-maps/melbourne/nz.png',
 ])
 
 const louvreEnvironmentMapTexture = loader.load([
-  '/environments/louvre/px.png',
-  '/environments/louvre/nx.png',
-  '/environments/louvre/py.png',
-  '/environments/louvre/ny.png',
-  '/environments/louvre/pz.png',
-  '/environments/louvre/nz.png',
+  'images/environment-maps/louvre/px.png',
+  'images/environment-maps/louvre/nx.png',
+  'images/environment-maps/louvre/py.png',
+  'images/environment-maps/louvre/ny.png',
+  'images/environment-maps/louvre/pz.png',
+  'images/environment-maps/louvre/nz.png',
 ])
 
 const templeEnvironmentMapTexture = loader.load([
-  '/environments/inari-temple/px.png',
-  '/environments/inari-temple/nx.png',
-  '/environments/inari-temple/py.png',
-  '/environments/inari-temple/ny.png',
-  '/environments/inari-temple/pz.png',
-  '/environments/inari-temple/nz.png',
+  'images/environment-maps/inari-temple/px.png',
+  'images/environment-maps/inari-temple/nx.png',
+  'images/environment-maps/inari-temple/py.png',
+  'images/environment-maps/inari-temple/ny.png',
+  'images/environment-maps/inari-temple/pz.png',
+  'images/environment-maps/inari-temple/nz.png',
 ])
 
 const timesSquareEnvironmentMapTexture = loader.load([
-  '/environments/times-square/px.png',
-  '/environments/times-square/nx.png',
-  '/environments/times-square/py.png',
-  '/environments/times-square/ny.png',
-  '/environments/times-square/pz.png',
-  '/environments/times-square/nz.png',
+  'images/environment-maps/times-square/px.png',
+  'images/environment-maps/times-square/nx.png',
+  'images/environment-maps/times-square/py.png',
+  'images/environment-maps/times-square/ny.png',
+  'images/environment-maps/times-square/pz.png',
+  'images/environment-maps/times-square/nz.png',
 ])
 
 const norwayEnvironmentMapTexture = loader.load([
-  '/environments/norway/px.png',
-  '/environments/norway/nx.png',
-  '/environments/norway/py.png',
-  '/environments/norway/ny.png',
-  '/environments/norway/pz.png',
-  '/environments/norway/nz.png',
+  'images/environment-maps/norway/px.png',
+  'images/environment-maps/norway/nx.png',
+  'images/environment-maps/norway/py.png',
+  'images/environment-maps/norway/ny.png',
+  'images/environment-maps/norway/pz.png',
+  'images/environment-maps/norway/nz.png',
 ])
 
 const setTexture = city => {

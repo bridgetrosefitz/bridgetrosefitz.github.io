@@ -45,7 +45,7 @@ const About = props => {
       <p className='about-p'>{t('about.About main text')}<span hidden={i18next.language === 'jp' ? true : false} className='small-text'>{t('about.Asterisk')}</span></p>
       <br/>
       <div className='photo-of-me'>
-        <img data-aos="fade-up" data-aos-duration="700" alt='Me at Trolltunga, Norway' src='/photos/Trolltunga.jpeg'/>
+        <img data-aos="fade-up" data-aos-duration="700" alt='Me at Trolltunga, Norway' src='images/personal-photos/Trolltunga.jpeg'/>
       </div>
       <div className='spacing-element-after-photo'/>
       <h2 className='about-header'>{t('about.My values')}</h2>
