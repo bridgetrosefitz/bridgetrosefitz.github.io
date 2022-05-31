@@ -17,13 +17,10 @@
 }
 
 .city {
-  /* transition: .2s; */
   cursor: crosshair;
 }
 
-
 .selected {
-  /* text-shadow: 0.5px 0.5px grey ; */
   text-shadow: -3px 5px 4px darkgrey
 }
 

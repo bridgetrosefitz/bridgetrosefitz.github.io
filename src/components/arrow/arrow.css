@@ -13,7 +13,6 @@
   height: 15px;
 }
 
-
 .left.nav-arrow-left-tip, 
 .left.nav-arrow-right-tip,
 .right.nav-arrow-left-tip, 
@@ -133,12 +132,11 @@
 /* IMPORTANT: You must put this class inside an element with a positioning context */
 
 .slideshow-arrow-left {
-  /* background: linear-gradient(90deg, #00000059, transparent 50%) */
+  /* Placeholder for css that affects the left hand side panel */
 }
 
 .slideshow-arrow-right {
   right: 0;
-  /* background: linear-gradient(-90deg, #00000059, transparent 50%) */
 }
 
 /* For arrow circle */

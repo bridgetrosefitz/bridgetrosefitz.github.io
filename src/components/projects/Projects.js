@@ -223,7 +223,7 @@ const Projects = props => {
             {projectTechLogos}
           </div>
           <p className={i18n.language === 'jp' ? 'japanese project-short-text' : 'project-short-text'}>{t(project.shortText)}</p>
-          <div className='buttons-container'>
+          <div>
             <Tag 
               show={project.title === 'work.Personal website.Title' ? false : true} 
               name={t('work.View site')} 

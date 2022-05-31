@@ -60,7 +60,7 @@ const Main = props => {
       </Canvas>
       <div className='spacing-element-for-canvas'>
       </div>
-      <div className='main-content'>
+      <div>
         <div className='arrow-positioning-context'>
           <Arrow color='black' direction='down' onClick={() => {workRef.current.scrollIntoView()}}/>
         </div>

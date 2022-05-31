@@ -4,14 +4,10 @@
   height: fit-content;
 }
 
-
 .slideshow-panel-left {
   position: absolute;
   height: 100%;
   width: 8%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background-color: white;
-  opacity: 0.4; */
 }
 
 .slideshow-panel-right {
@@ -19,7 +15,4 @@
   right: 0;
   height: 100%;
   width: 8%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background-color: white;
-  opacity: 0.4; */
 }

@@ -16,29 +16,9 @@ b {
   margin: 0 15em;
 }
 
-/* .values-p:after {
-    content: '';
-    border-bottom: 1px solid grey;
-    transform: translate(-50%, 0);
-    margin-left: 50%;
-    display: block;
-    margin-top: 3em;
-} */
-
 .values-p:last-of-type::after {
   content: none;
 }
-
-/* .values-p:after {
-    content: '';
-    width: 60%;
-    height: 1px;
-    background-color: rgba(0,0,0,.3);
-    display: block;
-    transform: translate(-50%, 0);
-    margin-left: 50%;
-    margin-top: 2em;
-} */
 
 .project h1:after {
   position: absolute;  
@@ -49,7 +29,6 @@ b {
   height: 1px;
   background-color: rgba(0,0,0,.3);
 }
-
 
 .about-header {  
   text-align: center;
@@ -90,7 +69,7 @@ img {
   .photo-of-me {
     margin: 3em 0;
     transform: rotate(2deg);
-}
+  }
 
   img {
     width: 80%;

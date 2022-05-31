@@ -7,15 +7,6 @@ canvas {
   z-index: -1;
 }
 
-.spacing-element-between-arrow-and-logos {
-
-}
-
-.main-content {
-  /* position: relative; */
-  /* z-index: 0; */
-}
-
 .external-links {
   background-color: transparent;
   border: none;
@@ -26,15 +17,6 @@ canvas {
 }
 
 /* External links: Styling intended to match localization.css */
-
-/* .localization-button {
-  background-color: transparent;
-  border: none;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-  margin-left: 0.2em;
-} */
 
 a:hover {
   color: grey;
@@ -90,7 +72,6 @@ a:hover {
     .spacing-element-for-canvas {
       height: 550px;
     }
-
 }
 
 @media (min-width: 1680px) {

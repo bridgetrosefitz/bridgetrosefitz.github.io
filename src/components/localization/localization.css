@@ -32,7 +32,6 @@ button:hover {
     margin-top: 0.2em;
     margin-left: 0.8em;
   } 
-
 }
 
 @media (min-width: 2160px) {
@@ -40,5 +39,4 @@ button:hover {
   .localization-button {
     font-size: 1.755em;
   }
-  
 }

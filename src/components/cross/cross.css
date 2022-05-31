@@ -2,6 +2,7 @@
 .close-icon:hover .close-left, .close-icon:hover .close-right {
   background-color: grey;
 }
+
 .close-icon {
   position: fixed;
   top: 2%;
@@ -20,9 +21,11 @@
   bottom: 0;
   background-color: black;
 }
+
 .close-right {
   transform: rotate(-45deg) translate(25px, 10px);
 }
+
 .close-left {
     transform: rotate(45deg) translate(10px, -25px);
 }
