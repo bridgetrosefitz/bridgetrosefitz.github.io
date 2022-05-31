@@ -38,7 +38,7 @@ const companies = [
   },
   {
     name: '国際交流基金',
-    link: 'https://kansai.jpf.go.jp/',
+    link: 'https://www.jpf.go.jp/j/kansai/index.html',
     logo: 'company-logos/japan-foundation-logo-english.png'
   },
   {

@@ -51,27 +51,6 @@ canvas {
   cursor: ew-resize;
 }
 
-@font-face {
-  font-family: "Gambetta";
-  src: local("Gambettaight"),
-  url('./fonts/Gambetta-Light.woff') format('woff');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Gambetta";
-  src: local("GambettaBold"),
-  url('./fonts/Gambetta-Bold.woff') format('woff');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Gambetta";
-  src: local("GambettaBold"),
-  url('./fonts/Gambetta-Bold.woff') format('woff');
-  font-weight: 700;
-}
-
 @media (max-width: 480px) {
 
   .side-button {

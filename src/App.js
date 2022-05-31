@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import About from './components/about/About'
 import Main from './components/main/Main'
 import { useTranslation } from 'react-i18next'
@@ -34,4 +34,4 @@ const App = () => {
   )
 }
 
-export default withRouter(App)
+export default App
