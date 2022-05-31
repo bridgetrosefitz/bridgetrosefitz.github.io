@@ -99,12 +99,15 @@ export const Sphere = props => {
       position={spherePosition}>
       <sphereGeometry args={[sphereRadius, 100, 100]} />
       <meshStandardMaterial
-      roughness={sphereRoughness}
-      metalness={sphereMetalness}
-      envMap={setTexture(props.city)}
+        roughness={sphereRoughness}
+        metalness={sphereMetalness}
+        envMap={setTexture(props.city)}
       />
       <Html distanceFactor={800}>
-        <div onClick={props.onClick} style={{ height: sphereRadius * 2, width: sphereRadius * 2}} className='sphereHtml'/>
+        <div 
+          onClick={props.onClick} 
+          style={{ height: sphereRadius * 2, width: sphereRadius * 2}} 
+          className='sphereHtml'/>
       </Html>
     </mesh>
   )

@@ -23,7 +23,9 @@ const Main = props => {
     <>
       <Localization {...props}/>
       { mobileCheck() ? null : <CustomMessage /> }
-      <button className='side-button' onClick={() => props.history.push('/about')}>
+      <button 
+        className='side-button' 
+        onClick={() => props.history.push('/about')}>
         {t('main.About')}
       </button>
       <HeaderLarge cities={cities} city={city} setCity={setCity}/>
@@ -62,7 +64,10 @@ const Main = props => {
       </div>
       <div>
         <div className='arrow-positioning-context'>
-          <Arrow color='black' direction='down' onClick={() => {workRef.current.scrollIntoView()}}/>
+          <Arrow 
+            color='black' 
+            direction='down' 
+            onClick={() => {workRef.current.scrollIntoView()}}/>
         </div>
         <div className='spacing-element-between-arrow-and-logos'></div>
         <Work workRef={workRef} />
