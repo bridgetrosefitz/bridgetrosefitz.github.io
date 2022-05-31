@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import Localization from '../localization/Localization'
-import Footer from '../footer/Footer'
+import Localization from '../../components/localization/Localization'
+import Footer from '../../components/footer/Footer'
 import './about.css'
 import i18next from 'i18next'
 

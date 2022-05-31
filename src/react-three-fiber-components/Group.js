@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { Sphere, Plane, MakeAButtloadOfSpheres } from '../scene/Scene'
+import { Sphere, Plane, MakeAButtloadOfSpheres } from './Scene'
 
 const Group = props => {
   const [showButtload, setShowButtload] = useState(false)

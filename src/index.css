@@ -65,6 +65,7 @@ canvas {
 }
 
 @media (min-width: 1441px) {
+  
   .side-button {
     /* Increases font size, while still at side */
     font-size: 1.17em;

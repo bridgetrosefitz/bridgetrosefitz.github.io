@@ -10,7 +10,6 @@ const spherePosition = [0, 30, 0]
 const planePosition = [0, -12, 0]
 const loader = new CubeTextureLoader()
 
-
 const melbourneEnvironmentMapTexture = loader.load([
   'images/environment-maps/melbourne/px.png',
   'images/environment-maps/melbourne/nx.png',

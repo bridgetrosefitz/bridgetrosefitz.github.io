@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import About from './components/about/About'
-import Main from './components/main/Main'
+import About from './pages/about/About'
+import Main from './pages/main/Main'
 import { useTranslation } from 'react-i18next'
 import AOS from 'aos';
 import "aos/dist/aos.css"

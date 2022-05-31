@@ -3,7 +3,7 @@ import Tag from '../tag/Tag'
 import React from 'react'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { useTranslation } from 'react-i18next'
-import PhotoSlideshow from '../photo-slideshow/PhotoSlideshow'
+import PhotoSlideshow from '../../components/photo-slideshow/PhotoSlideshow'
 import i18n from 'i18next';
 
 const techLookup = {
@@ -16,10 +16,10 @@ const techLookup = {
   'Bootstrap': { logo: 'images/tech-logos/bootstrap.png', link: 'https://getbootstrap.com/'},
   'JSON API': { logo: 'images/tech-logos/json-api.png', link: 'https://jsonapi.org/'},
   'PostgreSQL': { logo: 'images/tech-logos/postgresql.png', link: 'https://www.postgresql.org/'},
-  'webpack': { logo: 'tech-logos/webpack.png', link: 'https://webpack.js.org/'},
-  'Apex charts': { logo: 'tech-logos/apex-charts.png', link: 'https://apexcharts.com/'},
-  'drei': { logo: 'tech-logos/drei.png', link: 'https://drei.pmnd.rs/'},
-  'GSAP': { logo: 'tech-logos/greensock.png', link: 'https://greensock.com/gsap/'},
+  'webpack': { logo: 'images/tech-logos/webpack.png', link: 'https://webpack.js.org/'},
+  'Apex charts': { logo: 'images/tech-logos/apex-charts.png', link: 'https://apexcharts.com/'},
+  'drei': { logo: 'images/tech-logos/drei.png', link: 'https://drei.pmnd.rs/'},
+  'GSAP': { logo: 'images/tech-logos/greensock.png', link: 'https://greensock.com/gsap/'},
   'i18next': { logo: 'images/tech-logos/i18next.png', link: 'https://react.i18next.com/'},
   'BigQuery': { logo: 'images/tech-logos/big-query.png', link: 'https://cloud.google.com/bigquery'},
   'Forge': { logo: 'images/tech-logos/atlassian.png', link: 'https://developer.atlassian.com/platform/forge/'},
