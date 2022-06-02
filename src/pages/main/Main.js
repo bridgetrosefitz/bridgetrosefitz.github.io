@@ -23,6 +23,7 @@ const Main = props => {
     <>
       <Localization {...props}/>
       { mobileCheck() ? null : <CustomMessage /> }
+      {/* This should be an a-tag / Link from Router */}
       <button 
         className='side-button' 
         onClick={() => props.history.push('/about')}>
@@ -32,7 +33,8 @@ const Main = props => {
       <Canvas
         style={{ position: 'absolute', height: '100vh', width: '100%', top: 0, left: 0}}
         shadows
-        camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 50, 40] }}>
+        camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 50, 40] }}
+        >
       <ambientLight
         intensity={0.7}
       />
