@@ -73,7 +73,8 @@ const CustomMessage = () => {
     'Z3JpZmZpbg==',
     'bGltYmlj',
     'eGVuZGl0',
-    'aW5mbG93'
+    'aW5mbG93',
+    'b2N0b3B1cw=='
   ].map(encodedName => atob(encodedName))
 
   const generateNameForMessage = (path) => {
