@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, Suspense } from 'react'
 import './main.css'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/cannon'
@@ -7,17 +7,20 @@ import { useTranslation } from 'react-i18next'
 import Localization from '../../components/localization/Localization'
 import HeaderLarge from '../../components/header/HeaderLarge'
 import Group from '../../react-three-fiber-components/Group'
-import Work from '../../components/work/Work'
 import Footer from '../../components/footer/Footer'
 import Arrow from '../../components/arrow/Arrow'
 import CustomMessage from '../../components/custom-message/CustomMessage'
 import { mobileCheck } from '../../helpers'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+
+const Work = React.lazy(() => import(/* webpackChunkName: "Work" */ '../../components/work/Work'));
 
 const Main = props => {
   const { t } = useTranslation()
   const [city, setCity] = useState('Melbourne')
   const cities = ['Melbourne', 'NYC', 'Paris', 'Tokyo', 'Oslo']
   const workRef = useRef()
+  const isWorkSectionVisible = useIntersectionObserver(workRef)
 
   return (
     <>
@@ -71,8 +74,14 @@ const Main = props => {
             direction='down' 
             onClick={() => {workRef.current.scrollIntoView()}}/>
         </div>
-        <div className='spacing-element-between-arrow-and-logos'></div>
-        <Work workRef={workRef} />
+        <div className='spacing-element-between-arrow-and-logos'/>
+        <div className='work-section-container'ref={workRef}>
+          {isWorkSectionVisible && (
+            <Suspense fallback={<h1>Loading...</h1>}>
+              <Work />
+            </Suspense>
+          )}
+        </div>
       </div>
       <Footer/>
     </>

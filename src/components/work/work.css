@@ -1,6 +1,6 @@
 .company-logo-display-container {
   display: flex;
-  margin: 5em;
+  margin-bottom: 5em;
   margin-left: 10em;
   margin-right: 10em;
   flex-wrap: wrap;

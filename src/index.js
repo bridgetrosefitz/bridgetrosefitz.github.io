@@ -9,9 +9,9 @@ ReactDOM.render(
 
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <React.StrictMode>
-      <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<h1>Loading...</h1>}>
         <App />
-      </Suspense>
+        </Suspense>
       </React.StrictMode>
     </BrowserRouter>, document.getElementById('root')
 

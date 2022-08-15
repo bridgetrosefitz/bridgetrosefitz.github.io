@@ -16,6 +16,14 @@ canvas {
   margin-right: 0.2em;
 }
 
+.spacing-element-between-arrow-and-logos {
+  height: 100px;
+}
+
+.work-section-container {
+  min-height: 600px;
+}
+
 /* External links: Styling intended to match localization.css */
 
 a:hover {

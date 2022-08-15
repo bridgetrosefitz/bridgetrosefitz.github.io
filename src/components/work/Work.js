@@ -59,7 +59,7 @@ const Work = props => {
 
   return (
     <>  
-      <div ref={props.workRef} className='company-logo-display-container'>
+      <div className='company-logo-display-container' >
        {companyLogos}
       </div>
       <div className='spacing-element-between-logos-and-projects'/>
