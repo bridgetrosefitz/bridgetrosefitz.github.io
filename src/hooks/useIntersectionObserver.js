@@ -27,7 +27,6 @@ const useIntersectionObserver = reference => {
 
   }, [reference])
 
-  console.log('isVisible', isVisible)
   return isVisible
 
 }
