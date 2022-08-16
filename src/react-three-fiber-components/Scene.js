@@ -1,12 +1,21 @@
 import React from 'react'
 import { useSphere, usePlane} from '@react-three/cannon'
 import { Html } from '@react-three/drei'
+import { CubeTextureLoader } from 'three'
+// import { environmentMapsHighQuality, environmentMapsLowQuality } from '../../env-maps'
 
 const sphereMetalness = 1
 const sphereRoughness = 0.05
 const sphereRadius = 10
 const spherePosition = [0, 30, 0]
 const planePosition = [0, -12, 0]
+const loader = new CubeTextureLoader()
+
+
+// const melbourneEnvironmentMapTexture = loader.load(environmentMapsLowQuality.melbourne)
+// const louvreEnvironmentMapTexture = loader.load(environmentMapsLowQuality.louvre)
+// const templeEnvironmentMapTexture = loader.load(environmentMapsLowQuality.temple)
+// const timesSquareEnvironmentMapTexture = loader.load(environmentMapsLowQuality.timesSquare)
 
 export const Sphere = props => {
 

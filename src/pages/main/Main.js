@@ -57,7 +57,7 @@ const Main = props => {
       <Physics 
         gravity={[0, -120, 0]} 
         defaultContactMaterial={{friction: 0.05, restitution: 0.5}}>
-        <Group city={city}/>
+          <Group city={city} />
       </Physics>
       <OrbitControls
         minPolarAngle={Math.PI * 0.5}

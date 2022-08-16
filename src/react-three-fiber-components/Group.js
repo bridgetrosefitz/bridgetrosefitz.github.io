@@ -2,82 +2,68 @@ import { useEffect, useState, useRef } from 'react'
 import { Sphere, Plane, MakeAButtloadOfSpheres } from './Scene'
 import { CubeTextureLoader } from 'three'
 import { useLoader } from '@react-three/fiber'
+import { environmentMapsHighQuality, environmentMapsLowQuality } from '../env-maps'
+
 
 const Group = props => {
   const [showButtload, setShowButtload] = useState(false)
+  const [textureToUse, setTextureToUse] = useState()
+  const [melbourneTextureHighQuality, setMelbourneTextureHighQuality] = useState()
+  const [louvreTextureHighQuality, setLouvreTextureHighQuality] = useState()
+  const [timesSquareTextureHighQuality, setTimesSquareTextureHighQuality] = useState()
+  const [templeTextureHighQuality, setTempleTextureHighQuality] = useState()
+  const [norwayTextureHighQuality, setNorwayTextureHighQuality] = useState()
   const ref = useRef()
 
-  const [melbourneEnvironmentMapTexture] = useLoader(CubeTextureLoader, [[
-    'images/environment-maps/melbourne/px.png',
-    'images/environment-maps/melbourne/nx.png',
-    'images/environment-maps/melbourne/py.png',
-    'images/environment-maps/melbourne/ny.png',
-    'images/environment-maps/melbourne/pz.png',
-    'images/environment-maps/melbourne/nz.png',
-  ]])
+  const loader = new CubeTextureLoader()
 
-  const [louvreEnvironmentMapTexture] = useLoader(CubeTextureLoader, [[
-    'images/environment-maps/louvre/px.png',
-    'images/environment-maps/louvre/nx.png',
-    'images/environment-maps/louvre/py.png',
-    'images/environment-maps/louvre/ny.png',
-    'images/environment-maps/louvre/pz.png',
-    'images/environment-maps/louvre/nz.png',
-  ]])
+  useEffect(() => {
+    setTexture(props.city)
+    loader.load(environmentMapsHighQuality.melbourne, setMelbourneTextureHighQuality)
+    loader.load(environmentMapsHighQuality.louvre, setLouvreTextureHighQuality)
+    loader.load(environmentMapsHighQuality.timesSquare, setTimesSquareTextureHighQuality)
+    loader.load(environmentMapsHighQuality.temple, setTempleTextureHighQuality)
+    loader.load(environmentMapsHighQuality.norway, setNorwayTextureHighQuality)
+  }, [])
 
-  const [templeEnvironmentMapTexture] = useLoader(CubeTextureLoader, [[
-    'images/environment-maps/inari-temple/px.png',
-    'images/environment-maps/inari-temple/nx.png',
-    'images/environment-maps/inari-temple/py.png',
-    'images/environment-maps/inari-temple/ny.png',
-    'images/environment-maps/inari-temple/pz.png',
-    'images/environment-maps/inari-temple/nz.png',
-  ]])
+  useEffect(() => {
 
-  const [timesSquareEnvironmentMapTexture] = useLoader(CubeTextureLoader, [[
-    'images/environment-maps/times-square/px.png',
-    'images/environment-maps/times-square/nx.png',
-    'images/environment-maps/times-square/py.png',
-    'images/environment-maps/times-square/ny.png',
-    'images/environment-maps/times-square/pz.png',
-    'images/environment-maps/times-square/nz.png',
-  ]])
+    setTexture(props.city)
+    
+  }, [melbourneTextureHighQuality, louvreTextureHighQuality, timesSquareTextureHighQuality, templeTextureHighQuality, norwayTextureHighQuality])
 
-  const [norwayEnvironmentMapTexture] = useLoader(CubeTextureLoader, [[
-    'images/environment-maps/norway/px.png',
-    'images/environment-maps/norway/nx.png',
-    'images/environment-maps/norway/py.png',
-    'images/environment-maps/norway/ny.png',
-    'images/environment-maps/norway/pz.png',
-    'images/environment-maps/norway/nz.png',
-  ]])
+  const [melbourneEnvironmentMapTextureLowQuality] = useLoader(CubeTextureLoader, [environmentMapsLowQuality.melbourne])
+  const [louvreEnvironmentMapTextureLowQuality] = useLoader(CubeTextureLoader, [environmentMapsLowQuality.louvre])
+  const [templeEnvironmentMapTextureLowQuality] = useLoader(CubeTextureLoader, [environmentMapsLowQuality.temple])
+  const [timesSquareEnvironmentMapTextureLowQuality] = useLoader(CubeTextureLoader, [environmentMapsLowQuality.timesSquare])
+  const [norwayEnvironmentMapTextureLowQuality] = useLoader(CubeTextureLoader, [environmentMapsLowQuality.norway])
 
   const setTexture = city => {
 
-    let textureToUse = melbourneEnvironmentMapTexture
+    let texture = melbourneTextureHighQuality || melbourneEnvironmentMapTextureLowQuality
 
     switch (city) {
       case 'Melbourne':
-        textureToUse = melbourneEnvironmentMapTexture
+        texture = melbourneEnvironmentMapTextureLowQuality
         break
       case 'NYC':
-        textureToUse = timesSquareEnvironmentMapTexture
+        texture = timesSquareTextureHighQuality || timesSquareEnvironmentMapTextureLowQuality
         break
       case 'Paris':
-        textureToUse = louvreEnvironmentMapTexture
+        texture = louvreTextureHighQuality || louvreEnvironmentMapTextureLowQuality
         break
       case 'Tokyo':
-        textureToUse = templeEnvironmentMapTexture
+        texture = templeTextureHighQuality || templeEnvironmentMapTextureLowQuality
         break
       case 'Oslo':
-        textureToUse = norwayEnvironmentMapTexture
+        texture = norwayTextureHighQuality || norwayEnvironmentMapTextureLowQuality
         break
       default:
-        textureToUse = melbourneEnvironmentMapTexture
+        texture = melbourneTextureHighQuality || melbourneEnvironmentMapTextureLowQuality
         break
     }
 
-    return textureToUse
+    setTextureToUse(texture)
   }
 
   useEffect(() => {
@@ -90,11 +76,15 @@ const Group = props => {
 
   }, [showButtload])
 
+  useEffect(() => {
+    setTexture(props.city)
+  }, [])
+
   return(
     <group ref={ref}>
-      {!showButtload && <Sphere cityTexture={setTexture(props.city)} onClick={() => setShowButtload(!showButtload)} />}
+      {!showButtload && <Sphere cityTexture={textureToUse} onClick={() => setShowButtload(!showButtload)} />}
       <Plane />
-      {showButtload && <MakeAButtloadOfSpheres cityTexture={melbourneEnvironmentMapTexture} number={100} />}
+      {showButtload && <MakeAButtloadOfSpheres cityTexture={textureToUse} number={100} />}
     </group>
   )
 }
